@@ -9,7 +9,6 @@
 .main-page {
     flex-grow: 1;
     background-color: #F8F8F8;
-    justify-content: center;
     /* align-items: center; */
 }
 
