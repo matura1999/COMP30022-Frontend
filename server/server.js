@@ -1,20 +1,16 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
 
 // App variables
-const app = express();
 const PORT = process.env.PORT || 5000;
+const publicPath = path.join(__dirname, '..', 'build');
+const app = express();
 
-app.use(bodyParser.json());
-
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.use(express.static('public'));
+app.use(express.static(publicPath));
 
 // Redirect to React app
  app.get('*', (req, res) => {
- 	res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+ 	res.sendFile(path.resolve(publicPath, 'index.html'));
  })
 
 // Activate server
