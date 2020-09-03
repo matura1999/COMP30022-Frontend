@@ -5,21 +5,11 @@
     padding: 0;
   }
   
-  body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 9vh;
+    height: 10vh;
     border-bottom: 1px solid #CCCCCC;
     position: relative;
   }
@@ -27,8 +17,9 @@
   .logo-link{
     height: 100%;
     width: 10%;
+    width: 10%;
     border: none;
-    margin-left: 5%;
+    left: 5%;
     background: transparent;
   }
   
@@ -42,13 +33,11 @@
   }
   
   .navbar .search-bar {
-  
     position: absolute;
     left: 35%;
     width: 30%;
     display: flex;
     align-self: center;
-  
   }
   
   form.search-bar input {
@@ -78,27 +67,29 @@
     width: 20%;
     height: 60%;
     display: flex;
-    background: None;
+    background: none;
   }
   
   .sign-in {
     width: 40%;
     background: None;
-    border-radius: 5px;
     padding: 5px;
     margin-right: 20%;
+    display: flex;
+    text-decoration: none;
   }
   
   .sign-up {
     width: 40%;
     color: white;
     background-color: None;
-    border-radius: 5px;
     padding: 5px;
+    display: flex;
+    text-decoration: none;
   }
   
   .sign-in-button{
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: 1000;
     border-radius: 5px;
     width: 100%;

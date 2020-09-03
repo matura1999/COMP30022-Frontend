@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  height: 91vh;
+  height: 90vh;
 }
 
 .App-logo {
@@ -39,3 +39,6 @@
   }
 }
 
+button {
+  cursor: pointer;
+}

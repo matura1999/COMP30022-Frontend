@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import "../styles/header.css";
 
 export default class Header extends Component {
@@ -7,7 +7,6 @@ export default class Header extends Component {
         super(props)
         this.state = {
             login: false,
-            redirect: null
         }
     }
 
@@ -18,21 +17,21 @@ export default class Header extends Component {
     render(){
         return (
             <div class="navbar">
-                <NavLink exact to="/" class="logo-link">
-                    <button class="logo" to="/yes">🍋 Mojito</button>
-                </NavLink>
+                <Link exact to="/" class="logo-link">
+                    <button class="logo">🍋 Mojito</button>
+                </Link>
                 
                 <form class="search-bar" action="#">
                     <input type="text" placeholder="Search Portfolio" name="search-protfolio"/>
                     <button class="search-button" type="submit"><i class="fa fa-search"/></button>
                 </form>
                 <div class="sign-button-container">
-                    <NavLink exact to="/signin" class="sign-in">
+                    <Link exact to="/signin" class="sign-in">
                         <button class="sign-in-button">Sign in</button>
-                    </NavLink>
-                    <NavLink exact to="/signup" class="sign-up">
+                    </Link>
+                    <Link exact to="/signup" class="sign-up">
                         <button class="sign-up-button">Sign up</button>
-                    </NavLink>
+                    </Link>
                 </div>
             </div>
             
