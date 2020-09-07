@@ -9,40 +9,43 @@
 .main-page {
     flex-grow: 1;
     background-color: #F8F8F8;
-    /* align-items: center; */
-}
-
-.signup-box {
-    /* background-color: lightblue; */
-    height: 20%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1%;
 }
 
 .signup-form {
     height: 70%;
     width: 100%;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 13%;
     font-size: 25px;
     color: #6b6868;
+    margin-bottom: 1%;
 }
 
 h2 {
     display: flex;
     justify-content: center;
-
     align-items: center;
-
     margin-bottom: 13%;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .signin-redirect {
