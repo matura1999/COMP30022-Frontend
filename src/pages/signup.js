@@ -33,7 +33,7 @@ export default class Signup extends Component {
             },
             body: JSON.stringify({ username: values.username, email: values.email, password: values.password })
         };
-        fetch('http://mojito-portfolio-backend.herokuapp.com/user/add', requestOptions)
+        fetch('https://mojito-portfolio-backend.herokuapp.com/user/add', requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {

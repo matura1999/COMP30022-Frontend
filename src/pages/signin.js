@@ -37,7 +37,7 @@ export default class Signin extends Component {
             },
             body: JSON.stringify({ username: values.username, password: values.password })
         };
-        fetch('http://mojito-portfolio-backend.herokuapp.com/user/find', requestOptions)
+        fetch('https://mojito-portfolio-backend.herokuapp.com/user/find', requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {
