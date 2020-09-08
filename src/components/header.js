@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import { Avatar} from 'antd'
 import "../styles/header.css";
-import HeaderLeft from "./header-left"
+import HeaderRight from "./header-right"
 
 export default class Header extends Component {
     constructor(props){
@@ -24,7 +24,7 @@ export default class Header extends Component {
                     <input type="text" placeholder="Search Portfolio" name="search-protfolio"/>
                     <button class="search-button" type="submit"><i class="fa fa-search"/></button>
                 </form>
-                <HeaderLeft/>
+                <HeaderRight/>
             </div>
             
         )

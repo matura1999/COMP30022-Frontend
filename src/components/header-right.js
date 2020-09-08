@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import { Avatar, Button} from 'antd'
 import "../styles/header.css";
 
-export default class HeaderLeft extends Component {
+export default class HeaderRight extends Component {
     constructor(props){
         super(props)
         this.state = {
