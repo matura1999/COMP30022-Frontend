@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
-import { Avatar, Button} from 'antd'
+import { Avatar, Button, Menu, Dropdown, message} from 'antd'
 import "../styles/header.css";
+import { DownOutlined, UserOutlined} from '@ant-design/icons';
 
 export default class HeaderRight extends Component {
     constructor(props){
@@ -15,6 +16,37 @@ export default class HeaderRight extends Component {
         sessionStorage.setItem('authorised', false);
         sessionStorage.removeItem('authorised')
     }
+
+    menu = (
+        <Menu>
+            <Menu.Item>
+                <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
+                    My Portfolio
+                </a>
+            </Menu.Item>
+            <Menu.Item>
+                <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
+                    User Centre
+                </a>
+            </Menu.Item>
+            <Menu.Item>
+                <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
+                    Upload Content
+                </a>
+            </Menu.Item>
+            <Menu.Item>
+                <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
+                    Download Content
+                </a>
+            </Menu.Item>
+            <Menu.Divider />
+            <Menu.Item>
+                <a type="primary" block onClick={() => this.onLogout}>
+                    Sign out
+                </a>
+            </Menu.Item>
+        </Menu>
+    );
     
     render(){
         if (!sessionStorage.getItem('authorised')){
@@ -31,8 +63,12 @@ export default class HeaderRight extends Component {
         } else {
             return (
                 <div class="sign-button-container">
-                    <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" style={{marginLeft:"25%"}} size="large"/>
-                    <Button type="primary" block onClick={() => this.onLogout}>Log out</Button>
+                    <Dropdown overlay={this.menu} placement="bottomRight">
+                        <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                            <Avatar style={{ backgroundColor: '#8dc63f' }} icon={<UserOutlined />} />
+                        </a>
+                    </Dropdown>
+
                 </div>
             )
         } 
