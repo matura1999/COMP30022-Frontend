@@ -116,7 +116,7 @@ export default class Signin extends Component {
                 <div class="login-box">
                     <h2 class="title">
                         <bold>
-                            You have already signed in
+                            You have already signed in!
                         </bold>
                     </h2>
                 </div>

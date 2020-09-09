@@ -1,0 +1,12 @@
+.banner{
+    background-image: url('../assets/Banner 1920x126.png');
+    background-repeat:no-repeat;
+    background-size: 100vw;
+    font-size: 60px;
+    font-weight: 1000;
+    color: white;
+}
+
+.site-layout-background {
+    background: #fff;
+}

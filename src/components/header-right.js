@@ -2,7 +2,14 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import { Avatar, Button, Menu, Dropdown, message} from 'antd'
 import "../styles/header.css";
-import { DownOutlined, UserOutlined} from '@ant-design/icons';
+import {
+    FolderViewOutlined,
+    IdcardOutlined,
+    UploadOutlined,
+    AppstoreOutlined,
+    UserOutlined,
+    LogoutOutlined
+}from '@ant-design/icons';
 
 export default class HeaderRight extends Component {
     constructor(props){
@@ -20,29 +27,29 @@ export default class HeaderRight extends Component {
     menu = (
         <Menu>
             <Menu.Item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
-                    My Portfolio
-                </a>
+                <Link exact to='/username/portfolio'>
+                    <FolderViewOutlined/> My Portfolio
+                </Link>
             </Menu.Item>
             <Menu.Item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
-                    User Centre
-                </a>
+                <Link exact to='/userCentre'>
+                    <IdcardOutlined/> User Centre
+                </Link>
             </Menu.Item>
             <Menu.Item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
-                    Upload Content
-                </a>
+                <Link exact to='/username/uploadContent'>
+                    <UploadOutlined/> Upload Content
+                </Link>
             </Menu.Item>
             <Menu.Item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
-                    Download Content
-                </a>
+                <Link exact to='/username/manageContent'>
+                    <AppstoreOutlined/> Manage Content
+                </Link>
             </Menu.Item>
             <Menu.Divider />
             <Menu.Item>
                 <a type="primary" block onClick={() => this.onLogout}>
-                    Sign out
+                    <LogoutOutlined/> Sign out
                 </a>
             </Menu.Item>
         </Menu>

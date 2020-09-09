@@ -3,6 +3,7 @@ import Header from './components/header';
 import Intro from './pages/intro';
 import Signup from './pages/signup';
 import Signin from './pages/signin';
+import UserCentre from './pages/userCentre';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 
@@ -22,6 +23,9 @@ class App extends Component {
             />
             <Route exact path='/signin'
               exact component = {Signin}
+            />
+            <Route exact path='/usercentre'
+              exact component = {UserCentre}
             />
           </Switch>
         </div>
