@@ -22,25 +22,25 @@ export default class UserInfoBasic extends Component {
             <div class = "all-but-header">
                 <div class="banner"><h1>User Centre</h1></div>
                         <Row>
-                            <Col span={4}></Col>
-                            <Col span={16}>
+                            <Col span={3}></Col>
+                            <Col span={18}>
                                 <div className="sider-and-content">
                                 <Row>
-                                    <Col span={8} align={'middle'} >
+                                    <Col span={6} align={'middle'} >
                                         <Sider/>
                                     </Col>
-                                    <Col span={12} offset={1} >
+                                    <Col span={12} offset={6} >
                                         <div class = "content">This site is under heavy construction. </div>
                                     </Col>
                                 </Row>
                                 </div>
                             </Col>
-                            <Col span={4}></Col>
+                            <Col span={3}></Col>
                         </Row>
 
-                <br></br><br></br><br></br>
-                <Row justify={'center'} gutter={10}>
-                    <Col>
+
+                <Row>
+                    <Col span={24}>
                     <div class = "footer">Mojito Online Portfolio ©2020 Created by Team Mojito</div>
                     </Col>
                 </Row>

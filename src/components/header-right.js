@@ -69,7 +69,7 @@ export default class HeaderRight extends Component {
             )
         } else {
             return (
-                <div class="sign-button-container">
+                <div class="avatar-container">
                     <Dropdown overlay={this.menu} placement="bottomRight">
                         <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                             <Avatar style={{ backgroundColor: '#8dc63f'}} icon={<UserOutlined />} />
