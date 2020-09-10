@@ -26,7 +26,7 @@ export default class Sider extends Component {
         mode="inline"
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['sub1']}
-        style={{ height: '100%'}}
+        style={{ height: '100%', backgroundColor: '#e6edea'}}
         >
         <SubMenu key="sub1" icon={<IdcardOutlined/>} title="User Info">
             <Menu.Item key="1" >
@@ -40,7 +40,7 @@ export default class Sider extends Component {
             </Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" icon={<UploadOutlined/>} title="Upload Content">
-                <Menu.Item key="5">
+                <Menu.Item key="5" >
                 <Link exact to='/uploadContent-files'><FileAddOutlined />Upload Files</Link>
             </Menu.Item>
             <Menu.Item key="6">

@@ -26,7 +26,9 @@ export default class UserInfoBasic extends Component {
                             <Col span={16}>
                                 <div className="sider-and-content">
                                 <Row>
-                                    <Col span={8} align={'middle'} >  <Sider/> </Col>
+                                    <Col span={8} align={'middle'} >
+                                        <Sider/>
+                                    </Col>
                                     <Col span={12} offset={1} >
                                         <div class = "content">This site is under heavy construction. </div>
                                     </Col>
