@@ -13,11 +13,11 @@ export default class Header extends Component {
     }
     
     render(){
-        
+
         return (
             <div class="navbar">
                 <Link exact to="/" class="logo-link">
-                    <button class="logo">🍋 Mojito</button>
+                    <button class="logo">      🍋Mojito</button>
                 </Link>
                 
                 <form class="search-bar" action="#">

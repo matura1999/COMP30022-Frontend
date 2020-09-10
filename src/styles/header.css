@@ -21,9 +21,21 @@
     border: none;
     left: 5%;
     background: transparent;
+    color: #282c34;
   }
-  
-  .navbar .logo {
+
+  .logo {
+    width: 100%;
+    height: 100%;
+    flex: max-content;
+    border: none;
+    font-size: 30px;
+    font-weight: 1000;
+    background: transparent;
+
+  }
+
+  .navbar  {
     width: 100%; 
     height: 100%;
     border: none;
