@@ -26,7 +26,7 @@ export default class Sider extends Component {
         mode="inline"
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['sub1']}
-        style={{ height: '100%', backgroundColor: '#e6edea'}}
+        style={{ height: '100%'}}
         >
         <SubMenu key="sub1" icon={<IdcardOutlined/>} title="User Info">
             <Menu.Item key="1" >
