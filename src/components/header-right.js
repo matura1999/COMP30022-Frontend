@@ -32,8 +32,8 @@ export default class HeaderRight extends Component {
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link exact to='/userCentre'>
-                    <IdcardOutlined/> User Centre
+                <Link exact to='/userInfo-basic'>
+                    <IdcardOutlined/> User Info
                 </Link>
             </Menu.Item>
             <Menu.Item>
