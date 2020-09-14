@@ -15,17 +15,27 @@ export default class Header extends Component {
     render(){
 
         return (
-            <div class="navbar">
-                <Link exact to="/" class="logo">
-                    🍋Mojito
-                </Link>
 
-                <form class="search-bar" action="#">
-                    <input type="text" placeholder="Search Portfolio" name="search-protfolio"/>
-                    <button class="search-button" type="submit"><i class="fa fa-search"/></button>
-                </form>
-                <HeaderRight/>
+            <div class="navbar">
+                <Row justify="center" align="middle">
+                    <Col span={1}></Col>
+                    <Col span={7}>
+                        <Link exact to="/" class="logo">
+                            🍋Mojito
+                        </Link>
+                    </Col>
+                    <Col span={7}>
+                        <form className="search-bar" action="#">
+                            <input type="text" placeholder="Search Portfolio" name="search-protfolio"/>
+                            <button className="search-button" type="submit"><i className="fa fa-search"/></button>
+                        </form>
+                    </Col>
+
+                    <Col span={8} ><HeaderRight/></Col>
+                    <Col span={1}></Col>
+                </Row>
             </div>
+
 
         )
     }
