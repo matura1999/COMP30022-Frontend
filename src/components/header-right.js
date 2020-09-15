@@ -30,17 +30,17 @@ export default class HeaderRight extends Component {
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link exact to='/user/userInfo-basic'>
+                <Link exact to='/userCenter/userInfo/basic'>
                     <IdcardOutlined/> User Info
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link exact to='/user/uploadContent'>
+                <Link exact to='/userCenter/uploadContent/files'>
                     <UploadOutlined/> Upload Content
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link exact to='/user/manageContent'>
+                <Link exact to='/userCenter/manageContent/files'>
                     <AppstoreOutlined/> Manage Content
                 </Link>
             </Menu.Item>
