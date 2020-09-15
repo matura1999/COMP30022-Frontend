@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class UserInfoBasic extends Component {
+export default class UploadEssays extends Component {
     render() {
         return (
             <span>Hello World</span>

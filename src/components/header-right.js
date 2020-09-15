@@ -15,9 +15,6 @@ import {
 export default class HeaderRight extends Component {
     constructor(props){
         super(props)
-        this.state = {
-            login: false,
-        }
     }
 
     onLogout = () =>{
@@ -33,17 +30,17 @@ export default class HeaderRight extends Component {
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link exact to='/userInfo-basic'>
+                <Link exact to='/user/userInfo-basic'>
                     <IdcardOutlined/> User Info
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link exact to='/username/uploadContent'>
+                <Link exact to='/user/uploadContent'>
                     <UploadOutlined/> Upload Content
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link exact to='/username/manageContent'>
+                <Link exact to='/user/manageContent'>
                     <AppstoreOutlined/> Manage Content
                 </Link>
             </Menu.Item>
