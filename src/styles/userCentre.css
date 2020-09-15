@@ -1,7 +1,8 @@
 .banner{
     background-image: url('../assets/Banner 1920x90.png');
+    display: flex;
+    background-size: contain;
     background-repeat:no-repeat;
-    background-size: 100vw;
 }
 
 h1 {

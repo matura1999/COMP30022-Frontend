@@ -1,11 +1,11 @@
 .intro-page {
-    flex-grow: 1;
+
     display: flex;
     flex-direction: column;
     background-image: url('../assets/HomepageDecoration 1174x990.png');
     background-size: contain;
     background-repeat:no-repeat;
-    background-position:right
+    background-position:right;
   }
 
 .intro-page .slogan {
