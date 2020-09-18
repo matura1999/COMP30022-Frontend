@@ -1,6 +1,10 @@
-.App-body {
+.App {
   display: flex;
   flex-direction: column;
+
+}
+
+.App-body {
   height: 90vh;
 }
 
@@ -34,6 +38,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
