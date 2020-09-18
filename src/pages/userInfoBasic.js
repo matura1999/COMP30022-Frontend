@@ -47,16 +47,17 @@ export default class UserInfoBasic extends Component {
             <div>
                 <div class="avatar">
                     <Row>
-                        <Col span={6}>
+                        <Col span={4} offset={4}>
                         <Avatar style={{backgroundColor: '#8dc63f'}} size={80} icon={<UserOutlined/>}/>
                         </Col>
-                        <Col span={18}>
+                        <Col span={12}>
                         <div class="upload-button">
                             <Upload {...this.props}>
                                 <Button icon={<UploadOutlined/>}>Upload New Avatar</Button>
                             </Upload>
                         </div>
                         </Col>
+                        <Col span={4}></Col>
                     </Row>
                 </div>
                 <Form {...layout} name="nest-messages" onFinish={this.onFinish} validateMessages={validateMessages}>
