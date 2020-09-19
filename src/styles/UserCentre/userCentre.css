@@ -1,32 +1,32 @@
 .banner {
-  background-image: url("../../assets/Banner 1920x90.png");
-  background-repeat: no-repeat;
-  background-size: 100vw;
+    background-image: url("../../assets/Banner 1920x90.png");
+    background-repeat: no-repeat;
+    background-size: 100vw;
 }
 
 h1 {
-  font-size: 45px;
-  font-weight: 900;
-  color: white;
-  position: relative;
-  text-indent: 240px;
+    font-size: 45px;
+    font-weight: 900;
+    color: white;
+    position: relative;
+    text-indent: 240px;
 }
 
 .sider-and-content {
-  background: white;
-  border: #e1e1e1 1px groove;
-  border-radius: 10px;
-  padding: 20px;
-  min-height: 600px;
+    background: white;
+    border: #e1e1e1 1px groove;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 600px;
 }
 
 .footer {
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
 }
 
 .content {
-  height: 100%;
-  margin-left: 20px;
-  /* overflow: scroll; */
+    height: 100%;
+    margin-left: 20px;
+    overflow: overlay;
 }

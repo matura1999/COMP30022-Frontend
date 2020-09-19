@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/UserCentre/uploadFiles.css";
+// import "../styles/UserCentre/uploadFiles.css";
 import { Upload, message } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
 
