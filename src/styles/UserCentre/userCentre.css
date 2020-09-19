@@ -1,6 +1,6 @@
-.banner{
-    background-image: url('../assets/Banner 1920x90.png');
-    background-repeat:no-repeat;
+.banner {
+    background-image: url('../../assets/Banner 1920x90.png');
+    background-repeat: no-repeat;
     background-size: 100vw;
 }
 
@@ -13,7 +13,7 @@ h1 {
 }
 
 
-.sider-and-content{
+.sider-and-content {
     background: white;
     border: #e1e1e1 1px groove;
     border-radius: 10px;
@@ -21,8 +21,13 @@ h1 {
     min-height: 600px;
 }
 
-.footer{
+.footer {
     text-align: center;
     padding: 20px;
 }
 
+.content {
+    height: 100%;
+    margin-left: 20px;
+    /* overflow: scroll; */
+}
