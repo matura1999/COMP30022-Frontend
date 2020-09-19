@@ -75,6 +75,7 @@ export default class HeaderRight extends Component {
             >
               <Avatar
                 style={{ backgroundColor: "#8dc63f" }}
+                size={40}
                 icon={<UserOutlined />}
               />
             </a>

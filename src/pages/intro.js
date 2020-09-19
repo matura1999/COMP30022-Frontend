@@ -11,7 +11,7 @@ export default class Intro extends Component {
         </div>
         <div class="intro-text">
           Mojito is the online portfolio platform to make your life easier as a
-          university student. From archiving your acadmic work to sharing your
+          university student. From archiving your academic work to sharing your
           thoughts and reflections, you can assemble and maintain your
           E-portfolio like a pro.
         </div>
