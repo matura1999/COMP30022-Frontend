@@ -4,6 +4,15 @@
 
 .item {
     margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconAndInfo {
+    display: flex;
+    align-items: center;
+
 }
 
 .typeIcon {
@@ -12,8 +21,18 @@
     height: 100px;
     width: 100px;
     font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 20px;
 }
 
+.info {
+    display: flex;
+    flex-direction: column;
+
+}
 
 .title {
     font-size: 30px;
@@ -21,7 +40,9 @@
 }
 
 .typeSizeContainer {
-    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
 }
 
 .type,
