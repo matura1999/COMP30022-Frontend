@@ -60,7 +60,7 @@ export default class UserInfoBasic extends Component {
                         <Col span={4}></Col>
                     </Row>
                 </div>
-                <Form {...layout} name="basicInfo" onFinish={this.onFinish} validateMessages={validateMessages}>
+                <Form {...layout} name="basic-info" onFinish={this.onFinish} validateMessages={validateMessages}>
                     <Form.Item label="Username">
                         <span className="username">abcdefg </span>
                     </Form.Item>

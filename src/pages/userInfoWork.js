@@ -15,8 +15,8 @@ export default class UserInfoWork extends Component {
 
     render() {
         return (
-            <Form name="workInfo" onFinish={this.onFinish} autoComplete="off">
-                <Form.List name="users">
+            <Form name="work-info" onFinish={this.onFinish} autoComplete="off">
+                <Form.List name="records">
                     {(fields, { add, remove }) => {
                         return (
                             <div>
@@ -48,16 +48,16 @@ export default class UserInfoWork extends Component {
                                                 <Input placeholder="Job" />
                                             </Form.Item>
                                             </Col>
-                                        <Col span={24}>
-                                        <Form.Item
-                                            {...field}
-                                            name={[field.name, 'job-desc']}
-                                            fieldKey={[field.fieldKey, 'job-desc']}
-                                            rules={[{ required: true, message: 'Missing job description' }]}
-                                        >
-                                            <Input.TextArea placeholder="Description" />
-                                        </Form.Item>
-                                        </Col>
+                                            <Col span={24}>
+                                            <Form.Item
+                                                {...field}
+                                                name={[field.name, 'job-desc']}
+                                                fieldKey={[field.fieldKey, 'job-desc']}
+                                                rules={[{ required: true, message: 'Missing job description' }]}
+                                            >
+                                                <Input.TextArea placeholder="Description" />
+                                            </Form.Item>
+                                            </Col>
                                         </Row>
 
                                         <MinusCircleOutlined
@@ -86,7 +86,7 @@ export default class UserInfoWork extends Component {
 
                 <Form.Item>
                     <Button type="primary" htmlType="submit">
-                        Submit
+                        Save
                     </Button>
                 </Form.Item>
             </Form>

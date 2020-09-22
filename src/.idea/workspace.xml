@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0d242ce-2cad-434e-b10f-9426151fe677" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pages/userInfoBasic.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userInfoBasic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/userInfoEdu.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userInfoEdu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/userInfoWork.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userInfoWork.js" afterDir="false" />
     </list>
@@ -36,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/userInfoBasic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+            <state relative-caret-position="-257">
+              <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -48,10 +49,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/userInfoWork.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+            <state relative-caret-position="814">
+              <caret line="66" column="42" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="66" selection-end-column="42" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#973#1140#0" />
+                <element signature="e#783#1252#0" />
+                <element signature="e#1941#2290#0" />
+                <element signature="e#2438#2956#0" />
               </folding>
             </state>
           </provider>
@@ -60,10 +65,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/userInfoEdu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+            <state relative-caret-position="401">
+              <caret line="60" column="69" selection-start-line="60" selection-start-column="69" selection-end-line="60" selection-end-column="69" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#951#1908#0" />
+                <element signature="e#2067#2465#0" />
+                <element signature="e#2624#2802#0" />
               </folding>
             </state>
           </provider>
@@ -174,12 +182,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600658795661</updated>
-      <workItem from="1600658796933" duration="11281000" />
+      <workItem from="1600658796933" duration="13944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11281000" />
+    <option name="totallyTimeSpent" value="13944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -232,8 +240,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/userInfoBasic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+        <state relative-caret-position="-257">
+          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -242,20 +250,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/userInfoWork.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+        <state relative-caret-position="814">
+          <caret line="66" column="42" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="66" selection-end-column="42" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#973#1140#0" />
+            <element signature="e#783#1252#0" />
+            <element signature="e#1941#2290#0" />
+            <element signature="e#2438#2956#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/userInfoEdu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        <state relative-caret-position="401">
+          <caret line="60" column="69" selection-start-line="60" selection-start-column="69" selection-end-line="60" selection-end-column="69" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#951#1908#0" />
+            <element signature="e#2067#2465#0" />
+            <element signature="e#2624#2802#0" />
           </folding>
         </state>
       </provider>

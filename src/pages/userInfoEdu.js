@@ -9,22 +9,22 @@ export default class UserInfoEdu extends Component {
 
     render() {
         return (
-            <Form name="eduInfo" onFinish={this.onFinish} autoComplete="off">
-                <Form.List name="users">
+            <Form name="edu-info" onFinish={this.onFinish} autoComplete="off">
+                <Form.List name="records">
                     {(fields, { add, remove }) => {
                         return (
                             <div>
                                 {fields.map(field => (
                                     <Space key={field.key} align="baseline">
                                         <Row gutter={16}>
-                                            <Col span={8}>
+                                            <Col span={6}>
                                                 <Form.Item
                                                     {...field}
                                                     name={[field.name, 'level']}
                                                     fieldKey={[field.fieldKey, 'level']}
                                                     rules={[{ required: true, message: 'Please select level of education! ' }]}
                                                 >
-                                                    <Select style={{ width: 200 }} placeholder="Level">
+                                                    <Select style={{ width: 180 }} placeholder="Level">
                                                         <Select.Option value="secondary">Secondary Education</Select.Option>
                                                         <Select.Option value="subDegree">Sub-degree</Select.Option>
                                                         <Select.Option value="bachelor">Bachelor</Select.Option>
@@ -32,7 +32,7 @@ export default class UserInfoEdu extends Component {
                                                     </Select>
                                                 </Form.Item>
                                             </Col>
-                                            <Col span={8}>
+                                            <Col span={6}>
                                                 <Form.Item
                                                     {...field}
                                                     name={[field.name, 'institution']}
@@ -42,13 +42,26 @@ export default class UserInfoEdu extends Component {
                                                     <Input placeholder="Institution" />
                                                 </Form.Item>
                                             </Col>
-                                            <Col span={8}>
+                                            <Col span={6}>
                                                 <Form.Item
                                                     {...field}
                                                     name={[field.name, 'major']}
                                                     fieldKey={[field.fieldKey, 'major']}
                                                 >
                                                     <Input placeholder="Major (optional)" />
+                                                </Form.Item>
+                                            </Col>
+                                            <Col span={6}>
+                                                <Form.Item
+                                                    {...field}
+                                                    name={[field.name, 'status']}
+                                                    fieldKey={[field.fieldKey, 'status']}
+                                                    rules={[{ required: true, message: 'Please select status! ' }]}
+                                                >
+                                                    <Select style={{ width: 180 }} placeholder="Status">
+                                                        <Select.Option value="ongoing">Ongoing</Select.Option>
+                                                        <Select.Option value="finished">Finished</Select.Option>
+                                                    </Select>
                                                 </Form.Item>
                                             </Col>
                                         </Row>
@@ -79,7 +92,7 @@ export default class UserInfoEdu extends Component {
 
                 <Form.Item>
                     <Button type="primary" htmlType="submit">
-                        Submit
+                        Save
                     </Button>
                 </Form.Item>
             </Form>
