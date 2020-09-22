@@ -14,6 +14,8 @@ class FileList extends React.Component {
 
     if (sortMethod === "byName") {
       listAfterSearch.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortMethod === "byDate") {
+
     }
 
     listAfterSearch.forEach(({ name, type, date, size }) => {
