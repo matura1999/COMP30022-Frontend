@@ -21,7 +21,7 @@ export default class UserInfoWork extends Component {
                         return (
                             <div>
                                 {fields.map(field => (
-                                    <Space key={field.key} style={{ display: 'flex', marginBottom: 8 }} align="start">
+                                    <Space key={field.key} align="baseline">
                                         <Row gutter={16}>
                                             <Col span={8}>
                                             <Form.Item name="range-picker"  {...this.rangeConfig}>
@@ -30,7 +30,9 @@ export default class UserInfoWork extends Component {
                                             </Col>
                                             <Col span={8}>
                                             <Form.Item
-                                                name="company"
+                                                {...field}
+                                                name={[field.name, 'company']}
+                                                fieldKey={[field.fieldKey, 'company']}
                                                 rules={[{ required: true, message: 'Missing company name' }]}
                                             >
                                                 <Input placeholder="Company" />
@@ -38,7 +40,9 @@ export default class UserInfoWork extends Component {
                                             </Col>
                                             <Col span={8}>
                                             <Form.Item
-                                                name="job"
+                                                {...field}
+                                                name={[field.name, 'job']}
+                                                fieldKey={[field.fieldKey, 'job']}
                                                 rules={[{ required: true, message: 'Missing job name' }]}
                                             >
                                                 <Input placeholder="Job" />
@@ -47,7 +51,8 @@ export default class UserInfoWork extends Component {
                                         <Col span={24}>
                                         <Form.Item
                                             {...field}
-                                            name="job-desc"
+                                            name={[field.name, 'job-desc']}
+                                            fieldKey={[field.fieldKey, 'job-desc']}
                                             rules={[{ required: true, message: 'Missing job description' }]}
                                         >
                                             <Input.TextArea placeholder="Description" />

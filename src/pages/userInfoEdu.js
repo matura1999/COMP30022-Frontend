@@ -15,14 +15,16 @@ export default class UserInfoEdu extends Component {
                         return (
                             <div>
                                 {fields.map(field => (
-                                    <Space key={field.key} style={{ display: 'flex', marginBottom: 8 }} align="start">
+                                    <Space key={field.key} align="baseline">
                                         <Row gutter={16}>
                                             <Col span={8}>
                                                 <Form.Item
-                                                    name = "level"
+                                                    {...field}
+                                                    name={[field.name, 'level']}
+                                                    fieldKey={[field.fieldKey, 'level']}
                                                     rules={[{ required: true, message: 'Please select level of education! ' }]}
                                                 >
-                                                    <Select>
+                                                    <Select style={{ width: 200 }} placeholder="Level">
                                                         <Select.Option value="secondary">Secondary Education</Select.Option>
                                                         <Select.Option value="subDegree">Sub-degree</Select.Option>
                                                         <Select.Option value="bachelor">Bachelor</Select.Option>
@@ -32,14 +34,20 @@ export default class UserInfoEdu extends Component {
                                             </Col>
                                             <Col span={8}>
                                                 <Form.Item
-                                                    name="institution"
+                                                    {...field}
+                                                    name={[field.name, 'institution']}
+                                                    fieldKey={[field.fieldKey, 'institution']}
                                                     rules={[{ required: true, message: 'Missing institution name' }]}
                                                 >
                                                     <Input placeholder="Institution" />
                                                 </Form.Item>
                                             </Col>
                                             <Col span={8}>
-                                                <Form.Item name="major">
+                                                <Form.Item
+                                                    {...field}
+                                                    name={[field.name, 'major']}
+                                                    fieldKey={[field.fieldKey, 'major']}
+                                                >
                                                     <Input placeholder="Major (optional)" />
                                                 </Form.Item>
                                             </Col>
