@@ -15,10 +15,6 @@
   font-weight: 900;
 }
 
-.logo:hover {
-  text-decoration: none;
-}
-
 .navbar {
   height: 10vh;
   border: 1px solid #e1e1e1;
@@ -104,14 +100,4 @@ form.search-bar button {
 
 .avatar-container {
   float: right;
-}
-
-.ant-dropdown-menu-item > a:hover {
-  text-decoration: none;
-}
-
-.ant-avatar {
-  display: inline-flex !important;
-  justify-content: center;
-  align-items: center;
 }

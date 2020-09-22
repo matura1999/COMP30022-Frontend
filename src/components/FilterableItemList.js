@@ -39,7 +39,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <form className="searchAndSortBar row d-flex justify-content-between">
+      <form className="searchAndSortBar">
         <input
           className="searchBar"
           type="text"
