@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Upload, Button, message, Modal, Input } from 'antd';
 import {PlusOutlined, UploadOutlined} from '@ant-design/icons';
-import reqwest from 'reqwest';
+import request from 'request';
 
 function getBase64(file) {
     return new Promise((resolve, reject) => {
@@ -51,7 +51,7 @@ export default class UploadMedias extends Component {
         });
 
         // You can use any AJAX library you like
-        reqwest({
+        request({
             url: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
             method: 'post',
             processData: false,
