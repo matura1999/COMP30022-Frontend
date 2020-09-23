@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Upload, Button, message, Modal, Input } from 'antd';
 import {PlusOutlined, UploadOutlined} from '@ant-design/icons';
 import reqwest from 'reqwest';
+import "../styles/UserCentre/uploadMedia.css";
 
 function getBase64(file) {
     return new Promise((resolve, reject) => {
@@ -64,6 +65,7 @@ export default class UploadMedias extends Component {
                 });
                 message.success('upload successfully.');
             },
+
             error: () => {
                 this.setState({
                     uploading: false,
@@ -82,14 +84,13 @@ export default class UploadMedias extends Component {
         let description
         if (descriptionBox) {
             description = (
-                <div>
-                    {/*<label htmlFor="description">Description:</label>*/}
+                <div className="description">
                     <br />
-                    <TextArea placeholder="Enter Description Here" allowClear onChange={onChange} rows={4} />
+                    <TextArea placeholder="Enter Description Here"  allowClear onChange={onChange} rows={5} />
                 </div>)
         }
         const uploadButton = (
-            <div>
+            <div className="description">
                 <PlusOutlined />
                 <div style={{ marginTop: 8 }}>Upload</div>
             </div>
@@ -116,32 +117,37 @@ export default class UploadMedias extends Component {
 
         return (
             <>
-                <Upload     props
-                            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-                            listType="picture-card"
-                            fileList={fileList}
-                            onPreview={this.handlePreview}
-                            onChange={this.handleChange}>
-                    {uploadButton}
-                </Upload>
-                <Modal
-                    visible={previewVisible}
-                    title={previewTitle}
-                    footer={null}
-                    onCancel={this.handleCancel}
-                >
-                    <img alt="example" style={{ width: '100%' }} src={previewImage} />
-                </Modal>
+                <div className="uploadIcon">
+                    <Upload     {...props}
+                                action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                                listType="picture-card"
+                                fileList={fileList}
+                                onPreview={this.handlePreview}
+                                onChange={this.handleChange}>
+                        {fileList.length >= 1 ? null : uploadButton}
+                    </Upload>
+                    <Modal
+                        visible={previewVisible}
+                        title={previewTitle}
+                        footer={null}
+                        onCancel={this.handleCancel}
+                    >
+                        <img alt="example" style={{ width: '100%' }} src={previewImage} />
+                    </Modal>
+                </div>
                 {description}
-                <Button
-                    type="primary"
-                    onClick={this.handleUpload}
-                    disabled={fileList.length === 0}
-                    loading={uploading}
-                    style={{ marginTop: 16 , backgroundColor: "#9ACD32"}}
-                >
-                    {uploading ? 'Uploading' : 'Start Upload'}
-                </Button>
+                <br/>
+                <div className="startUpload">
+                    <Button
+                        type="primary"
+                        onClick={this.handleUpload}
+                        disabled={fileList.length === 0}
+                        loading={uploading}
+                        style={{ marginTop: 16 , backgroundColor: "#9ACD32"}}
+                    >
+                        {uploading ? 'Uploading' : 'Start Upload'}
+                    </Button>
+                </div>
             </>
         );
     }
