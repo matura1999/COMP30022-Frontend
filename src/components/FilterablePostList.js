@@ -19,7 +19,7 @@ class PostList extends React.Component {
         }
 
         listAfterSearch.forEach(({ name, thumbnail, abstract, date }) => {
-            rows.push(<PostItem name={name} thumbnail={thumbnail} abstract={abstract} date={date} />);
+            rows.push(<PostItem name={name} thumbnail={<img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL"/>} abstract={abstract} date={date} />);
         });
 
         return <div className="postList">{rows}</div>;
