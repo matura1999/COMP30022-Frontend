@@ -6,7 +6,7 @@
 
 .searchBar {
     border: 1px solid #c2c0c0;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px 10px;
     margin-left: 30px;
     width: 50%;
@@ -16,7 +16,7 @@
 .sortBar {
     width: 30%;
     margin-right: 15px;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px 10px;
     border: 1px solid #c2c0c0;
     border-radius: 5px;
