@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Upload, Button, message, Modal, Input } from 'antd';
 import {PlusOutlined, UploadOutlined} from '@ant-design/icons';
-import reqwest from 'reqwest';
+import request from 'request';
+import { Row, Col } from 'antd';
 import "../styles/UserCentre/uploadMedia.css";
 
 function getBase64(file) {
@@ -52,7 +53,7 @@ export default class UploadMedias extends Component {
         });
 
         // You can use any AJAX library you like
-        reqwest({
+        request({
             url: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
             method: 'post',
             processData: false,
@@ -92,7 +93,7 @@ export default class UploadMedias extends Component {
         const uploadButton = (
             <div className="description">
                 <PlusOutlined />
-                <div style={{ marginTop: 8 }}>Upload</div>
+                <div style={{ marginTop: 8 }}>Add Media</div>
             </div>
         );
         const props = {
@@ -117,6 +118,8 @@ export default class UploadMedias extends Component {
 
         return (
             <>
+                <Row justify="center">
+                    <Col>
                 <div className="uploadIcon">
                     <Upload     {...props}
                                 action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
@@ -135,8 +138,15 @@ export default class UploadMedias extends Component {
                         <img alt="example" style={{ width: '100%' }} src={previewImage} />
                     </Modal>
                 </div>
+                    </Col>
+                </Row>
+                <Row justify="center">
+                    <Col span={20}>
                 {description}
-                <br/>
+                    </Col>
+                </Row>
+                <Row justify="center">
+                    <Col>
                 <div className="startUpload">
                     <Button
                         type="primary"
@@ -145,9 +155,11 @@ export default class UploadMedias extends Component {
                         loading={uploading}
                         style={{ marginTop: 16 , backgroundColor: "#9ACD32"}}
                     >
-                        {uploading ? 'Uploading' : 'Start Upload'}
+                        {uploading ? 'Uploading' : 'Upload Now'}
                     </Button>
                 </div>
+                    </Col>
+                </Row>
             </>
         );
     }

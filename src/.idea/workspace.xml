@@ -4,6 +4,9 @@
     <list default="true" id="e0d242ce-2cad-434e-b10f-9426151fe677" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/uploadMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/uploadMedias.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/UserCentre/component/FileItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/UserCentre/component/FileItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/UserCentre/component/FilterableItemList.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/UserCentre/component/FilterableItemList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/UserCentre/uploadMedia.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/UserCentre/uploadMedia.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,20 +20,71 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/UserCentre/component/FileItem.css">
+        <entry file="file://$PROJECT_DIR$/pages/uploadMedias.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1080" />
+            <state relative-caret-position="-1121">
+              <caret line="95" column="42" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#3803#4673#0" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/uploadMedias.js">
+        <entry file="file://$PROJECT_DIR$/styles/UserCentre/component/FileItem.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2960">
-              <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+            <state relative-caret-position="432">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/manageFiles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1620">
+              <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/FilterableItemList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2187">
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/FileItem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-603" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/UserCentre/component/FilterableItemList.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/UserCentre/uploadMedia.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -40,6 +94,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>req</find>
+      <find>qwe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -51,7 +106,10 @@
         <option value="$PROJECT_DIR$/pages/userInfoBasic.js" />
         <option value="$PROJECT_DIR$/pages/userInfoWork.js" />
         <option value="$PROJECT_DIR$/pages/userInfoEdu.js" />
+        <option value="$PROJECT_DIR$/styles/UserCentre/uploadMedia.css" />
         <option value="$PROJECT_DIR$/pages/uploadMedias.js" />
+        <option value="$PROJECT_DIR$/styles/UserCentre/component/FilterableItemList.css" />
+        <option value="$PROJECT_DIR$/styles/UserCentre/component/FileItem.css" />
       </list>
     </option>
   </component>
@@ -66,8 +124,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="290" />
-    <option name="y" value="-50" />
+    <option name="x" value="-15" />
+    <option name="y" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
   </component>
@@ -93,24 +151,6 @@
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="UserCentre" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="UserCentre" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -148,12 +188,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600658795661</updated>
-      <workItem from="1600658796933" duration="16111000" />
+      <workItem from="1600658796933" duration="20290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16111000" />
+    <option name="totallyTimeSpent" value="20290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -248,18 +288,59 @@
     <entry file="file://$PROJECT_DIR$/styles/header.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/UserCentre/component/FileItem.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/uploadMedias.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2960">
-          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        <state relative-caret-position="-1121">
+          <caret line="95" column="42" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#3803#4673#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/manageFiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/FileItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-603" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/FilterableItemList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2187">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/UserCentre/uploadMedia.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/UserCentre/component/FilterableItemList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/UserCentre/component/FileItem.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
