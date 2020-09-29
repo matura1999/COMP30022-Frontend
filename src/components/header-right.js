@@ -25,7 +25,7 @@ export default class HeaderRight extends Component {
   menu = (
     <Menu>
       <Menu.Item>
-        <Link exact to="/username/portfolio">
+        <Link exact to="/userPortfolio/info">
           <FolderViewOutlined /> My Portfolio
         </Link>
       </Menu.Item>
