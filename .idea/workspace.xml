@@ -26,17 +26,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="834c6a35-d075-48ae-aab8-cf3da347633e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/FilterableListOfPosts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ListOfPosts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/ListOfItem.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilterablePostList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterablePostList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manageEssays.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manageEssays.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/PostItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/PostItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/portfolioEssays.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/portfolioEssays.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
@@ -62,6 +76,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -89,6 +104,9 @@
       <workItem from="1600399166491" duration="2729000" />
       <workItem from="1600482604206" duration="1931000" />
       <workItem from="1600875984090" duration="1115000" />
+      <workItem from="1600912962153" duration="1113000" />
+      <workItem from="1601086885000" duration="890000" />
+      <workItem from="1601436621185" duration="2016000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master' into caroline&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <created>1600875699785</created>
@@ -152,5 +170,9 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="233" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1600875821658" />
+    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601436638405">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1601436638405" />
   </component>
 </project>
