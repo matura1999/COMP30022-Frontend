@@ -127,7 +127,7 @@ export default class UploadMedias extends Component {
                                 fileList={fileList}
                                 onPreview={this.handlePreview}
                                 onChange={this.handleChange}>
-                        {fileList.length >= 1 ? null : uploadButton}
+                        {fileList.length >= 5 ? null : uploadButton}
                     </Upload>
                     <Modal
                         visible={previewVisible}

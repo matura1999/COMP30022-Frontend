@@ -63,8 +63,8 @@ class List extends React.Component {
         const sortMethod = this.props.sortMethod;
         const rows = [];
 
-        const listAfterSearch = this.props.files.filter(({ name }) =>
-            name.toLowerCase().includes(filterText.toLowerCase())
+        const listAfterSearch = this.props.files.filter(({ description }) =>
+            description.toLowerCase().includes(filterText.toLowerCase())
         );
 
         if (sortMethod === "byDate") {
