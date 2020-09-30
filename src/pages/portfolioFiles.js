@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import ManageFiles from "../pages/manageFiles";
 
 export default class portfolioFiles extends Component {
-    render() {
-        return (
-            <div>Portfolio Files</div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <ManageFiles />
+      </div>
+    );
+  }
 }

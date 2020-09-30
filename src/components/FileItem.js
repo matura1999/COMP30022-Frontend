@@ -2,7 +2,30 @@
 import React from "react";
 import "../styles/UserCentre/component/FileItem.css";
 
-const FileItem = ({ name, type, size, date }) => (
+const deleteElement = (fileUrl) => {
+  const requestOptions = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({ key: fileUrl }),
+  };
+  fetch("https://mojito-portfolio-backend.herokuapp.com/files", requestOptions)
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.success === false) {
+        setTimeout(() => {
+          this.setState({
+            notice: res.error,
+          });
+        }, 300);
+      }
+    })
+    .then(window.location.reload(false));
+};
+
+const FileItem = ({ name, type, size, date, fileUrl }) => (
   <div className="container">
     <div className="item">
       <div className="iconAndInfo">
@@ -23,8 +46,22 @@ const FileItem = ({ name, type, size, date }) => (
       </div>
 
       <div className="options">
-        <button className="download">Download</button>
-        <button className="delete">Delete</button>
+        <a
+          href={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${fileUrl}`}
+          download
+        >
+          <button className="download">Download</button>
+        </a>
+
+        <button
+          className="delete"
+          onClick={(event) => {
+            event.preventDefault();
+            deleteElement(fileUrl);
+          }}
+        >
+          Delete
+        </button>
       </div>
     </div>
   </div>

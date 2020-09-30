@@ -16,8 +16,16 @@ class FileList extends React.Component {
       listAfterSearch.sort((a, b) => a.name.localeCompare(b.name));
     }
 
-    listAfterSearch.forEach(({ name, type, date, size }) => {
-      rows.push(<FileItem name={name} type={type} date={date} size={size} />);
+    listAfterSearch.forEach(({ name, type, date, size, fileUrl }) => {
+      rows.push(
+        <FileItem
+          name={name}
+          type={type}
+          date={date}
+          size={size}
+          fileUrl={fileUrl}
+        />
+      );
     });
 
     return <div className="fileList">{rows}</div>;
