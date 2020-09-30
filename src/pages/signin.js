@@ -40,6 +40,7 @@ export default class Signin extends Component {
         fetch('https://mojito-portfolio-backend.herokuapp.com/user/find', requestOptions)
             .then(res => res.json())
             .then(res => {
+                console.log(res)
                 if (res.success === false) {
                     setTimeout(() => {
                         this.setState({
@@ -48,6 +49,7 @@ export default class Signin extends Component {
                     }, 300);
                 } else {
                     sessionStorage.setItem('authorised', true);
+                    sessionStorage.setItem('user', res.data._id);
                     window.location.href = "/";
                 }
             })

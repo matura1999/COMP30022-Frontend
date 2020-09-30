@@ -85,36 +85,42 @@ export default class UserPage extends Component {
   };
 
   render() {
-    return (
-      <div class="all-but-header">
-        <div class="banner">
-          <h1>User Centre</h1>
-        </div>
-        <Row>
-          <Col span={3}></Col>
-          <Col span={18}>
-            <div className="sider-and-content">
-              <Row>
-                <Col span={6} align={"middle"}>
-                  <Sider selectKey={[selectKey]} openKey={[openKey]} />
-                </Col>
-                <Col span={18} offset={0} style={{ height: "600px" }}>
-                  <div class="content">{this.showContent()}</div>
-                </Col>
-              </Row>
-            </div>
-          </Col>
-          <Col span={3}></Col>
-        </Row>
+    if (sessionStorage.getItem('authorised')) {
+      return (
+        <div class="all-but-header">
+          <div class="banner">
+            <h1>User Centre</h1>
+          </div>
+          <Row>
+            <Col span={3}></Col>
+            <Col span={18}>
+              <div className="sider-and-content">
+                <Row>
+                  <Col span={6} align={"middle"}>
+                    <Sider selectKey={[selectKey]} openKey={[openKey]} />
+                  </Col>
+                  <Col span={18} offset={0} style={{ height: "600px" }}>
+                    <div class="content">{this.showContent()}</div>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+            <Col span={3}></Col>
+          </Row>
 
-        <Row>
-          <Col span={24}>
-            <div class="footer">
-              Mojito Online Portfolio ©2020 Created by Team Mojito
+          <Row>
+            <Col span={24}>
+              <div class="footer">
+                Mojito Online Portfolio ©2020 Created by Team Mojito
             </div>
-          </Col>
-        </Row>
-      </div>
-    );
+            </Col>
+          </Row>
+        </div>
+      );
+    } else {
+      return (
+        window.location.href='/signin'
+      )
+    }
   }
 }

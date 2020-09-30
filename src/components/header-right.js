@@ -18,8 +18,8 @@ export default class HeaderRight extends Component {
   }
 
   onLogout = () => {
-    sessionStorage.setItem("authorised", false);
-    sessionStorage.removeItem("authorised");
+    window.location.href = "/";
+    window.sessionStorage.clear()
   };
 
   menu = (
@@ -46,7 +46,7 @@ export default class HeaderRight extends Component {
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item>
-        <a type="primary" block onClick={() => this.onLogout}>
+        <a type="primary" block onClick={this.onLogout}>
           <LogoutOutlined /> Sign out
         </a>
       </Menu.Item>

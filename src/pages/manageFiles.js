@@ -41,6 +41,43 @@ const fileItemList = [
 ];
 
 export default class ManageFiles extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      notice: ''
+    }
+  }
+  
+  componentDidMount = () => {
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+        body: JSON.stringify({ user: sessionStorage.getItem('user'), path: "files" })
+    };
+    fetch('https://mojito-portfolio-backend.herokuapp.com/files', requestOptions)
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)
+            if (res.success === false) {
+                setTimeout(() => {
+                    this.setState({
+                        notice: res.error,
+                    });
+                }, 300);
+            } else {
+              setTimeout(() => {
+                this.setState({
+                    notice: res.message,
+                });
+              }, 300);
+            }
+      })
+  }
+
+
   render() {
     return (
       <div className="fileList">

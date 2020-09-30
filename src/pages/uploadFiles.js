@@ -4,11 +4,13 @@ import { Upload, message } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
 
 const { Dragger } = Upload;
-
+const sendingData = {user: sessionStorage.getItem('user'), path: 'files'};
 const props = {
   name: "file",
   multiple: true,
-  action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+  action: "https://mojito-portfolio-backend.herokuapp.com/files",
+  method: 'PUT',
+  data: sendingData,
   onChange(info) {
     const { status } = info.file;
     if (status !== "uploading") {
