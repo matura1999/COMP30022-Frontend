@@ -10,7 +10,7 @@ export default class ManageFiles extends Component {
     };
   }
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
     const requestOptions = {
       method: "POST",
       headers: {
@@ -22,7 +22,7 @@ export default class ManageFiles extends Component {
         path: "files",
       }),
     };
-    fetch(
+    await fetch(
       "https://mojito-portfolio-backend.herokuapp.com/files",
       requestOptions
     )
