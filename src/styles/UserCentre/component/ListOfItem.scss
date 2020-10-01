@@ -2,11 +2,15 @@
     border-bottom: 1px solid black;
 }
 
-.item {
+.p-item {
     margin: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.p-item:hover {
+    border: 1px solid black;
 }
 
 .iconAndInfo {
@@ -16,7 +20,6 @@
 }
 
 .thumbnail {
-    /* box-sizing: border-box; */
     background-color: #DFE88C;
     height: 100px;
     width: 150px;
@@ -44,10 +47,10 @@
     width: 200px;
 }
 
-.abstract {
+.p-abstract {
     font-size: 15px;
     font-weight: 500;
-    width: 500px;
+    width: 45%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -59,19 +62,3 @@
     font-weight: 100;
     color: #9e9e9e;
 }
-
-/* .edit,
-.delete {
-    font-size: 20px;
-    width: 60%;
-    background-color: transparent;
-    border: 0.5px solid #c2c0c0;
-    margin: 7px;
-    border-radius: 15px;
-}
-
-.download:hover,
-.delete:hover {
-    background-color: #8CC63E;
-    color: white;
-} */

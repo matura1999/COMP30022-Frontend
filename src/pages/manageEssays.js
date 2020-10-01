@@ -45,6 +45,28 @@ const postItemList = [
         date: "2019-09-01 01:01:00",
         thumbnail: 'https://static.billboard.com/files/2020/09/NCT-2020-RESONANCE-Pt-1-billboard-1548-1600784845-1024x677.jpg',
     },
+    {
+        name: "Ice Cream",
+        abstract: "Look so good, yeah, look so sweet (Hey)\n" +
+            "Lookin' good enough to eat\n" +
+            "Coldest with the kiss, so he call me ice cream\n" +
+            "Catch me in the fridge, right where the ice be\n" +
+            "Look so good, yeah, look so sweet (Hey)\n" +
+            "Baby, you deserve a treat",
+        date: "2018-09-01 01:01:00",
+        thumbnail: 'https://image7.uhdpaper.com/wallpaper/blackpink-ice-cream-members-uhdpaper.com-4K-7.2617.jpg'    },
+    {
+        name: "#",
+        abstract: "Eh, can't let it hide, burn\n" +
+            "Oh, the look in your eyes has changed (Hey!)\n" +
+            "The obstacles that were too high\n" +
+            "I'll show you, I'll go     over them\n" +
+            "Further with my thrilling eyes\n\n" +
+            "Follow me\n" +
+            "Being sharp, so what?",
+        date: "2019-09-01 01:01:00",
+        thumbnail: 'http://images6.fanpop.com/image/photos/42600000/LOONA-X-X-image-loo-CE-A0-CE-94-42662149-2250-1500.jpg',
+    },
 ];
 
 export default class ManageEssays extends Component {
