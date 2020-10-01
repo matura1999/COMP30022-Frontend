@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/UserCentre/component/ListOfItem.css";
+import "../styles/UserCentre/component/ListOfItem.scss";
 
 const ListOfPosts = ({ name, thumbnail, abstract, date }) => (
     <div className="container">
-        <div className="item">
+        <div className="p-item">
             <div className="iconAndInfo">
                 <div className="typeIconContainer">
                     <div className="thumbnail">{thumbnail}</div>
@@ -11,7 +11,7 @@ const ListOfPosts = ({ name, thumbnail, abstract, date }) => (
 
                 <div className="info">
                     <div className="title">{name}</div>
-                    <div className="abstract">{abstract}</div>
+                    <div className="p-abstract">{abstract}</div>
                     <div className="date">{date}</div>
                 </div>
             </div>
