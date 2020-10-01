@@ -17,12 +17,8 @@ import {
 let selectKey = "info";
 
 export default class UserPortfolio extends Component {
-    state = {
-        current: 'info',
-    };
-
     handleClick = e => {
-        console.log('click ', e);
+        console.log('click ', e.key);
         this.setState({ current: e.key });
     };
 
@@ -30,6 +26,7 @@ export default class UserPortfolio extends Component {
         super(props);
         this.state = {
             collapsed: false,
+            current: 'info',
         };
         this.setUpMenu(props.match.params.path, props.match.params.subpath);
     }
