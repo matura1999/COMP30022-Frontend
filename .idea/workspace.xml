@@ -25,7 +25,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834c6a35-d075-48ae-aab8-cf3da347633e" name="Default Changelist" comment="" />
+    <list default="true" id="834c6a35-d075-48ae-aab8-cf3da347633e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/PostItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListOfPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListOfPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manageEssays.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manageEssays.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/ListOfItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/ListOfItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/PostItem.css" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +49,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -70,12 +84,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sqlux\Documents\_COMP30022 IT Project\COMP30022-Frontend\src\styles\UserCentre\component" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\zixin lin\Documents\GitHub\COMP30022-Frontend\src\pages" />
       <recent name="C:\Users\zixin lin\Documents\GitHub\COMP30022-Frontend\src\styles\UserCentre" />
@@ -132,6 +149,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master' into caroline&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="526" y="194" key="#File_Watchers" timestamp="1601520461259">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="526" y="194" key="#File_Watchers/0.0.1280.720@0.0.1280.720" timestamp="1601520461259" />
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600778983167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -140,6 +161,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="217" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1600875699218" />
+    <state x="310" y="139" key="EditFileWatcherDialog" timestamp="1601520270952">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="310" y="139" key="EditFileWatcherDialog/0.0.1280.720@0.0.1280.720" timestamp="1601520270952" />
     <state width="775" height="163" key="GridCell.Tab.0.bottom" timestamp="1600779087848">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -156,17 +181,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="775" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600779087848" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1600779540213">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="121" y="54" key="MergeDialog" timestamp="1601458290107">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="121" y="54" key="MergeDialog/0.0.1280.720@0.0.1280.720" timestamp="1601458290107" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1601520056711">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600779540213" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1601520056711" />
     <state x="233" y="93" key="Vcs.Push.Dialog.v2" timestamp="1600875821658">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="233" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1600875821658" />
-    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601436638405">
+    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601458275515">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1601436638405" />
+    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1601458275515" />
   </component>
 </project>
