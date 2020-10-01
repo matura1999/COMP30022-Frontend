@@ -2,7 +2,7 @@
 import React from "react";
 import "../styles/UserCentre/component/FileItem.css";
 
-const deleteElement = (fileUrl) => {
+const deleteElement = async (fileUrl) => {
   const requestOptions = {
     method: "DELETE",
     headers: {
@@ -11,7 +11,7 @@ const deleteElement = (fileUrl) => {
     },
     body: JSON.stringify({ key: fileUrl }),
   };
-  fetch("https://mojito-portfolio-backend.herokuapp.com/files", requestOptions)
+  await fetch("https://mojito-portfolio-backend.herokuapp.com/files", requestOptions)
     .then((res) => res.json())
     .then((res) => {
       if (res.success === false) {
@@ -20,9 +20,10 @@ const deleteElement = (fileUrl) => {
             notice: res.error,
           });
         }, 300);
+      } else{
+        window.location.reload(false);
       }
     })
-    .then(window.location.reload(false));
 };
 
 const FileItem = ({ name, type, size, date, fileUrl }) => (
