@@ -14,7 +14,6 @@ export default class Header extends Component {
 
   render() {
     return (
-      // <div class="navbar">
       <Row className="navbar" justify="center" align="middle">
         <Col span={1}></Col>
         <Col span={7}>
@@ -40,7 +39,6 @@ export default class Header extends Component {
         </Col>
         <Col span={1}></Col>
       </Row>
-      // </div>
     );
   }
 }
