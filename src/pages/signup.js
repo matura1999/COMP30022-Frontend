@@ -44,6 +44,8 @@ export default class Signup extends Component {
                     }, 300);
                 } else {
                     sessionStorage.setItem('authorised', true);
+                    sessionStorage.setItem('user', res.id);
+                    sessionStorage.setItem('username', res.username);
                     window.location.href = "/";
                 }
             })

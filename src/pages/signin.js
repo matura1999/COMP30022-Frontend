@@ -49,7 +49,8 @@ export default class Signin extends Component {
                     }, 300);
                 } else {
                     sessionStorage.setItem('authorised', true);
-                    sessionStorage.setItem('user', res.data._id);
+                    sessionStorage.setItem('user', res.id);
+                    sessionStorage.setItem('username', res.username);
                     window.location.href = "/";
                 }
             })
