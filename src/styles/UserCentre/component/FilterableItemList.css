@@ -23,7 +23,22 @@
 }
 
 .item{
-    display: inline-block;
-    justify-content: space-around;
-    flex-wrap:wrap;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+}
+
+.item::after {
+             content: "";
+             width:200px;
+         }
+
+.media_image{
+    width:200px !important;
+    height:150px !important;
+
+}
+
+.media_card{
+
 }

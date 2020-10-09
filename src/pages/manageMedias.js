@@ -80,7 +80,6 @@ class List extends React.Component {
                             <img width="150px" height="150px" alt={alt} src={source}/>
                         }
                         actions={[
-                            <ZoomInOutlined />,
                             <EditOutlined key="edit" />,
                             <DeleteOutlined key="delete" />,
                         ]}

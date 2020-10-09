@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import "../styles/UserCentre/component/FilterableItemList.css";
-import {  Popover, Button, Card } from 'antd';
-import { EditOutlined,  ZoomInOutlined, DeleteOutlined} from '@ant-design/icons';
+import { Card , Image} from 'antd';
 
 const { Meta } = Card;
 
@@ -24,14 +23,28 @@ const mediaItemList = [
     },
     {
         name: "title",
-        source: "https://www.w3schools.com/images/w3schools_green.jpg",
+        source: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
         alt: "aa",
         time: "2020-09-01 01:01:00",
         description: "This is the description"
     },
     {
         name: "title",
-        source: "https://www.w3schools.com/images/w3schools_green.jpg",
+        source: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+        alt: "aa",
+        time: "2020-09-01 01:01:00",
+        description: "This is the description"
+    },
+    {
+        name: "title",
+        source: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+        alt: "aa",
+        time: "2020-09-01 01:01:00",
+        description: "This is the description"
+    },
+    {
+        name: "title",
+        source: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
         alt: "aa",
         time: "2020-09-01 01:01:00",
         description: "This is the description"
@@ -66,27 +79,20 @@ class List extends React.Component {
 
         listAfterSearch.forEach(({ name, source, alt, time, description}) => {
             rows.push(
-                <div >
-                    <Card
+                // <div classname = "di">
+                    <Card clasname="media_card"
                         style={{ width: 200}}
                         cover={
-                            <img width="150px" height="150px" alt={alt} src={source}/>
+                            <Image classname ="media_image"
+                                   alt={alt} src={source}/>
                         }
-                        actions={[
-                            <ZoomInOutlined />,
-                            <EditOutlined key="edit" />,
-                            <DeleteOutlined key="delete" />,
-                        ]}
                     >
                         <Meta
                             title={time}
                             description={description}
                         />
-                    </Card>
-                    {/*<div> {time} </div>*/}
-                    <br/>
-                </div>);
-        });
+                    </Card>);
+            });
 
         return <div className="item">{rows}</div>;
     }
