@@ -1,17 +1,20 @@
 .e-container {
   border-bottom: 1px solid black;
 }
+
 .e-item {
   margin: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .e-iconAndInfo {
   display: flex;
   align-items: center;
   margin-left: 15px;
 }
+
 .e-thumbnail {
   background-color: #DFE88C;
   height: 100px;
@@ -22,19 +25,23 @@
   align-items: center;
   margin-right: 20px;
 }
+
 .e-info {
   display: flex;
   flex-direction: column;
 }
+
 .e-title {
   font-size: 30px;
   font-weight: 900;
 }
+
 .e-typeSizeContainer {
   display: flex;
   justify-content: space-between;
   width: 200px;
 }
+
 .e-abstract {
   font-size: 15px;
   font-weight: 500;
@@ -43,6 +50,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .e-date {
   padding-top: 3px;
   font-size: 13px;
