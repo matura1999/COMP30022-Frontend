@@ -3,6 +3,23 @@ import { NavLink } from "react-router-dom";
 import "../styles/intro.css";
 
 export default class Intro extends Component {
+  startButton = () => {
+    if (!sessionStorage.getItem('authorised')) {
+      return (
+        <NavLink exact to="/signup" class="get-start">
+          <button class="get-start-button">GET STARTED NOW</button>
+        </NavLink>
+      )
+
+    } else {
+      return (
+        <NavLink exact to="/userPortfolio/info" class="get-start">
+          <button class="get-start-button">VIEW MY PORTFOLIO</button>
+        </NavLink>
+      )
+    }
+  }
+
   render() {
     return (
       <div class="intro-page">
@@ -15,9 +32,8 @@ export default class Intro extends Component {
           thoughts and reflections, you can assemble and maintain your
           E-portfolio like a pro.
         </div>
-        <NavLink exact to="/signup" class="get-start">
-          <button class="get-start-button">GET STARTED NOW</button>
-        </NavLink>
+        {(this.startButton())}
+
       </div>
     );
   }
