@@ -3,15 +3,66 @@ import { Form, Input, Button, Space, DatePicker, Row, Col, Select } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 
 export default class UserInfoEdu extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            fields: []
+        }
+    }
     onFinish = (values) => {
-        console.log('Received values of form:', values);
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify({ username: sessionStorage.getItem('username'), records: values.records })
+        };
+        fetch('http://localhost:5000/user/info/education', requestOptions)
+            .then(res => res.json())
+            .then(res => {
+                if (res.success === false) {
+                    setTimeout(() => {
+                        
+                    }, 300);
+                } else {
+                    console.log(res.message);
+                }
+            })
     };
+
+    componentDidMount = async () => {
+        const requestOptions = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+        };
+        await fetch('http://localhost:5000/user/info/education/' + sessionStorage.getItem('username'), requestOptions)
+            .then(res => res.json())
+            .then(res => {
+                if (res.success === false) {
+                    setTimeout(() => {
+                        
+                    }, 300);
+                } else {
+                    for(const item of res.data.records){
+                        this.state.fields.push(item)
+                    }
+                }
+                console.log(this.state.fields)
+            })
+    }
+
+    
 
     render() {
         return (
             <Form name="edu-info" onFinish={this.onFinish} autoComplete="off">
                 <Form.List name="records">
                     {(fields, { add, remove }) => {
+                        console.log(fields)
                         return (
                             <div>
                                 {fields.map(field => (
