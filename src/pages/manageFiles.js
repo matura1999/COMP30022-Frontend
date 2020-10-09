@@ -42,7 +42,6 @@ export default class ManageFiles extends Component {
             });
           }, 300);
 
-          // console.log("sda", res.files);
           res.files.map(({ Key: fileUrl, LastModified: date, Size: size }) => {
             const name = fileUrl.split("/").pop();
             const type = name.split(".").pop().toUpperCase();
@@ -64,15 +63,10 @@ export default class ManageFiles extends Component {
               size: fileSize,
               fileUrl: fileUrl,
             };
-
-            // console.log("sss", fileObject);
             this.setState({
               fileItemList: [...this.state.fileItemList, fileObject],
             });
-            // console.log("list", this.state.fileItemList);
           });
-
-          // const [{ Key: fileUrl,  LastModified: date, Size: size}] = res.files;
         }
       });
   };

@@ -18,7 +18,7 @@ export default class UserInfoEdu extends Component {
             },
             body: JSON.stringify({ username: sessionStorage.getItem('username'), records: values.records })
         };
-        fetch('http://localhost:5000/user/info/education', requestOptions)
+        fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/education', requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {
@@ -39,7 +39,7 @@ export default class UserInfoEdu extends Component {
                 'Accept': 'application/json',
             },
         };
-        await fetch('http://localhost:5000/user/info/education/' + sessionStorage.getItem('username'), requestOptions)
+        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/education/' + sessionStorage.getItem('username'), requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {

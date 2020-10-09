@@ -22,7 +22,7 @@ export default class UserInfoWork extends Component {
             },
             body: JSON.stringify({ username: sessionStorage.getItem('username'), records: values.records })
         };
-        fetch('http://localhost:5000/user/info/work', requestOptions)
+        fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/work', requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {
@@ -43,7 +43,7 @@ export default class UserInfoWork extends Component {
                 'Accept': 'application/json',
             },
         };
-        await fetch('http://localhost:5000/user/info/work/' + sessionStorage.getItem('username'), requestOptions)
+        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/work/' + sessionStorage.getItem('username'), requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {

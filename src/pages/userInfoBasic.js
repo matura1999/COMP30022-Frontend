@@ -47,7 +47,7 @@ export default class UserInfoBasic extends Component {
                 introduction: values.user.introduction
             })
         };
-        fetch('http://localhost:5000/user/info/basic', requestOptions)
+        fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/basic', requestOptions)
             .then(res => res.json())
             .then(res => {
                 console.log(res)
@@ -69,7 +69,7 @@ export default class UserInfoBasic extends Component {
                 'Accept': 'application/json',
             },
         };
-        await fetch('http://localhost:5000/user/info/basic/' + sessionStorage.getItem('username'), requestOptions)
+        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/basic/' + sessionStorage.getItem('username'), requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {
@@ -77,6 +77,7 @@ export default class UserInfoBasic extends Component {
 
                     }, 300);
                 } else {
+                    // return data, include all basic user information
                     const data = res.data;
                     this.setState({ name: data.name, age: data.age, phone: data.phone, email: data.email, intro: data.self_intro })
                 }
@@ -84,7 +85,6 @@ export default class UserInfoBasic extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div>
                 <div class="avatar">
@@ -107,10 +107,10 @@ export default class UserInfoBasic extends Component {
                         <span className="username">{sessionStorage.getItem("username")} </span>
                     </Form.Item>
                     <Form.Item name={['user', 'name']} label="Name" rules={[{ required: true }]}>
-                        <Input defaultValue={this.state.name} />
+                        <Input/>
                     </Form.Item>
                     <Form.Item name={['user', 'age']} label="Age" rules={[{ type: 'number', min: 0, max: 999 }]}>
-                        <InputNumber defaultValue={this.state.age} />
+                        <InputNumber defaultValue={this.state.age} key={this.state.age}/>
                     </Form.Item>
                     <Form.Item name={['user', 'phone']} label="Phone">
                         <Input />
