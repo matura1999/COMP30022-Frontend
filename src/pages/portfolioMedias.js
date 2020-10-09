@@ -80,10 +80,10 @@ class List extends React.Component {
         listAfterSearch.forEach(({ name, source, alt, time, description}) => {
             rows.push(
                 // <div classname = "di">
-                    <Card clasname="media_card"
+                    <Card className="media_card"
                         style={{ width: 200}}
                         cover={
-                            <Image classname ="media_image"
+                            <Image className ="media_image"
                                    alt={alt} src={source}/>
                         }
                     >
