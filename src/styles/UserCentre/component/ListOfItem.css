@@ -1,25 +1,27 @@
-.container {
-    border-bottom: 1px solid black;
+.essays__container {
+
+    width: 1024px;
 }
 
-.p-item {
+.essays__item {
     margin: 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    width: 1024px;
 }
 
-.p-item:hover {
-    border: 1px solid black;
+.essays__item:hover {
+
 }
 
-.iconAndInfo {
+.essays__iconAndInfo {
     display: flex;
     align-items: center;
     margin-left: 15px;
+    width: 200px;
 }
 
-.thumbnail {
+.essays__thumbnail {
     background-color: #DFE88C;
     height: 100px;
     width: 150px;
@@ -30,35 +32,37 @@
     margin-right: 20px;
 }
 
-.info {
+.essays__info {
     display: flex;
     flex-direction: column;
+    width: 900px;
 
 }
 
-.title {
+.essays__title {
     font-size: 30px;
     font-weight: 900;
 }
 
-.typeSizeContainer {
+.essays__typeSizeContainer {
     display: flex;
     justify-content: space-between;
-    width: 200px;
+    width: 100px;
 }
 
-.p-abstract {
+.essays__abstract {
     font-size: 15px;
     font-weight: 500;
-    width: 45%;
+    width: 800px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.date {
+.essays__date {
     padding-top: 3px;
     font-size: 13px;
     font-weight: 100;
     color: #9e9e9e;
+    width: 200px;
 }
