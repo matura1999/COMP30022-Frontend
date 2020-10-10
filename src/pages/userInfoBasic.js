@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, InputNumber, Button, Upload, Avatar, message, Col, Row } from 'antd';
+import { Form, Input, DatePicker, Button, Upload, Avatar, message, Col, Row } from 'antd';
 import { UserOutlined, UploadOutlined } from '@ant-design/icons';
 import "../styles/userInfo.css"
 
@@ -109,11 +109,11 @@ export default class UserInfoBasic extends Component {
                     <Form.Item name={['user', 'name']} label="Name" rules={[{ required: true }]}>
                         <Input/>
                     </Form.Item>
-                    <Form.Item name={['user', 'age']} label="Age" rules={[{ type: 'number', min: 0, max: 999 }]}>
-                        <InputNumber defaultValue={this.state.age} key={this.state.age}/>
+                    <Form.Item name={['user', 'dob']} label="DoB" >
+                            <DatePicker />
                     </Form.Item>
                     <Form.Item name={['user', 'phone']} label="Phone">
-                        <Input />
+                        <Input/>
                     </Form.Item>
                     <Form.Item name={['user', 'email']} label="Email" rules={[{ type: 'email' }]}>
                         <Input />

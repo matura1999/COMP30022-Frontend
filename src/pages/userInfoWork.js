@@ -59,10 +59,6 @@ export default class UserInfoWork extends Component {
             })
     }
 
-    rangeConfig = {
-        rules: [{ type: 'array', required: true, message: 'Please select time!' }],
-    };
-
     render() {
         return (
             <Form name="work-info" onFinish={this.onFinish} autoComplete="off">
@@ -74,7 +70,12 @@ export default class UserInfoWork extends Component {
                                     <Space key={field.key} align="baseline">
                                         <Row gutter={16}>
                                             <Col span={8}>
-                                                <Form.Item name="range-picker"  {...this.rangeConfig}>
+                                                <Form.Item
+                                                    {...field}
+                                                    name={[field.name, 'dateRange']}
+                                                    fieldKey={[field.fieldKey, 'dateRange']}
+                                                    rules={[{ type: 'array', required: true, message: 'Please select time!' }]}
+                                                >
                                                     <RangePicker />
                                                 </Form.Item>
                                             </Col>
