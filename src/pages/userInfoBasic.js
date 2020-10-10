@@ -97,7 +97,7 @@ export default class UserInfoBasic extends Component {
                 } else {
                     // return data, include all basic user information
                     const data = res.data;
-                    const dob = null;
+                    var dob = null;
                     if(data.dob){
                         dob = new Date(data.dob);
                     }
@@ -124,12 +124,13 @@ export default class UserInfoBasic extends Component {
                         <Col span={4}></Col>
                     </Row>
                 </div>
+                <Input defaultValue={this.state.name}/>
                 <Form {...layout} name="basic-info" onFinish={this.onFinish} validateMessages={validateMessages}>
                     <Form.Item label="Username">
                         <span className="username">{sessionStorage.getItem("username")} </span>
                     </Form.Item>
                     <Form.Item name={['user', 'name']} label="Name" rules={[{ required: true }]}>
-                        <Input />
+                        <Input defaultValue={this.state.name}/>
                     </Form.Item>
                     <Form.Item name={['user', 'dob']} label="DoB" >
                         <DatePicker />
