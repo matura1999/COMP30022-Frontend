@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Avatar, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import "../styles/header.css";
 import HeaderRight from "./header-right";
 

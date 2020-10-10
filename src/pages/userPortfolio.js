@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/userPortfolio.css";
 import {Menu, Row, Col, Avatar} from "antd";
+import Footer from "../components/footer";
 import PortfolioInfo from "./portfolioInfo.js";
 import PortfolioFiles from "./portfolioFiles.js";
 import PortfolioMedias from "./portfolioMedias.js";
@@ -92,18 +93,12 @@ export default class UserPortfolio extends Component {
                                 </Menu.Item>
                             </Menu>
                         </div>
-                        <div class="portfolio-content">
+                        <div class="portfolio-content" style={{ height: "800px" }}>
                             {this.showContent()}
                         </div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col span={24}>
-                        <div class="footer">
-                            Mojito Online Portfolio ©2020 Created by Team Mojito
-                        </div>
-                    </Col>
-                </Row>
+                <Footer/>
             </div>
         );
     }

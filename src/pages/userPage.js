@@ -11,6 +11,7 @@ import UploadEssays from "./uploadEssays";
 import ManageMedias from "./manageMedias";
 import ManageFiles from "./manageFiles";
 import ManageEssays from "./manageEssays";
+import Footer from "../components/footer";
 
 let selectKey = "1";
 let openKey = "sub1";
@@ -107,14 +108,7 @@ export default class UserPage extends Component {
             </Col>
             <Col span={3}></Col>
           </Row>
-
-          <Row>
-            <Col span={24}>
-              <div class="footer">
-                Mojito Online Portfolio ©2020 Created by Team Mojito
-            </div>
-            </Col>
-          </Row>
+          <Footer />
         </div>
       );
     } else {
