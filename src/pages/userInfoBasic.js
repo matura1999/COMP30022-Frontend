@@ -23,7 +23,7 @@ export default class UserInfoBasic extends Component {
         super(props);
         this.state = {
             name: '',
-            age: 20,
+            dob: null,
             phone: '',
             email: '',
             intro: ''
@@ -32,19 +32,37 @@ export default class UserInfoBasic extends Component {
 
     onFinish = (values) => {
         console.log(values)
+        var phone = '';
+        var email = '';
+        var introduction = '';
+        if (values.user.dob) {
+            var dob = values.user.dob;
+        }
+
+        if (values.user.phone) {
+            phone = values.user.phone;
+        }
+
+        if (values.user.email) {
+            email = values.user.email;
+        }
+
+        if (values.user.introduction) {
+            introduction = values.user.introduction;
+        }
         const requestOptions = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
             },
-            body: JSON.stringify({ 
-                username: sessionStorage.getItem('username'), 
-                name:values.user.name,
-                age:values.user.age,
-                phone: values.user.phone,
-                email: values.user.email,
-                introduction: values.user.introduction
+            body: JSON.stringify({
+                username: sessionStorage.getItem('username'),
+                name: values.user.name,
+                dob: dob._d,
+                phone: phone,
+                email: email,
+                introduction: introduction
             })
         };
         fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/basic', requestOptions)
@@ -53,7 +71,7 @@ export default class UserInfoBasic extends Component {
                 console.log(res)
                 if (res.success === false) {
                     setTimeout(() => {
-                        
+
                     }, 300);
                 } else {
                     console.log(res.message);
@@ -79,7 +97,11 @@ export default class UserInfoBasic extends Component {
                 } else {
                     // return data, include all basic user information
                     const data = res.data;
-                    this.setState({ name: data.name, age: data.age, phone: data.phone, email: data.email, intro: data.self_intro })
+                    const dob = null;
+                    if(data.dob){
+                        dob = new Date(data.dob);
+                    }
+                    this.setState({ name: data.name, dob: dob, phone: data.phone, email: data.email, intro: data.self_intro })
                 }
             })
     }
@@ -107,13 +129,13 @@ export default class UserInfoBasic extends Component {
                         <span className="username">{sessionStorage.getItem("username")} </span>
                     </Form.Item>
                     <Form.Item name={['user', 'name']} label="Name" rules={[{ required: true }]}>
-                        <Input/>
+                        <Input />
                     </Form.Item>
                     <Form.Item name={['user', 'dob']} label="DoB" >
-                            <DatePicker />
+                        <DatePicker />
                     </Form.Item>
                     <Form.Item name={['user', 'phone']} label="Phone">
-                        <Input/>
+                        <Input />
                     </Form.Item>
                     <Form.Item name={['user', 'email']} label="Email" rules={[{ type: 'email' }]}>
                         <Input />
