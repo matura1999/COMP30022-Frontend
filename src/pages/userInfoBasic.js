@@ -31,12 +31,12 @@ export default class UserInfoBasic extends Component {
     }
 
     onFinish = (values) => {
-        console.log(values)
+        var dob = null
         var phone = '';
         var email = '';
         var introduction = '';
         if (values.user.dob) {
-            var dob = values.user.dob;
+            dob = values.user.dob._d;
         }
 
         if (values.user.phone) {
@@ -59,7 +59,7 @@ export default class UserInfoBasic extends Component {
             body: JSON.stringify({
                 username: sessionStorage.getItem('username'),
                 name: values.user.name,
-                dob: dob._d,
+                dob: dob,
                 phone: phone,
                 email: email,
                 introduction: introduction
