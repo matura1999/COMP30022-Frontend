@@ -26,18 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="834c6a35-d075-48ae-aab8-cf3da347633e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/PostItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListOfPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListOfPosts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manageEssays.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manageEssays.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/ListOfItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/ListOfItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/PostItem.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/portfolioMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/portfolioMedias.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/FilterableItemList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/FilterableItemList.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
