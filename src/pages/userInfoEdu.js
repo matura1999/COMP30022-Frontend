@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Button, Space, DatePicker, Row, Col, Select } from 'antd';
+import { Form, Input, Button, Space, Row, Col, Select, message} from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 
 export default class UserInfoEdu extends Component {
@@ -26,6 +26,7 @@ export default class UserInfoEdu extends Component {
                         
                     }, 300);
                 } else {
+                    message.success(`Your changes have been saved.`);
                     console.log(res.message);
                 }
             })
@@ -133,7 +134,7 @@ export default class UserInfoEdu extends Component {
                                         }}
                                         block
                                     >
-                                        <PlusOutlined /> Add Record
+                                        <PlusOutlined /> Add Education Record
                                     </Button>
                                 </Form.Item>
                             </div>

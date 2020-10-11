@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/userPortfolio.css";
-import {Menu, Row, Col, Avatar} from "antd";
+import {Menu, Row, Col} from "antd";
 import Footer from "../components/footer";
 import PortfolioInfo from "./portfolioInfo.js";
 import PortfolioFiles from "./portfolioFiles.js";
@@ -14,6 +14,7 @@ import {
     FileTextOutlined,
     UserOutlined,
 } from "@ant-design/icons";
+import PortfolioNameCard from "../components/portfolioNameCard";
 
 let selectKey = "info";
 
@@ -64,12 +65,8 @@ export default class UserPortfolio extends Component {
             <div className="all-but-header">
                 <Row>
                     <Col span={18} offset={3}>
-                        <div class="avatar-and-menu">
-                            <div class="portfolio-avatar">
-                                <Avatar style={{backgroundColor: '#8dc63f'}} size={80} icon={<UserOutlined/>}/>
-                                </div>
-                            <h2>The Meme Lord</h2>
-                            <h3>I'm the ultimate memer.</h3>
+                        <div class="name-card-and-menu">
+                            <PortfolioNameCard/>
                             <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal">
                                 <Menu.Item key="info" icon={<IdcardOutlined />}>
                                     <Link exact to="/userPortfolio/info">

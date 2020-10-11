@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Button, Space, DatePicker, Row, Col } from 'antd';
+import { Form, Input, Button, Space, DatePicker, Row, Col, message } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 
 const { RangePicker } = DatePicker;
@@ -30,6 +30,7 @@ export default class UserInfoWork extends Component {
 
                     }, 300);
                 } else {
+                    message.success(`Your changes have been saved.`);
                     console.log(res.message);
                 }
             })
@@ -127,7 +128,7 @@ export default class UserInfoWork extends Component {
                                         }}
                                         block
                                     >
-                                        <PlusOutlined /> Add Record
+                                        <PlusOutlined /> Add Work Record
                                     </Button>
                                 </Form.Item>
                             </div>

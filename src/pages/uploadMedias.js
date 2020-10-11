@@ -64,14 +64,14 @@ export default class UploadMedias extends Component {
                     uploading: false,
                     descriptionBox: false,
                 });
-                message.success('upload successfully.');
+                message.success(`Uploaded successfully.`);
             },
 
             error: () => {
                 this.setState({
                     uploading: false,
                 });
-                message.error('upload failed.');
+                message.error('Upload failed.');
             },
         });
     };

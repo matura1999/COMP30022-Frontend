@@ -74,6 +74,7 @@ export default class UserInfoBasic extends Component {
 
                     }, 300);
                 } else {
+                    message.success(`Your changes have been saved.`);
                     console.log(res.message);
                 }
             })
@@ -124,13 +125,13 @@ export default class UserInfoBasic extends Component {
                         <Col span={4}></Col>
                     </Row>
                 </div>
-                <Input defaultValue={this.state.name}/>
+                <Input value={this.state.name}/>
                 <Form {...layout} name="basic-info" onFinish={this.onFinish} validateMessages={validateMessages}>
                     <Form.Item label="Username">
                         <span className="username">{sessionStorage.getItem("username")} </span>
                     </Form.Item>
                     <Form.Item name={['user', 'name']} label="Name" rules={[{ required: true }]}>
-                        <Input defaultValue={this.state.name}/>
+                        <Input initialValue={this.state.name}/>
                     </Form.Item>
                     <Form.Item name={['user', 'dob']} label="DoB" >
                         <DatePicker />
