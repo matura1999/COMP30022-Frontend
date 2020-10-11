@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import FilterableListOfPosts from "../components/FilterableListOfPosts";
+import ListOfEssay from "../components/ListOfEssay";
 
-const postItemList = [
+
+
+const essayList = [
     {
         name: "Horizon",
         abstract: "I came to dance-dance-dance-dance (Yeah)\n" +
@@ -54,7 +56,7 @@ const postItemList = [
             "Look so good, yeah, look so sweet (Hey)\n" +
             "Baby, you deserve a treat",
         date: "2018-09-01 01:01:00",
-        thumbnail: 'https://image7.uhdpaper.com/wallpaper/blackpink-ice-cream-members-uhdpaper.com-4K-7.2617.jpg'    },
+        thumbnail: 'https://s.yimg.com/ny/api/res/1.2/fHxH29M3wXOFl.MgJKOt5g--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en/stylecaster_935/c5a30443d4db06a57d1acaddb29fa85a'    },
     {
         name: "#",
         abstract: "Eh, can't let it hide, burn\n" +
@@ -69,10 +71,18 @@ const postItemList = [
     },
 ];
 
-export default class portfolioFiles extends Component {
+export default class portfolioEssays extends Component {
+    constructor(props) {
+        super(props);
+
+    }
+
     render() {
-        return (
-            <FilterableListOfPosts posts={postItemList} />
-        );
+        const rows = [];
+        essayList.forEach(({ name, thumbnail, abstract, date }) => {
+            rows.push(<ListOfEssay name={name} thumbnail={<img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL"/>} abstract={abstract} date={date} />);
+        });
+
+        return <div className="postList">{rows}</div>;
     }
 }

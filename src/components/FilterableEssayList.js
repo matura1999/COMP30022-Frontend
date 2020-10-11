@@ -1,8 +1,8 @@
 import React from "react";
-import PostItem from "./PostItem";
+import EssayItem from "./EssayItem";
 import "../styles/UserCentre/component/FilterableItemList.css";
 
-class PostList extends React.Component {
+class EssayList extends React.Component {
     render() {
         const filterText = this.props.filterText;
         const sortMethod = this.props.sortMethod;
@@ -19,7 +19,7 @@ class PostList extends React.Component {
         }
 
         listAfterSearch.forEach(({ name, thumbnail, abstract, date }) => {
-            rows.push(<PostItem name={name} thumbnail={<img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL"/>} abstract={abstract} date={date} />);
+            rows.push(<EssayItem name={name} thumbnail={<img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL"/>} abstract={abstract} date={date} />);
         });
 
         return <div className="postList">{rows}</div>;
@@ -45,7 +45,7 @@ class SearchBar extends React.Component {
                 <input
                     className="searchBar"
                     type="text"
-                    placeholder="Search Post"
+                    placeholder="Search Essay"
                     value={this.props.filterText}
                     onChange={this.handleFilterTextChange}
                 />
@@ -54,15 +54,13 @@ class SearchBar extends React.Component {
                     <option value="byDefault">Sort By Default</option>
                     <option value="byName">Sort By Name</option>
                     <option value="byDate">Sort By Date</option>
-                    {/* <option value="bySize">Sort By Size</option>
-          <option value="byDate">Sort By Date</option> */}
                 </select>
             </form>
         );
     }
 }
 
-class FilterablePostList extends React.Component {
+class FilterableEssayList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -91,7 +89,7 @@ class FilterablePostList extends React.Component {
                     onFilterTextChange={this.handleFilterTextChange}
                     onSortChange={this.handleSortChange}
                 />
-                <PostList
+                <EssayList
                     posts={this.props.posts}
                     filterText={this.state.filterText}
                     sortMethod={this.state.sortMethod}
@@ -101,4 +99,4 @@ class FilterablePostList extends React.Component {
     }
 }
 
-export default FilterablePostList;
+export default FilterableEssayList;

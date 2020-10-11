@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/UserCentre/component/ListOfItem.css";
+import "../styles/UserCentre/component/ListOfEssay.css";
 
-const ListOfPosts = ({ name, thumbnail, abstract, date }) => (
+const ListOfEssay = ({ name, thumbnail, abstract, date }) => (
     <div className="essays__container">
         <div className="essays__item">
             <div className="essays__iconAndInfo">
@@ -19,4 +19,4 @@ const ListOfPosts = ({ name, thumbnail, abstract, date }) => (
     </div>
 );
 
-export default ListOfPosts;
+export default ListOfEssay;

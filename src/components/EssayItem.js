@@ -1,8 +1,8 @@
 // this is the file item component for the file management page
 import React from "react";
-import "../styles/UserCentre/component/PostItem.scss";
+import "../styles/UserCentre/component/EssayItem.css";
 
-const PostItem = ({ name, thumbnail, abstract, date }) => (
+const EssayItem = ({ name, thumbnail, abstract, date }) => (
     <div className="e-container">
         <div className="e-item">
             <div className="e-iconAndInfo">
@@ -25,4 +25,4 @@ const PostItem = ({ name, thumbnail, abstract, date }) => (
     </div>
 );
 
-export default PostItem;
+export default EssayItem;
