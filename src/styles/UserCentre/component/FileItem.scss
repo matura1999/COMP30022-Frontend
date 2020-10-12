@@ -37,6 +37,10 @@
     &__title {
         font-size: 24px;
         font-weight: 900;
+        max-width: 25vw;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     &__typeSizeContainer {
