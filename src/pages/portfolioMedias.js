@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../styles/UserCentre/component/FilterableItemList.css";
 import "../styles/MyPortfolio/portfolioMedias.scss";
-import { Card, Image } from "antd";
+import {Card, Image, Popover} from "antd";
 
 const { Meta } = Card;
 
@@ -10,9 +10,9 @@ const mediaItemList = [
     name: "title",
     source:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    alt: "aa",
+    alt: "a",
     time: "2020-09-01 01:02:00",
-    description: "This is the description",
+    description: "This is the description nnnnnnnnnnn",
   },
   {
     name: "title",
@@ -26,7 +26,7 @@ const mediaItemList = [
     name: "title",
     source:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    alt: "aa",
+    alt: "b",
     time: "2020-09-01 01:01:00",
     description: "This is the description",
   },
@@ -34,7 +34,7 @@ const mediaItemList = [
     name: "title",
     source:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-    alt: "aa",
+    alt: "c",
     time: "2020-09-01 01:01:00",
     description: "This is the description",
   },
@@ -42,7 +42,7 @@ const mediaItemList = [
     name: "title",
     source:
       "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-    alt: "aa",
+    alt: "d",
     time: "2020-09-01 01:01:00",
     description: "This is the description",
   },
@@ -50,7 +50,7 @@ const mediaItemList = [
     name: "title",
     source:
       "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-    alt: "aa",
+    alt: "e",
     time: "2020-09-01 01:01:00",
     description: "This is the description",
   },
@@ -58,13 +58,58 @@ const mediaItemList = [
     name: "title",
     source:
       "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-    alt: "aa",
+    alt: "f",
     time: "2020-09-01 01:01:00",
     description: "This is the description",
   },
 ];
 
 class List extends React.Component {
+  state = {
+    clicked: false,
+    hovered: false,
+    show: 0,
+  }
+
+  handleHoverChange = (visible,source) => {
+    if (visible) {
+      this.setState({
+        hovered: visible,
+        clicked: false,
+        show: source
+      });
+    } else {
+      this.setState({
+        hovered: visible,
+        clicked: false,
+        show:0
+      });
+    }
+  };
+
+  handleClickChange = (visible,source) => {
+    if (visible) {
+      this.setState({
+        hovered: false,
+        clicked: visible,
+        show: source
+      });
+    } else {
+      this.setState({
+        hovered: false,
+        clicked: visible,
+        show:0
+      });
+    }
+  };
+
+  hide = () => {
+    this.setState({
+      clicked: false,
+      hovered: false,
+    });
+  };
+
   render() {
     const filterText = this.props.filterText;
     const sortMethod = this.props.sortMethod;
@@ -78,7 +123,7 @@ class List extends React.Component {
       listAfterSearch.sort((a, b) => a.time.localeCompare(b.time));
     }
 
-    listAfterSearch.forEach(({ name, source, alt, time, description }) => {
+    listAfterSearch.forEach(({ source, alt, time, description }) => {
       rows.push(
         // <div classname = "di">
         <Card
@@ -86,7 +131,44 @@ class List extends React.Component {
           style={{ width: 200 }}
           cover={<Image className="media__image" alt={alt} src={source} />}
         >
-          <Meta title={time} description={description} />
+          <Popover
+              className={"manageMedia__popover"}
+              style={{ width: 50 }}
+              content={
+                <div>
+                  {time}
+                  <br/>
+                  {description}
+                </div>}
+              trigger="hover"
+              autoAdjustOverflow
+              color={"lime"}
+              visible={this.state.show === alt && this.state.hovered}
+              onVisibleChange={(e)=>this.handleHoverChange(e, alt)}
+          >
+            <Popover
+                className={"manageMedia__popover"}
+                content={
+                  <div>
+                    {time}
+                    <br/>
+                    {description}
+                    <br/>
+                    <a onClick={this.hide}>Close</a>
+                  </div>
+                }
+                trigger="click"
+                visible={this.state.show === alt && this.state.clicked}
+                onVisibleChange={(e)=>this.handleClickChange(e, alt)}
+            >
+              <Meta
+                  className={"media__meta"}
+                  title={time}
+                  description={description}
+              />
+            </Popover>
+          </Popover>
+          {/*<Meta className={"media__meta"} title={time} description={description} />*/}
         </Card>
       );
     });

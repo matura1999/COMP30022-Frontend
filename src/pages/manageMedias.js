@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "../styles/UserCentre/component/FilterableItemList.css";
-import {  Popover, Button, Card } from 'antd';
+import "../styles/UserCentre/manageMedia.scss"
+import {Popconfirm, Popover, Card, Image, Tooltip, Input,Modal} from 'antd';
 import { EditOutlined,  ZoomInOutlined, DeleteOutlined} from '@ant-design/icons';
 
 const { Meta } = Card;
@@ -9,44 +10,38 @@ const { Meta } = Card;
 
 const mediaItemList = [
     {
-        name: "title",
         source: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
         alt: "aa",
         time: "2020-09-01 01:02:00",
         description: "This is the description"
     },
     {
-        name: "title",
         source: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-        alt: "aa",
+        alt: "a",
         time: "2020-09-01 01:01:00",
-        description: "This is the description"
+        description: "This is the description ffffffffffffffffffffffffffffffffffffffffffffffffff"
     },
     {
-        name: "title",
         source: "https://www.w3schools.com/images/w3schools_green.jpg",
-        alt: "aa",
+        alt: "b",
         time: "2020-09-01 01:01:00",
         description: "This is the description"
     },
     {
-        name: "title",
         source: "https://www.w3schools.com/images/w3schools_green.jpg",
-        alt: "aa",
+        alt: "c",
         time: "2020-09-01 01:01:00",
         description: "This is the description"
     },
     {
-        name: "title",
         source: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-        alt: "aa",
+        alt: "d",
         time: "2020-09-01 01:01:00",
         description: "This is the description"
     },
     {
-        name: "title",
         source: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-        alt: "aa",
+        alt: "e",
         time: "2020-09-01 01:01:00",
         description: "This is the description"
     },
@@ -58,10 +53,95 @@ const mediaItemList = [
 
 class List extends React.Component {
 
+    state = {
+        files:this.props.files,
+        visible: false,
+        confirmLoading: false,
+        clicked: false,
+        hovered: false,
+        show: 0,
+    }
+    handleItem = (index) => {
+        const list = this.props.files
+        list.splice(index,1)
+        this.setState({files:list})
+    }
+
+    handleHoverChange = (visible,source) => {
+        if (visible) {
+            this.setState({
+                hovered: visible,
+                clicked: false,
+                show: source
+            });
+        } else {
+            this.setState({
+                hovered: visible,
+                clicked: false,
+                show:0
+        });
+        }
+    };
+
+    handleClickChange = (visible,source) => {
+        if (visible) {
+            this.setState({
+                hovered: false,
+                clicked: visible,
+                show: source
+            });
+        } else {
+            this.setState({
+                hovered: false,
+                clicked: visible,
+                show:0
+            });
+        }
+    };
+
+    hide = () => {
+        this.setState({
+            clicked: false,
+            hovered: false,
+        });
+    };
+
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    };
+
+    handleOk = () => {
+        // const index = e.target.getAttribute("key")
+        // let data = this.state.files
+        // data[1].description = document.getElementById('text').value
+        this.setState({
+            confirmLoading: true,
+            // files :data
+        });
+        setTimeout(() => {
+            this.setState({
+                visible: false,
+                confirmLoading: false,
+            });
+        }, 2000);
+    };
+
+    handleCancel = () => {
+        console.log('Clicked cancel button');
+        this.setState({
+            visible: false,
+        });
+    };
+
     render() {
         const filterText = this.props.filterText;
         const sortMethod = this.props.sortMethod;
         const rows = [];
+        const { TextArea } = Input;
+        const { confirmLoading } = this.state;
+
 
         const listAfterSearch = this.props.files.filter(({ description }) =>
             description.toLowerCase().includes(filterText.toLowerCase())
@@ -71,30 +151,79 @@ class List extends React.Component {
             listAfterSearch.sort((a, b) => a.time.localeCompare(b.time));
         }
 
-        listAfterSearch.forEach(({ name, source, alt, time, description}) => {
+        listAfterSearch.forEach(({ source, alt, time, description},index) => {
             rows.push(
                 <div >
                     <Card
-                        style={{ width: 200}}
-                        cover={
-                            <img width="150px" height="150px" alt={alt} src={source}/>
-                        }
+                        className="manageMedia__card"
+                        style={{ width: 200 }}
+                        cover={<Image className="manageMedia__image" alt={alt} src={source} />}
                         actions={[
-                            <EditOutlined key="edit" />,
-                            <DeleteOutlined key="delete" />,
+                            <>
+                                <EditOutlined  onClick={this.showModal}/>
+                                <Modal
+                                    title="Edit Description"
+                                    visible={this.state.visible}
+                                    key={index}
+                                    confirmLoading={confirmLoading}
+                                    onOk={this.handleOk}
+                                    onCancel={this.handleCancel}
+                                    destroyOnClose
+                                >
+                                    <TextArea id="text" rows={4} allowClear defaultValue={description}/>
+                                </Modal>
+                            </>,
+                            <Popconfirm title="Are you sure？" key={index} onConfirm={this.handleItem}
+                                        okText="Yes" cancelText="No">
+                                <DeleteOutlined />
+                            </Popconfirm>,
                         ]}
                     >
-                        <Meta
-                            title={time}
-                            description={description}
-                        />
+                        <Popover
+                            className={"manageMedia__popover"}
+                            style={{ width: 50 }}
+                            content={
+                                <div>
+                                    {time}
+                                    <br/>
+                                    {description}
+                                </div>}
+                            trigger="hover"
+                            autoAdjustOverflow
+                            color={"lime"}
+                            visible={this.state.show === alt && this.state.hovered}
+                            onVisibleChange={(e)=>this.handleHoverChange(e, alt)}
+                        >
+                            <Popover
+                                className={"manageMedia__popover"}
+                                content={
+                                    <div>
+                                        {time}
+                                        <br/>
+                                        {description}
+                                        <br/>
+                                        <a onClick={this.hide}>Close</a>
+                                    </div>
+                                }
+                                trigger="click"
+                                visible={this.state.show === alt && this.state.clicked}
+                                onVisibleChange={(e)=>this.handleClickChange(e, alt)}
+                            >
+                                <Meta
+                                    className={"manageMedia__meta"}
+                                    id={alt}
+                                    title={time}
+                                    description={description}
+                                />
+                            </Popover>
+                        </Popover>
+
                     </Card>
-                    {/*<div> {time} </div>*/}
                     <br/>
                 </div>);
         });
 
-        return <div className="item">{rows}</div>;
+        return <div className="manageMedia__content">{rows}</div>;
     }
 }
 
@@ -137,6 +266,7 @@ export default class manageMedias extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            files: mediaItemList,
             filterText: "",
             sortMethod: "byDefault",
         };
@@ -163,7 +293,7 @@ export default class manageMedias extends Component {
                     onSortChange={this.handleSortChange}
                 />
                 <List
-                    files={mediaItemList}
+                    files={this.state.files}
                     filterText={this.state.filterText}
                     sortMethod={this.state.sortMethod}
                 />

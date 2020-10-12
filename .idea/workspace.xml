@@ -26,8 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="834c6a35-d075-48ae-aab8-cf3da347633e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/styles/UserCentre/manageMedia.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manageMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manageMedias.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/portfolioMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/portfolioMedias.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/FilterableItemList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/FilterableItemList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/uploadMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/uploadMedias.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/MyPortfolio/portfolioMedias.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MyPortfolio/portfolioMedias.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,10 +147,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="526" y="194" key="#File_Watchers/0.0.1280.720@0.0.1280.720" timestamp="1601520461259" />
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600778983167">
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602232039731">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600778983167" />
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1602232039731" />
     <state x="217" y="0" key="CommitChangelistDialog2" timestamp="1600875699218">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

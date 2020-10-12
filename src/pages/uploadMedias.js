@@ -87,7 +87,12 @@ export default class UploadMedias extends Component {
             description = (
                 <div className="description">
                     <br />
-                    <TextArea placeholder="Enter Description Here"  allowClear onChange={onChange} rows={5} />
+                    <TextArea placeholder="Enter Description Here"
+                              allowClear
+                              onChange={onChange}
+                              rows={5}
+                              // showCount maxLength={100}
+                    />
                 </div>)
         }
         const uploadButton = (

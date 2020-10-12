@@ -5,6 +5,13 @@
 
     }
 
+    &__meta {
+        height: 50px;
+        .ant-card-meta-description {
+            height:40px;
+        }
+    }
+
     &__image {
         width: 200px;
         height: 200px;
