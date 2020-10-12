@@ -1,11 +1,13 @@
 import React from "react";
 import FileItem from "./FileItem";
+import MyPortfolioFileItem from "./MyPortfolioFileItem";
 import "../styles/UserCentre/component/FilterableItemList.css";
 
 class FileList extends React.Component {
   render() {
     const filterText = this.props.filterText;
     const sortMethod = this.props.sortMethod;
+    const useFor = this.props.useFor;
     const rows = [];
 
     const listAfterSearch = this.props.files.filter(({ name }) =>
@@ -16,17 +18,31 @@ class FileList extends React.Component {
       listAfterSearch.sort((a, b) => a.name.localeCompare(b.name));
     }
 
-    listAfterSearch.forEach(({ name, type, date, size, fileUrl }) => {
-      rows.push(
-        <FileItem
-          name={name}
-          type={type}
-          date={date}
-          size={size}
-          fileUrl={fileUrl}
-        />
-      );
-    });
+    if (useFor === "manage") {
+      listAfterSearch.forEach(({ name, type, date, size, fileUrl }) => {
+        rows.push(
+          <FileItem
+            name={name}
+            type={type}
+            date={date}
+            size={size}
+            fileUrl={fileUrl}
+          />
+        );
+      });
+    } else {
+      listAfterSearch.forEach(({ name, type, date, size, fileUrl }) => {
+        rows.push(
+          <MyPortfolioFileItem
+            name={name}
+            type={type}
+            date={date}
+            size={size}
+            fileUrl={fileUrl}
+          />
+        );
+      });
+    }
 
     return <div className="fileList">{rows}</div>;
   }
@@ -100,6 +116,7 @@ class FilterableItemList extends React.Component {
           files={this.props.files}
           filterText={this.state.filterText}
           sortMethod={this.state.sortMethod}
+          useFor={this.props.useFor}
         />
       </div>
     );

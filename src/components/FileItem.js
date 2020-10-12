@@ -1,6 +1,6 @@
 // this is the file item component for the file management page
 import React from "react";
-import "../styles/UserCentre/component/FileItem.css";
+import "../styles/UserCentre/component/FileItem.scss";
 
 const deleteElement = async (fileUrl) => {
   const requestOptions = {
@@ -11,7 +11,10 @@ const deleteElement = async (fileUrl) => {
     },
     body: JSON.stringify({ key: fileUrl }),
   };
-  await fetch("https://mojito-portfolio-backend.herokuapp.com/files", requestOptions)
+  await fetch(
+    "https://mojito-portfolio-backend.herokuapp.com/files",
+    requestOptions
+  )
     .then((res) => res.json())
     .then((res) => {
       if (res.success === false) {
@@ -20,42 +23,42 @@ const deleteElement = async (fileUrl) => {
             notice: res.error,
           });
         }, 300);
-      } else{
+      } else {
         window.location.reload(false);
       }
-    })
+    });
 };
 
 const FileItem = ({ name, type, size, date, fileUrl }) => (
-  <div className="container">
-    <div className="item">
-      <div className="iconAndInfo">
-        <div className="typeIconContainer">
-          <div className="typeIcon">{type}</div>
+  <div className="fileItem__container">
+    <div className="fileItem__item">
+      <div className="fileItem__iconAndInfo">
+        <div className="fileItem__typeIconContainer">
+          <div className="fileItem__typeIcon">{type}</div>
         </div>
 
-        <div className="info">
-          <div className="title">{name}</div>
+        <div className="fileItem__info">
+          <div className="fileItem__title">{name}</div>
 
-          <div className="typeSizeContainer">
-            <div className="type">{type} File</div>
-            <div className="size">{size}</div>
+          <div className="fileItem__typeSizeContainer">
+            <div className="fileItem__type">{type} File</div>
+            <div className="fileItem__size">{size}</div>
           </div>
 
-          <div className="date">{date}</div>
+          <div className="fileItem__date">{date}</div>
         </div>
       </div>
 
-      <div className="options">
+      <div className="fileItem__options">
         <a
           href={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${fileUrl}`}
           download
         >
-          <button className="download">Download</button>
+          <button className="fileItem__download">Download</button>
         </a>
 
         <button
-          className="delete"
+          className="fileItem__delete"
           onClick={(event) => {
             event.preventDefault();
             deleteElement(fileUrl);

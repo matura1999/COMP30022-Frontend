@@ -1,0 +1,113 @@
+.portfolioFile {
+
+    &__item {
+        // margin: 15px;
+        display: flex;
+        // justify-content: space-between;
+        margin-bottom: 20px;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__iconAndInfo {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+    }
+
+    &__typeIcon {
+        background-color: #DFE88C;
+        height: 78px;
+        width: 78px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 30px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__title {
+        font-size: 24px;
+        width: 300px;
+        font-weight: 900;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__typeSizeContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+    }
+
+    &__type,
+    &__size {
+        font-size: 18px;
+        font-weight: 500;
+
+    }
+
+    &__size {
+        width: 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__dateDownloadContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+    }
+
+
+    &__date {
+        padding-top: 3px;
+        font-size: 15px;
+        font-weight: 100;
+        color: #9e9e9e;
+    }
+
+    &__download {
+        font-size: 15px;
+        color: black;
+        width: 60px;
+        background-color: transparent;
+        border: 0.5px solid #c2c0c0;
+        margin: 0;
+        border-radius: 5px;
+    }
+
+
+
+
+    &__download:hover {
+        background-color: #8CC63E;
+        color: white;
+    }
+}
+
+.myPortfolioFileList .fileList {
+    // width: 60vw;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // border: 2px solid red;
+
+    // &::after {
+    //     content: "";
+    //     width: 200px;
+    // }
+
+
+}

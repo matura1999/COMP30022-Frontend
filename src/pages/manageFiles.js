@@ -73,9 +73,7 @@ export default class ManageFiles extends Component {
 
   render() {
     return (
-      <div className="fileList">
-        <FilterableItemList files={this.state.fileItemList} />
-      </div>
+      <FilterableItemList files={this.state.fileItemList} useFor="manage" />
     );
   }
 }
