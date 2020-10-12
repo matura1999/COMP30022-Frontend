@@ -1,4 +1,9 @@
+.portfolio-all-but-header{
+    background-color: #fafafa;
+}
+
 .name-card-and-menu {
+    background-color: #ffffff;
     background-size: 100vw;
     border-left: #e1e1e1 1px groove;
     border-right: #e1e1e1 1px groove;
@@ -18,6 +23,7 @@
 }
 
 .portfolio-content {
+    background-color: #ffffff;
     height: 100%;
     margin-top: 20px;
     border: #e1e1e1 1px groove;

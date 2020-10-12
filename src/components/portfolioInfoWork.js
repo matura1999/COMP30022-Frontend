@@ -35,10 +35,11 @@ export default class PortfolioInfoWork extends Component {
         return(
             <div>
                 {this.state.records.map(record=>(
-                    <Descriptions className="portfolio-descriptions">
-                        <Descriptions.Item label="Date">
+                    <Descriptions className="portfolio-descriptions" column={4}>
+                        <Descriptions.Item label="Start Date">
                             {record.dateRange[0].slice(0,10)}
-                            &nbsp;~&nbsp;
+                        </Descriptions.Item>
+                        <Descriptions.Item label="End Date">
                             {record.dateRange[1].slice(0,10)}
                         </Descriptions.Item>
                         <Descriptions.Item label="Company">{record.company}</Descriptions.Item>

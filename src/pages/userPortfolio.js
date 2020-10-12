@@ -62,7 +62,7 @@ export default class UserPortfolio extends Component {
     render() {
         const { current } = this.state;
         return (
-            <div className="all-but-header">
+            <div className="portfolio-all-but-header">
                 <Row>
                     <Col span={18} offset={3}>
                         <div class="name-card-and-menu">

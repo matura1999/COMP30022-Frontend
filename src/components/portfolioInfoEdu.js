@@ -39,14 +39,22 @@ export default class PortfolioInfoEdu extends Component {
         }
     }
 
+    recordMajor(major){
+        if(major == null){
+            return ('\\')
+        }else{
+            return major
+        }
+    }
+
     render(){
         return(
             <div>
             {this.state.records.map(record=>(
-                <Descriptions className="portfolio-descriptions" >
+                <Descriptions className="portfolio-descriptions" column={4}>
                     <Descriptions.Item label="Level">{record.level}</Descriptions.Item>
                     <Descriptions.Item label="Institution">{record.institution}</Descriptions.Item>
-                    <Descriptions.Item label="Major">{record.major}</Descriptions.Item>
+                    <Descriptions.Item label="Major">{this.recordMajor(record.major)}</Descriptions.Item>
                     <Descriptions.Item label="Status">
                         <Badge status={this.badgeStatus(record)[0]} text={this.badgeStatus(record)[1]} />
                     </Descriptions.Item>

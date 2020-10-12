@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Avatar, Button, Menu, Dropdown, message } from "antd";
+import { Menu, Dropdown,} from "antd";
 import "../styles/header.css";
-
+import AvatarSmall from "./avatarSmall";
 import {
   FolderViewOutlined,
   IdcardOutlined,
   UploadOutlined,
   AppstoreOutlined,
-  UserOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
 
@@ -73,11 +72,7 @@ export default class HeaderRight extends Component {
               className="ant-dropdown-link"
               onClick={(e) => e.preventDefault()}
             >
-              <Avatar
-                style={{ backgroundColor: "#8dc63f" }}
-                size={40}
-                icon={<UserOutlined />}
-              />
+            <AvatarSmall/>
             </a>
           </Dropdown>
         </div>

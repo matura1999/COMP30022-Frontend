@@ -5,6 +5,7 @@ import "../styles/header.css";
 import HeaderRight from "./header-right";
 
 export default class Header extends Component {
+
   constructor(props) {
     super(props);
     this.state = {

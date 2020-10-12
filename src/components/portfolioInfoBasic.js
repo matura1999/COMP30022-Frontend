@@ -39,7 +39,7 @@ export default class PortfolioInfoBasic extends Component {
 
     render(){
         return(
-            <Descriptions className="portfolio-descriptions">
+            <Descriptions className="portfolio-descriptions" column={4}>
                 <Descriptions.Item label="Date of Birth">{this.state.dob}</Descriptions.Item>
                 <Descriptions.Item label="Phone">{this.state.phone}</Descriptions.Item>
                 <Descriptions.Item label="Email">{this.state.email}</Descriptions.Item>

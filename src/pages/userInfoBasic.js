@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Form, Input, DatePicker, Button, Upload, Avatar, message, Col, Row } from 'antd';
-import { UserOutlined, UploadOutlined } from '@ant-design/icons';
+import { Form, Input, DatePicker, Button, Upload, message, Col, Row } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
+import AvatarLarge from "../components/avatarLarge";
 import "../styles/userInfo.css"
 
 const layout = {
@@ -113,7 +114,7 @@ export default class UserInfoBasic extends Component {
                 <div class="avatar">
                     <Row>
                         <Col span={4} offset={4}>
-                            <Avatar style={{ backgroundColor: '#8dc63f' }} size={80} icon={<UserOutlined />} />
+                            <AvatarLarge/>
                         </Col>
                         <Col span={12}>
                             <div class="upload-button">
@@ -125,8 +126,11 @@ export default class UserInfoBasic extends Component {
                         <Col span={4}></Col>
                     </Row>
                 </div>
-                <Input value={this.state.name}/>
-                <Form {...layout} name="basic-info" onFinish={this.onFinish} validateMessages={validateMessages}>
+                <Form
+                    {...layout}
+                    name="basic-info"
+                    onFinish={this.onFinish}
+                    validateMessages={validateMessages}>
                     <Form.Item label="Username">
                         <span className="username">{sessionStorage.getItem("username")} </span>
                     </Form.Item>

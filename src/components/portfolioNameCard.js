@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import "../styles/userPortfolio.css";
-import {Avatar,Col,Row} from "antd";
-import {
-    UserOutlined,
-} from "@ant-design/icons";
+import AvatarLarge from "./avatarLarge";
 
 export default class PortfolioNameCard extends Component{
     constructor(props) {
@@ -41,7 +38,7 @@ export default class PortfolioNameCard extends Component{
         return(
             <div className="portfolio-name-card">
                 <div className="portfolio-avatar-container">
-                    <Avatar style={{backgroundColor: '#8dc63f'}} size={80} icon={<UserOutlined/>}/>
+                    <AvatarLarge/>
                 </div>
                 <h2>{this.state.name}</h2>
                 <div className="portfolio-intro-container">
