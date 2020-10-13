@@ -125,7 +125,7 @@ export default class UploadMedias extends Component {
             <>
                 <Row justify="center">
                     <Col>
-                <div className="uploadIcon">
+                <div className="add-media">
                     <Upload     {...props}
                                 action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
                                 listType="picture-card"
@@ -152,13 +152,14 @@ export default class UploadMedias extends Component {
                 </Row>
                 <Row justify="center">
                     <Col>
-                <div className="startUpload">
+                <div className="start-upload">
                     <Button
                         type="primary"
                         onClick={this.handleUpload}
                         disabled={fileList.length === 0}
                         loading={uploading}
-                        style={{ marginTop: 16 , backgroundColor: "#9ACD32"}}
+                        size="large"
+                        style={{ marginTop: 16 , backgroundColor: "#8dc63f"}}
                     >
                         {uploading ? 'Uploading' : 'Upload Now'}
                     </Button>

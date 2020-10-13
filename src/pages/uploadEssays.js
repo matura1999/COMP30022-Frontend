@@ -66,10 +66,10 @@ export default class UploadEssays extends Component {
                 <Divider />
 
                 <Form.Item>    <Space size={"middle"}>
-                    <Button type="primary" htmlType="submit" size="large">
+                    <Button type="primary" htmlType="submit" size="large" style={{ backgroundColor: "#8dc63f" }}>
                        Submit Now
                     </Button>
-                    <Button type="primary" htmlType="submit" size="large">
+                    <Button type="primary" htmlType="submit" size="large" style={{ backgroundColor: "#8dc63f" }}>
                         Save Draft
                     </Button>  </Space>
                 </Form.Item>
