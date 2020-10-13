@@ -31,22 +31,30 @@ export default class PortfolioInfoWork extends Component {
             })
     }
 
+    inCaseOfNoRecord(){
+        if(this.state.records.length < 1){
+            return(<div className="portfolio-descriptions">This user has not uploaded his work experience.</div>)
+        }else{
+            {this.state.records.map(record=>(
+                <Descriptions className="portfolio-descriptions" column={4}>
+                    <Descriptions.Item label="Start Date">
+                        {record.dateRange[0].slice(0,10)}
+                    </Descriptions.Item>
+                    <Descriptions.Item label="End Date">
+                        {record.dateRange[1].slice(0,10)}
+                    </Descriptions.Item>
+                    <Descriptions.Item label="Company">{record.company}</Descriptions.Item>
+                    <Descriptions.Item label="Job">{record.job}</Descriptions.Item>
+                    <Descriptions.Item label="Job Description">{record.job_desc}</Descriptions.Item>
+                </Descriptions>
+            ))}
+        }
+    }
+
     render(){
         return(
             <div>
-                {this.state.records.map(record=>(
-                    <Descriptions className="portfolio-descriptions" column={4}>
-                        <Descriptions.Item label="Start Date">
-                            {record.dateRange[0].slice(0,10)}
-                        </Descriptions.Item>
-                        <Descriptions.Item label="End Date">
-                            {record.dateRange[1].slice(0,10)}
-                        </Descriptions.Item>
-                        <Descriptions.Item label="Company">{record.company}</Descriptions.Item>
-                        <Descriptions.Item label="Job">{record.job}</Descriptions.Item>
-                        <Descriptions.Item label="Job Description">{record.job_desc}</Descriptions.Item>
-                    </Descriptions>
-                ))}
+                {this.inCaseOfNoRecord()}
             </div>
         )
     }
