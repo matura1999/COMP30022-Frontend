@@ -47,28 +47,24 @@ export default class PortfolioInfoEdu extends Component {
         }
     }
 
-    inCaseOfNoRecord() {
+    render(){
         if (this.state.records.length < 1) {
             return (<div className="portfolio-descriptions">This user has not uploaded his educational background.</div>)
         } else {
-            {this.state.records.map(record=>(
-                <Descriptions className="portfolio-descriptions" column={4}>
-                    <Descriptions.Item label="Level">{record.level}</Descriptions.Item>
-                    <Descriptions.Item label="Institution">{record.institution}</Descriptions.Item>
-                    <Descriptions.Item label="Major">{this.recordMajor(record.major)}</Descriptions.Item>
-                    <Descriptions.Item label="Status">
-                        <Badge status={this.badgeStatus(record)[0]} text={this.badgeStatus(record)[1]} />
-                    </Descriptions.Item>
-                </Descriptions>
-            ))}
+            return(
+                <div>
+                    {this.state.records.map(record=>(
+                        <Descriptions className="portfolio-descriptions" column={4}>
+                            <Descriptions.Item label="Level">{record.level}</Descriptions.Item>
+                            <Descriptions.Item label="Institution">{record.institution}</Descriptions.Item>
+                            <Descriptions.Item label="Major">{this.recordMajor(record.major)}</Descriptions.Item>
+                            <Descriptions.Item label="Status">
+                                <Badge status={this.badgeStatus(record)[0]} text={this.badgeStatus(record)[1]} />
+                            </Descriptions.Item>
+                        </Descriptions>
+                    ))}
+                </div>
+            )
         }
-    }
-
-    render(){
-        return(
-            <div>
-                {this.inCaseOfNoRecord()}
-            </div>
-        );
     }
 }
