@@ -30,19 +30,29 @@ export default class PortfolioInfoBasic extends Component {
                     const data = res.data;
                     var dob = null;
                     if(data.dob){
-                        dob = new Date(data.dob);
+                        dob = new Date(data.dob).toDateString();
+                    } else{
+                        dob = "\\"
                     }
-                    this.setState({ name: data.name, dob: dob.toDateString(), phone: data.phone, email: data.email, intro: data.self_intro })
+                    this.setState({ name: data.name, dob: dob, phone: data.phone, email: data.email, intro: data.self_intro })
                 }
             })
+    }
+
+    displaySlashInstead(item){
+        if(!item){
+            return("\\")
+        }else{
+            return(item)
+        }
     }
 
     render(){
         return(
             <Descriptions className="portfolio-descriptions" column={4}>
                 <Descriptions.Item label="Date of Birth">{this.state.dob}</Descriptions.Item>
-                <Descriptions.Item label="Phone">{this.state.phone}</Descriptions.Item>
-                <Descriptions.Item label="Email">{this.state.email}</Descriptions.Item>
+                <Descriptions.Item label="Phone">{this.displaySlashInstead(this.state.phone)}</Descriptions.Item>
+                <Descriptions.Item label="Email">{this.displaySlashInstead(this.state.email)}</Descriptions.Item>
             </Descriptions>
         )
     }

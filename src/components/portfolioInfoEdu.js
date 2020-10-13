@@ -47,9 +47,10 @@ export default class PortfolioInfoEdu extends Component {
         }
     }
 
-    render(){
-        return(
-            <div>
+    inCaseOfNoRecord() {
+        if (this.state.records.length < 1) {
+            return (<div className="portfolio-descriptions">This user has not uploaded his educational background.</div>)
+        } else {
             {this.state.records.map(record=>(
                 <Descriptions className="portfolio-descriptions" column={4}>
                     <Descriptions.Item label="Level">{record.level}</Descriptions.Item>
@@ -59,7 +60,14 @@ export default class PortfolioInfoEdu extends Component {
                         <Badge status={this.badgeStatus(record)[0]} text={this.badgeStatus(record)[1]} />
                     </Descriptions.Item>
                 </Descriptions>
-                ))}
+            ))}
+        }
+    }
+
+    render(){
+        return(
+            <div>
+                {this.inCaseOfNoRecord()}
             </div>
         );
     }
