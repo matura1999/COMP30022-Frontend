@@ -6,12 +6,6 @@ import "../styles/UserCentre/essay.css";
 export default class UploadEssays extends Component {
     state = {
         fileList: [
-            {
-                uid: '-1',
-                name: 'ateez_aoty.png',
-                status: 'done',
-                url: 'https://viewofthearts.files.wordpress.com/2020/07/a22c2b66305c46f0a800b5115caf1c46.jpeg',
-            },
         ],
     };
 
@@ -46,9 +40,9 @@ export default class UploadEssays extends Component {
         };
 
         return (
-            <div className="upload">
+            <div className="essay_component">
 
-            <Form name="nest-messages" onFinish={this.onFinish} id="upload">
+            <Form name="nest-messages" onFinish={this.onFinish} id="essay_component">
                 <Form.Item name='title' placeholder="Enter Title Here">
                     <Input placeholder="Enter Title Here" bordered={false}/>
                 </Form.Item>
@@ -58,7 +52,11 @@ export default class UploadEssays extends Component {
                 </Form.Item>
                 <Divider />
                 <Form.Item >
-                    <Upload {...props} fileList={this.state.fileList}>
+                    <Upload {...props}
+                            fileList={this.state.fileList}
+                            restrictions={{
+                        allowedExtensions: [ '.jpg', '.png' ]
+                    }}>
                         <Button htmlType="submit">
                             Upload Thumbnail
                         </Button>

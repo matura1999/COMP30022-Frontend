@@ -26,12 +26,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="834c6a35-d075-48ae-aab8-cf3da347633e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/UserCentre/manageMedia.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/portfolioEssay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manageMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manageMedias.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/portfolioMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/portfolioMedias.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/uploadMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/uploadMedias.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/MyPortfolio/portfolioMedias.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MyPortfolio/portfolioMedias.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EssayItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EssayItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FilterableEssayList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterableEssayList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListOfEssay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListOfEssay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolioInfoBasic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolioInfoBasic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manageEssays.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manageEssays.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/portfolioEssays.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/portfolioEssays.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/EssayItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/EssayItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/ListOfEssay.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/ListOfEssay.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +45,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -112,6 +116,8 @@
       <workItem from="1600912962153" duration="1113000" />
       <workItem from="1601086885000" duration="890000" />
       <workItem from="1601436621185" duration="2016000" />
+      <workItem from="1602400227005" duration="3778000" />
+      <workItem from="1602552766288" duration="1603000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master' into caroline&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <created>1600875699785</created>
@@ -120,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600875699785</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Change &quot;posts&quot; into &quot;essays&quot; 0-0">
+      <created>1602394904680</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602394904680</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,21 +153,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into caroline&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master' into caroline&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="Change &quot;posts&quot; into &quot;essays&quot; 0-0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change &quot;posts&quot; into &quot;essays&quot; 0-0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="526" y="194" key="#File_Watchers" timestamp="1601520461259">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="526" y="194" key="#File_Watchers/0.0.1280.720@0.0.1280.720" timestamp="1601520461259" />
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602232039731">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1602232039731" />
-    <state x="217" y="0" key="CommitChangelistDialog2" timestamp="1600875699218">
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602391635655">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="217" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1600875699218" />
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600778983167" />
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.720@0.0.1280.720" timestamp="1602391635655" />
+    <state x="217" y="0" key="CommitChangelistDialog2" timestamp="1602394903985">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="217" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1602394903985" />
     <state x="310" y="139" key="EditFileWatcherDialog" timestamp="1601520270952">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -179,18 +194,26 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="54" key="MergeDialog/0.0.1280.720@0.0.1280.720" timestamp="1601458290107" />
+    <state x="356" y="63" key="RollbackChangesDialog" timestamp="1602390349933">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="356" y="63" key="RollbackChangesDialog/0.0.1280.720@0.0.1280.720" timestamp="1602390349933" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1601520056711">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600779540213" />
     <state x="142" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1601520056711" />
-    <state x="233" y="93" key="Vcs.Push.Dialog.v2" timestamp="1600875821658">
+    <state x="233" y="93" key="Vcs.Push.Dialog.v2" timestamp="1602394907861">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="233" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1600875821658" />
+    <state x="233" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1602394907861" />
     <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601458275515">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1601458275515" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1602401251706">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1602401251706" />
   </component>
 </project>

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import {Descriptions,} from "antd";
+import {Descriptions} from "antd";
 
-export default class PortfolioInfoBasic extends Component {
+export default class PortfolioEssay extends Component {
     constructor(props) {
         super(props);
         this.state = {
             name: '',
-            intro: ''
+            content: '',
+            thumbnail: '',
         }
     }
 
@@ -18,7 +19,7 @@ export default class PortfolioInfoBasic extends Component {
                 'Accept': 'application/json',
             },
         };
-        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/basic/' + sessionStorage.getItem('username'), requestOptions)
+        await fetch('https://mojito-portfolio-backend.herokuapp.com/' + sessionStorage.getItem('username'), requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {
@@ -28,18 +29,14 @@ export default class PortfolioInfoBasic extends Component {
                 } else {
                     // return data, include all basic user information
                     const data = res.data;
-                    var dob = null;
-                    if(data.dob){
-                        dob = new Date(data.dob);
-                    }
-                    this.setState({ name: data.name, dob: dob.toDateString(), phone: data.phone, email: data.email, intro: data.self_intro })
+                    this.setState({ name: data.name, date: data.toDateString(), content: data.content, thumbnail: data.thumbnail })
                 }
             })
     }
 
     render(){
         return(
-            <Descriptions className="portfolio-descriptions" column={4}>
+            <Descriptions className="portfolio-descriptions">
                 <Descriptions.Item label="Date of Birth">{this.state.dob}</Descriptions.Item>
                 <Descriptions.Item label="Phone">{this.state.phone}</Descriptions.Item>
                 <Descriptions.Item label="Email">{this.state.email}</Descriptions.Item>
