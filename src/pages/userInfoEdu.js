@@ -6,9 +6,10 @@ export default class UserInfoEdu extends Component {
     constructor(props){
         super(props);
         this.state = {
-            fields: []
+            records: []
         }
     }
+
     onFinish = (values) => {
         const requestOptions = {
             method: 'POST',
@@ -23,7 +24,7 @@ export default class UserInfoEdu extends Component {
             .then(res => {
                 if (res.success === false) {
                     setTimeout(() => {
-                        
+
                     }, 300);
                 } else {
                     message.success(`Your changes have been saved.`);
@@ -45,18 +46,14 @@ export default class UserInfoEdu extends Component {
             .then(res => {
                 if (res.success === false) {
                     setTimeout(() => {
-                        
+
                     }, 300);
                 } else {
-                    for(const item of res.data.records){
-                        this.state.fields.push(item)
-                    }
+                    this.setState({records:res.data.records})
                 }
-                console.log(this.state.fields)
+                console.log(this.state.records)
             })
     }
-
-    
 
     render() {
         return (
@@ -143,7 +140,7 @@ export default class UserInfoEdu extends Component {
                 </Form.List>
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit">
+                    <Button type="primary" htmlType="submit" size="large" style={{ backgroundColor: "#8dc63f" }}>
                         Save
                     </Button>
                 </Form.Item>

@@ -8,7 +8,7 @@ export default class UserInfoWork extends Component {
     constructor(props){
         super(props);
         this.state = {
-            fields: []
+            records: []
         }
     }
 
@@ -49,14 +49,12 @@ export default class UserInfoWork extends Component {
             .then(res => {
                 if (res.success === false) {
                     setTimeout(() => {
-                        
+
                     }, 300);
                 } else {
-                    for(const item of res.data.records){
-                        this.state.fields.push(item)
-                    }
+                    this.setState({records:res.data.records})
                 }
-                console.log(this.state.fields)
+                console.log(this.state.records)
             })
     }
 
@@ -137,7 +135,7 @@ export default class UserInfoWork extends Component {
                 </Form.List>
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit">
+                    <Button type="primary" htmlType="submit" size="large" style={{ backgroundColor: "#8dc63f" }}>
                         Save
                     </Button>
                 </Form.Item>

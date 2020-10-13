@@ -82,6 +82,7 @@ export default class UserInfoBasic extends Component {
     };
 
     componentDidMount = async () => {
+        let { form,updateList,productList } = this.props;
         const requestOptions = {
             method: 'GET',
             headers: {
@@ -130,27 +131,28 @@ export default class UserInfoBasic extends Component {
                     {...layout}
                     name="basic-info"
                     onFinish={this.onFinish}
-                    validateMessages={validateMessages}>
+                    validateMessages={validateMessages}
+                >
                     <Form.Item label="Username">
                         <span className="username">{sessionStorage.getItem("username")} </span>
                     </Form.Item>
-                    <Form.Item name={['user', 'name']} label="Name" rules={[{ required: true }]}>
+                    <Form.Item name="name" label="Name" rules={[{ required: true }]}>
                         <Input initialValue={this.state.name}/>
                     </Form.Item>
-                    <Form.Item name={['user', 'dob']} label="DoB" >
+                    <Form.Item name="dob" label="DoB" >
                         <DatePicker />
                     </Form.Item>
-                    <Form.Item name={['user', 'phone']} label="Phone">
+                    <Form.Item name="phone" label="Phone">
                         <Input />
                     </Form.Item>
-                    <Form.Item name={['user', 'email']} label="Email" rules={[{ type: 'email' }]}>
+                    <Form.Item name="email" label="Email" rules={[{ type: 'email' }]}>
                         <Input />
                     </Form.Item>
-                    <Form.Item name={['user', 'introduction']} label="Self Introduction">
+                    <Form.Item name="introduction" label="Self Introduction">
                         <Input.TextArea />
                     </Form.Item>
                     <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 4 }}>
-                        <Button type="primary" htmlType="submit">
+                        <Button type="primary" htmlType="submit" size="large" style={{ backgroundColor: "#8dc63f" }}>
                             Save All Changes
                         </Button>
                     </Form.Item>
