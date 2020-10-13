@@ -1,10 +1,13 @@
 .App {
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .App-body {
-  height: 90vh;
+  flex: 1;
+  background-color: #f0f8e8;
+  /* background-color: #fafafa; */
 }
 
 .App-logo {
@@ -17,6 +20,8 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+.App-footer {}
 
 .App-header {
   background-color: #282c34;

@@ -63,43 +63,43 @@ export default class UserPortfolio extends Component {
     const { current } = this.state;
     return (
       <div className="portfolio-all-but-header">
-        <Row>
-          <Col span={18} offset={3}>
-            <div class="name-card-and-menu">
-              <PortfolioNameCard />
-              <Menu
-                onClick={this.handleClick}
-                selectedKeys={[current]}
-                mode="horizontal"
-              >
-                <Menu.Item key="info" icon={<IdcardOutlined />}>
-                  <Link exact to="/userPortfolio/info">
-                    Info
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="files" icon={<FileOutlined />}>
-                  <Link exact to="/userPortfolio/files">
-                    Files
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="medias" icon={<PictureOutlined />}>
-                  <Link exact to="/userPortfolio/medias">
-                    Medias
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="essays" icon={<FileTextOutlined />}>
-                  <Link exact to="/userPortfolio/essays">
-                    Essays
-                  </Link>
-                </Menu.Item>
-              </Menu>
-            </div>
-            <div class="portfolio-content" style={{ height: "auto" }}>
-              {this.showContent()}
-            </div>
-          </Col>
-        </Row>
-        <Footer />
+        <Col span={18} offset={3}>
+          <div class="name-card-and-menu">
+            <PortfolioNameCard />
+            <Menu
+              onClick={this.handleClick}
+              selectedKeys={[current]}
+              mode="horizontal"
+            >
+              <Menu.Item key="info" icon={<IdcardOutlined />}>
+                <Link exact to="/userPortfolio/info">
+                  Info
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="files" icon={<FileOutlined />}>
+                <Link exact to="/userPortfolio/files">
+                  Files
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="medias" icon={<PictureOutlined />}>
+                <Link exact to="/userPortfolio/medias">
+                  Medias
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="essays" icon={<FileTextOutlined />}>
+                <Link exact to="/userPortfolio/essays">
+                  Essays
+                </Link>
+              </Menu.Item>
+            </Menu>
+          </div>
+          <div class="portfolio-content" style={{ height: "auto" }}>
+            {this.showContent()}
+          </div>
+        </Col>
+        <div className="portfolio__footer">
+          <Footer />
+        </div>
       </div>
     );
   }

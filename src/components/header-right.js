@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Menu, Dropdown,} from "antd";
+import { Menu, Dropdown } from "antd";
 import "../styles/header.css";
-import AvatarSmall from "./avatarSmall";
+import UserAvatar from "./UserAvatar";
 import {
   FolderViewOutlined,
   IdcardOutlined,
@@ -18,7 +18,7 @@ export default class HeaderRight extends Component {
 
   onLogout = () => {
     window.location.href = "/";
-    window.sessionStorage.clear()
+    window.sessionStorage.clear();
   };
 
   menu = (
@@ -72,7 +72,7 @@ export default class HeaderRight extends Component {
               className="ant-dropdown-link"
               onClick={(e) => e.preventDefault()}
             >
-            <AvatarSmall/>
+              <UserAvatar size={40} />
             </a>
           </Dropdown>
         </div>
