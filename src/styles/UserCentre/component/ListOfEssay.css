@@ -1,16 +1,15 @@
 .essays__container {
-
-    width: 1024px;
+    max-width: 1024px;
 }
 
 .essays__item {
     margin: 15px;
     display: flex;
-
-    width: 1024px;
+    max-width: 1024px;
 }
 
 .essays__item:hover {
+
 
 }
 
@@ -18,7 +17,7 @@
     display: flex;
     align-items: center;
     margin-left: 15px;
-    width: 200px;
+
 }
 
 .essays__thumbnail {
@@ -35,7 +34,7 @@
 .essays__info {
     display: flex;
     flex-direction: column;
-    width: 900px;
+    max-width: 900px;
 
 }
 
@@ -44,19 +43,9 @@
     font-weight: 900;
 }
 
-.essays__typeSizeContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 100px;
-}
-
-.essays__abstract {
+.essays__content {
     font-size: 15px;
     font-weight: 500;
-    width: 800px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .essays__date {

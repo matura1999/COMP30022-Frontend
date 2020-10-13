@@ -4,7 +4,7 @@ import FilterableEssayList from "../components/FilterableEssayList";
 const postItemList = [
     {
         name: "Horizon",
-        abstract: "I came to dance-dance-dance-dance (Yeah)\n" +
+        content: "I came to dance-dance-dance-dance (Yeah)\n" +
             "I hit the floor 'cause that's my plans plans plans plans (Yeah)\n" +
             "I'm wearing all my favorite brands brands brands brands (Yeah)\n" +
             "Give me some space for both my hands hands hands hands\n" +
@@ -14,7 +14,7 @@ const postItemList = [
     },
     {
         name: "The Tortoise and the Hare",
-        abstract: "'Cause I-I-I'm in the stars tonight\n" +
+        content: "'Cause I-I-I'm in the stars tonight\n" +
             "So watch me bring the fire and set the night alight (hey)\n" +
             "Shining through the city with a little funk and soul\n" +
             "So I'ma light it up like dynamite, whoa",
@@ -23,7 +23,7 @@ const postItemList = [
     },
     {
         name: "Fearless",
-        abstract: "This is getting heavy\n" +
+        content: "This is getting heavy\n" +
             "Can you hear the bass boom? I'm ready (woo hoo)\n" +
             "Life is sweet as honey\n" +
             "Yeah, this beat cha-ching like money\n" +
@@ -35,7 +35,7 @@ const postItemList = [
     },
     {
         name: "NCT 2020",
-        abstract: "Shoes on, get up in the morn\n" +
+        content: "Shoes on, get up in the morn\n" +
             "Cup of milk, let's rock and roll\n" +
             "King Kong, kick the drum, rolling on like a rolling stone\n" +
             "Sing song when I'm walking home\n" +
@@ -47,7 +47,7 @@ const postItemList = [
     },
     {
         name: "Ice Cream",
-        abstract: "Look so good, yeah, look so sweet (Hey)\n" +
+        content: "Look so good, yeah, look so sweet (Hey)\n" +
             "Lookin' good enough to eat\n" +
             "Coldest with the kiss, so he call me ice cream\n" +
             "Catch me in the fridge, right where the ice be\n" +
@@ -57,7 +57,7 @@ const postItemList = [
         thumbnail: 'https://s.yimg.com/ny/api/res/1.2/fHxH29M3wXOFl.MgJKOt5g--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en/stylecaster_935/c5a30443d4db06a57d1acaddb29fa85a'    },
     {
         name: "#",
-        abstract: "Eh, can't let it hide, burn\n" +
+        content: "Eh, can't let it hide, burn\n" +
             "Oh, the look in your eyes has changed (Hey!)\n" +
             "The obstacles that were too high\n" +
             "I'll show you, I'll go     over them\n" +

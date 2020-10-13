@@ -18,8 +18,8 @@ class EssayList extends React.Component {
             listAfterSearch.sort((a, b) => a.date.localeCompare(b.date));
         }
 
-        listAfterSearch.forEach(({ name, thumbnail, abstract, date }) => {
-            rows.push(<EssayItem name={name} thumbnail={<img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL"/>} abstract={abstract} date={date} />);
+        listAfterSearch.forEach(({ name, thumbnail, content, date }) => {
+            rows.push(<EssayItem name={name} thumbnail={<img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL"/>} content={content} date={date} />);
         });
 
         return <div className="postList">{rows}</div>;

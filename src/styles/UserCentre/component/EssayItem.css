@@ -1,5 +1,6 @@
 .e-container {
   border-bottom: 1px solid black;
+  max-width: 900px;
 }
 
 .e-item {
@@ -7,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 900px;
 }
 
 .e-iconAndInfo {
@@ -29,6 +31,7 @@
 .e-info {
   display: flex;
   flex-direction: column;
+  max-width: 500px;
 }
 
 .e-title {
@@ -40,12 +43,12 @@
   display: flex;
   justify-content: space-between;
   width: 200px;
+  max-width: 900px;
 }
 
-.e-abstract {
+.e-content {
   font-size: 15px;
   font-weight: 500;
-  width: 500px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
