@@ -50,11 +50,11 @@ export default class UserInfoBasic extends Component {
     }
 
     if (values.phone) {
-      phone = values.user.phone;
+      phone = values.phone;
     }
 
     if (values.email) {
-      email = values.user.email;
+      email = values.email;
     }
 
     if (values.introduction) {
