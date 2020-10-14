@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import Header from "./components/header";
-import Intro from "./pages/intro";
-import Signup from "./pages/signup";
-import Signin from "./pages/signin";
-import UserPage from "./pages/userPage";
-import Sider from "./components/sider";
-import UserPortfolio from "./pages/userPortfolio"
+import Header from "./components/header/header";
+import Intro from "./pages/intro/intro";
+import Signup from "./pages/signup/signup";
+import Signin from "./pages/signin/signin";
+import UserPage from "./pages/userCentre/userCentre";
+import UserPortfolio from "./pages/portfolio/userPortfolio"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
