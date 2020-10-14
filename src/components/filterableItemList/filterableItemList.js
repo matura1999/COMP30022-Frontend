@@ -17,6 +17,9 @@ class FileList extends React.Component {
     if (sortMethod === "byName") {
       listAfterSearch.sort((a, b) => a.name.localeCompare(b.name));
     }
+    if (sortMethod === "byDate") {
+      listAfterSearch.sort((a, b) => b.date.localeCompare(a.date));
+    }
 
     if (useFor === "manage") {
       listAfterSearch.forEach(({ name, type, date, size, fileUrl }) => {
@@ -71,8 +74,7 @@ class SearchBar extends React.Component {
         <select className="sortBar" onChange={this.handleSortChange}>
           <option value="byDefault">Sort By Default</option>
           <option value="byName">Sort By Name</option>
-          {/* <option value="bySize">Sort By Size</option>
-          <option value="byDate">Sort By Date</option> */}
+          <option value="byDate">Sort By Date</option>
         </select>
       </form>
     );

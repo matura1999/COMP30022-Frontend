@@ -3,7 +3,7 @@
     &__item {
         display: flex;
         margin-bottom: 20px;
-        width: 50%;
+        // width: 50%;
         align-items: center;
         justify-content: center;
     }
@@ -94,17 +94,13 @@
 }
 
 .myPortfolioFileList .fileList {
-    // width: 60vw;
-    margin: 20px;
+    margin: 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    // border: 2px solid red;
 
-    // &::after {
-    //     content: "";
-    //     width: 200px;
-    // }
-
-
+    &::after {
+        content: "";
+        width: 410px;
+    }
 }

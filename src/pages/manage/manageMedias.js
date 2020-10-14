@@ -49,7 +49,7 @@ const mediaItemList = [
     source:
       "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
     alt: "e",
-    time: "2020-09-01 01:01:00",
+    time: "2020-10-20 01:01:00",
     description: "This is the description",
   },
 ];
@@ -150,7 +150,7 @@ class MediaList extends React.Component {
     );
 
     if (sortMethod === "byDate") {
-      listAfterSearch.sort((a, b) => a.time.localeCompare(b.time));
+      listAfterSearch.sort((a, b) => b.time.localeCompare(a.time));
     }
 
     listAfterSearch.forEach(({ source, alt, time, description }, index) => {
