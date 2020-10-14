@@ -16,7 +16,7 @@ const mediaItemList = [
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
     alt: "aa",
     time: "2020-09-01 01:02:00",
-    description: "This is the description",
+    description: "This is the description  jsndkjandkajsndajks",
   },
   {
     source:
@@ -30,28 +30,28 @@ const mediaItemList = [
     source: "https://www.w3schools.com/images/w3schools_green.jpg",
     alt: "b",
     time: "2020-09-01 01:01:00",
-    description: "This is the description",
+    description: "hahahhahha",
   },
-  {
-    source: "https://www.w3schools.com/images/w3schools_green.jpg",
-    alt: "c",
-    time: "2020-09-01 01:01:00",
-    description: "This is the description",
-  },
-  {
-    source:
-      "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-    alt: "d",
-    time: "2020-09-01 01:01:00",
-    description: "This is the description",
-  },
-  {
-    source:
-      "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-    alt: "e",
-    time: "2020-10-20 01:01:00",
-    description: "This is the description",
-  },
+  // {
+  //   source: "https://www.w3schools.com/images/w3schools_green.jpg",
+  //   alt: "c",
+  //   time: "2020-09-01 01:01:00",
+  //   description: "This is the description",
+  // },
+  // {
+  //   source:
+  //     "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+  //   alt: "d",
+  //   time: "2020-09-01 01:01:00",
+  //   description: "This is the description",
+  // },
+  // {
+  //   source:
+  //     "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+  //   alt: "e",
+  //   time: "2020-10-20 01:01:00",
+  //   description: "This is the description",
+  // },
 ];
 
 class MediaList extends React.Component {
@@ -67,7 +67,7 @@ class MediaList extends React.Component {
     const list = this.props.files;
     list.splice(index, 1);
     this.setState({ files: list });
-    console.log("sdahk");
+    console.log("clicked delete");
   };
 
   handleHoverChange = (visible, source) => {
@@ -117,11 +117,11 @@ class MediaList extends React.Component {
 
   handleOk = () => {
     // const index = e.target.getAttribute("key")
-    // let data = this.state.files
-    // data[1].description = document.getElementById('text').value
+    let data = this.state.files;
+    data[1].description = document.getElementById("text").value;
     this.setState({
       confirmLoading: true,
-      // files :data
+      files: data,
     });
     setTimeout(() => {
       this.setState({
@@ -154,6 +154,8 @@ class MediaList extends React.Component {
     }
 
     listAfterSearch.forEach(({ source, alt, time, description }, index) => {
+      console.log({ source, alt, time, description });
+      // const hehe = description;
       rows.push(
         <div>
           <Card
