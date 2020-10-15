@@ -38,19 +38,19 @@ const FileItem = ({ name, type, size, date, fileUrl }) => (
         </div>
 
         <div className="fileItem__info">
-          <div className="fileItem__title">{name}</div>
+          <div className="fileItem__title" data-testid="fileItem-name">{name}</div>
 
           <div className="fileItem__typeSizeContainer">
-            <div className="fileItem__type">{type} File</div>
-            <div className="fileItem__size">{size}</div>
+            <div className="fileItem__type" data-testid="fileItem-type">{type} File</div>
+            <div className="fileItem__size" data-testid="fileItem-size">{size}</div>
           </div>
 
-          <div className="fileItem__date">{date}</div>
+          <div className="fileItem__date" data-testid="fileItem-date">{date}</div>
         </div>
       </div>
 
       <div className="fileItem__options">
-        <a
+        <a data-testid="fileItem-url"
           href={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${fileUrl}`}
           download
         >
