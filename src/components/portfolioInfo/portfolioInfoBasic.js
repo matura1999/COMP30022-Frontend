@@ -6,7 +6,8 @@ export default class PortfolioInfoBasic extends Component {
         super(props);
         this.state = {
             name: '',
-            intro: ''
+            intro: '',
+            user: this.props.user,
         }
     }
 
@@ -18,7 +19,7 @@ export default class PortfolioInfoBasic extends Component {
                 'Accept': 'application/json',
             },
         };
-        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/basic/' + sessionStorage.getItem('username'), requestOptions)
+        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/basic/' + this.state.user, requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {

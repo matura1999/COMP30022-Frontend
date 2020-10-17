@@ -18,7 +18,7 @@ export default class ManageFiles extends Component {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        user: sessionStorage.getItem("user"),
+        user: sessionStorage.getItem("username"),
         path: "files",
       }),
     };
@@ -28,7 +28,6 @@ export default class ManageFiles extends Component {
     )
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         if (res.success === false) {
           setTimeout(() => {
             this.setState({
@@ -36,11 +35,9 @@ export default class ManageFiles extends Component {
             });
           }, 300);
         } else {
-          setTimeout(() => {
-            this.setState({
-              notice: res.message,
-            });
-          }, 300);
+          this.setState({
+            notice: res.message,
+          });
 
           res.files.map(({ Key: fileUrl, LastModified: date, Size: size }) => {
             const name = fileUrl.split("/").pop();
@@ -55,7 +52,6 @@ export default class ManageFiles extends Component {
             }
             let dateObj = new Date(date);
             const createdDate = dateObj.toLocaleString();
-            console.log(fileUrl);
             const fileObject = {
               name: name,
               type: type,

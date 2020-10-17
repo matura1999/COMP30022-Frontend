@@ -28,7 +28,6 @@ export default class UserInfoEdu extends Component {
                     }, 300);
                 } else {
                     message.success(`Your changes have been saved.`);
-                    console.log(res.message);
                 }
             })
     };
@@ -51,7 +50,6 @@ export default class UserInfoEdu extends Component {
                 } else {
                     this.setState({records:res.data.records})
                 }
-                console.log(this.state.records)
             })
     }
 
@@ -60,7 +58,6 @@ export default class UserInfoEdu extends Component {
             <Form name="edu-info" onFinish={this.onFinish} autoComplete="off">
                 <Form.List name="records">
                     {(fields, { add, remove }) => {
-                        console.log(fields)
                         return (
                             <div>
                                 {fields.map(field => (

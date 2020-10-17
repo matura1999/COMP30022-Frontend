@@ -3,7 +3,7 @@ import { Upload, message } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
 
 const { Dragger } = Upload;
-const sendingData = {user: sessionStorage.getItem('user'), path: 'files'};
+const sendingData = {user: sessionStorage.getItem('username'), path: 'files'};
 const props = {
   name: "file",
   multiple: true,

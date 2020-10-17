@@ -6,6 +6,7 @@ export default class PortfolioNameCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      user: this.props.user,
       name: "",
       intro: "",
     };
@@ -20,7 +21,7 @@ export default class PortfolioNameCard extends Component {
       },
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/user/info/basic/" + sessionStorage.getItem("username"),
+      "https://mojito-portfolio-backend.herokuapp.com/user/info/basic/" + this.state.user,
       requestOptions
     )
       .then((res) => res.json())

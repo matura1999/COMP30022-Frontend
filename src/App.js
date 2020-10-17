@@ -6,6 +6,7 @@ import Signin from "./pages/signin/signin";
 import UserPage from "./pages/userCentre/userCentre";
 import UserPortfolio from "./pages/portfolio/userPortfolio"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SearchResult from "./pages/search/search"
 import "./App.css";
 
 class App extends Component {
@@ -20,7 +21,8 @@ class App extends Component {
               <Route exact path="/signup" exact component={Signup} />
               <Route exact path="/signin" exact component={Signin} />
               <Route path="/userCentre/:path/:subpath" component={UserPage} />
-              <Route path="/userPortfolio/:path" component={UserPortfolio} />
+              <Route path="/userPortfolio/:username/:path" component={UserPortfolio} />
+              <Route path="/search" component={SearchResult} />
             </Switch>
           </div>
         </Router>

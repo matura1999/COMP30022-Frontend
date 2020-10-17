@@ -26,61 +26,61 @@ export default class Sider extends Component {
       defaultOpenKeys={this.props.openKey}
       style={{ height: "100%" }}
     >
-      <SubMenu key="sub1" icon={<IdcardOutlined />} title="User Info">
-        <Menu.Item key="1">
+      <SubMenu key="userInfo" icon={<IdcardOutlined />} title="User Info">
+        <Menu.Item key="basic">
           <Link exact to="/userCentre/userInfo/basic">
             <SolutionOutlined />
             Basic Info
           </Link>
         </Menu.Item>
-        <Menu.Item key="2">
+        <Menu.Item key="education">
           <Link exact to="/userCentre/userInfo/education">
             <BookOutlined />
             Educational Background
           </Link>
         </Menu.Item>
-        <Menu.Item key="3">
+        <Menu.Item key="work">
           <Link exact to="/userCentre/userInfo/work">
             <BarChartOutlined />
             Work Experience
           </Link>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key="sub2" icon={<UploadOutlined />} title="Upload Content">
-        <Menu.Item key="4">
-          <Link exact to="/userCentre/uploadContent/files">
+      <SubMenu key="uploadContent" icon={<UploadOutlined />} title="Upload Content">
+        <Menu.Item key="filesUpload">
+          <Link exact to="/userCentre/uploadContent/filesUpload">
             <FileAddOutlined />
             Upload Files
           </Link>
         </Menu.Item>
-        <Menu.Item key="5">
-          <Link exact to="/userCentre/uploadContent/medias">
+        <Menu.Item key="mediasUpload">
+          <Link exact to="/userCentre/uploadContent/mediasUpload">
             <CameraOutlined />
             Upload Medias
           </Link>
         </Menu.Item>
-        <Menu.Item key="6">
-          <Link exact to="/userCentre/uploadContent/essays">
+        <Menu.Item key="essaysUpload">
+          <Link exact to="/userCentre/uploadContent/essaysUpload">
             <EditOutlined />
             Write Essays
           </Link>
         </Menu.Item>
       </SubMenu>
-      <SubMenu key="sub3" icon={<AppstoreOutlined />} title="Manage Content">
-        <Menu.Item key="7">
-          <Link exact to="/userCentre/manageContent/files">
+      <SubMenu key="manageContent" icon={<AppstoreOutlined />} title="Manage Content">
+        <Menu.Item key="filesManagement">
+          <Link exact to="/userCentre/manageContent/filesManagement">
             <FileOutlined />
             Manage Files
           </Link>
         </Menu.Item>
-        <Menu.Item key="8">
-          <Link exact to="/userCentre/manageContent/medias">
+        <Menu.Item key="mediasManagement">
+          <Link exact to="/userCentre/manageContent/mediasManagement">
             <PictureOutlined />
             Manage Medias
           </Link>
         </Menu.Item>
-        <Menu.Item key="9">
-          <Link exact to="/userCentre/manageContent/essays">
+        <Menu.Item key="essaysManage">
+          <Link exact to="/userCentre/manageContent/essaysManage">
             <FileTextOutlined />
             Manage Essays
           </Link>

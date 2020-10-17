@@ -5,7 +5,8 @@ export default class PortfolioInfoWork extends Component {
     constructor(props){
         super(props);
         this.state = {
-            records: []
+            records: [],
+            user: this.props.user,
         }
     }
 
@@ -17,10 +18,9 @@ export default class PortfolioInfoWork extends Component {
                 'Accept': 'application/json',
             },
         };
-        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/work/' + sessionStorage.getItem('username'), requestOptions)
+        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/work/' + this.state.user, requestOptions)
             .then(res => res.json())
             .then(res => {
-                console.log(res);
                 if (res.success === false) {
                     setTimeout(() => {
 
@@ -28,7 +28,6 @@ export default class PortfolioInfoWork extends Component {
                 } else {
                     this.setState({records:res.data.records})
                 }
-                console.log(this.state.records)
             })
     }
 

@@ -5,7 +5,8 @@ export default class PortfolioInfoEdu extends Component {
     constructor(props){
         super(props);
         this.state = {
-            records: []
+            records: [],
+            user: this.props.user,
         }
     }
 
@@ -17,7 +18,7 @@ export default class PortfolioInfoEdu extends Component {
                 'Accept': 'application/json',
             },
         };
-        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/education/' + sessionStorage.getItem('username'), requestOptions)
+        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/education/' + this.state.user, requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {
@@ -27,7 +28,6 @@ export default class PortfolioInfoEdu extends Component {
                 } else {
                     this.setState({records:res.data.records})
                 }
-                console.log(this.state.records)
             })
     }
 

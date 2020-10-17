@@ -23,11 +23,11 @@ export default class Header extends Component {
           </Link>
         </Col>
         <Col span={7}>
-          <form className="search-bar" action="#">
+          <form className="search-bar" action="/search">
             <input
               type="text"
               placeholder="Search Portfolio"
-              name="search-protfolio"
+              name="name"
             />
             <button className="search-button" type="submit">
               <i className="fa fa-search" />

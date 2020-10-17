@@ -17,27 +17,39 @@ export default class HeaderRight extends Component {
     window.sessionStorage.clear();
   };
 
+  goToUserInfo = () => {
+    window.location.href = "/userCentre/userInfo/basic"
+  }
+
+  goToUpload = () => {
+    window.location.href = "/userCentre/uploadContent/filesUpload"
+  }
+  
+  goToManage = () => {
+    window.location.href = "/userCentre/manageContent/filesManagement"
+  }
+
   menu = (
     <Menu>
       <Menu.Item>
-        <Link exact to="/userPortfolio/info">
+        <Link exact to={"/userPortfolio/" + sessionStorage.getItem('username') + "/info"}>
           <FolderViewOutlined /> My Portfolio
         </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link exact to="/userCentre/userInfo/basic">
+        <a onClick={this.goToUserInfo}>
           <IdcardOutlined /> User Info
-        </Link>
+        </a>
       </Menu.Item>
       <Menu.Item>
-        <Link exact to="/userCentre/uploadContent/files">
+        <a onClick={this.goToUpload}>
           <UploadOutlined /> Upload Content
-        </Link>
+        </a>
       </Menu.Item>
-      <Menu.Item>
-        <Link exact to="/userCentre/manageContent/files">
+      <Menu.Item onclick={this.goToManage}>
+        <a onClick={this.goToManage}>
           <AppstoreOutlined /> Manage Content
-        </Link>
+        </a>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item>
