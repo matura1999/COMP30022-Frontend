@@ -25,17 +25,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834c6a35-d075-48ae-aab8-cf3da347633e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/portfolioEssay.js" afterDir="false" />
+    <list default="true" id="20269a7e-e697-4d8d-ac80-f2bba661dd09" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/filterableEssayList/essayPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EssayItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EssayItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilterableEssayList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterableEssayList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListOfEssay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListOfEssay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/portfolioInfoBasic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolioInfoBasic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manageEssays.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manageEssays.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/portfolioEssays.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/portfolioEssays.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/EssayItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/EssayItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/UserCentre/component/ListOfEssay.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UserCentre/component/ListOfEssay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolioEssay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolioEssay.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +48,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="caroline" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/xiaohanl4/COMP30022-Frontend" />
+      </set>
+    </option>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -102,7 +103,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="834c6a35-d075-48ae-aab8-cf3da347633e" name="Default Changelist" comment="" />
+      <changelist id="20269a7e-e697-4d8d-ac80-f2bba661dd09" name="Default Changelist" comment="" />
       <created>1599788066501</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -118,6 +119,10 @@
       <workItem from="1601436621185" duration="2016000" />
       <workItem from="1602400227005" duration="3778000" />
       <workItem from="1602552766288" duration="1603000" />
+      <workItem from="1602667790201" duration="1882000" />
+      <workItem from="1602678395700" duration="738000" />
+      <workItem from="1602724535239" duration="3962000" />
+      <workItem from="1602903648474" duration="2426000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master' into caroline&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <created>1600875699785</created>
@@ -133,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602394904680</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branch 'caroline' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1602554885557</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602554885557</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +166,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into caroline&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Change &quot;posts&quot; into &quot;essays&quot; 0-0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change &quot;posts&quot; into &quot;essays&quot; 0-0" />
+    <MESSAGE value="Merge branch 'caroline' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'caroline' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="526" y="194" key="#File_Watchers" timestamp="1601520461259">
@@ -166,30 +179,34 @@
     </state>
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600778983167" />
     <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.720@0.0.1280.720" timestamp="1602391635655" />
-    <state x="217" y="0" key="CommitChangelistDialog2" timestamp="1602394903985">
+    <state x="217" y="0" key="CommitChangelistDialog2" timestamp="1602554885042">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="217" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1602394903985" />
+    <state x="217" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1602554885042" />
     <state x="310" y="139" key="EditFileWatcherDialog" timestamp="1601520270952">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="310" y="139" key="EditFileWatcherDialog/0.0.1280.720@0.0.1280.720" timestamp="1601520270952" />
-    <state width="775" height="163" key="GridCell.Tab.0.bottom" timestamp="1600779087848">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1259" height="176" key="GridCell.Tab.0.bottom" timestamp="1602679134319">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="775" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600779087848" />
-    <state width="775" height="163" key="GridCell.Tab.0.center" timestamp="1600779087848">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1259" height="176" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1602679134319" />
+    <state width="1259" height="176" key="GridCell.Tab.0.center" timestamp="1602679134319">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="775" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600779087848" />
-    <state width="775" height="163" key="GridCell.Tab.0.left" timestamp="1600779087848">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1259" height="176" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1602679134319" />
+    <state width="1259" height="176" key="GridCell.Tab.0.left" timestamp="1602679134319">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="775" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600779087848" />
-    <state width="775" height="163" key="GridCell.Tab.0.right" timestamp="1600779087848">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1259" height="176" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1602679134319" />
+    <state width="1259" height="176" key="GridCell.Tab.0.right" timestamp="1602679134319">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="775" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600779087848" />
+    <state width="1259" height="176" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1602679134319" />
     <state x="121" y="54" key="MergeDialog" timestamp="1601458290107">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -203,14 +220,14 @@
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600779540213" />
     <state x="142" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1601520056711" />
-    <state x="233" y="93" key="Vcs.Push.Dialog.v2" timestamp="1602394907861">
+    <state x="233" y="93" key="Vcs.Push.Dialog.v2" timestamp="1602554925175">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="233" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1602394907861" />
-    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601458275515">
+    <state x="233" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1602554925175" />
+    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602678583831">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1601458275515" />
+    <state x="458" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1602678583831" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1602401251706">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

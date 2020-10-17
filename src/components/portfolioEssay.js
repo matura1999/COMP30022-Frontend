@@ -6,6 +6,7 @@ export default class PortfolioEssay extends Component {
         super(props);
         this.state = {
             name: '',
+            date: '',
             content: '',
             thumbnail: '',
         }
@@ -37,9 +38,10 @@ export default class PortfolioEssay extends Component {
     render(){
         return(
             <Descriptions className="portfolio-descriptions">
-                <Descriptions.Item label="Date of Birth">{this.state.dob}</Descriptions.Item>
-                <Descriptions.Item label="Phone">{this.state.phone}</Descriptions.Item>
-                <Descriptions.Item label="Email">{this.state.email}</Descriptions.Item>
+                <Descriptions.Item label="essay_title">{this.state.name}</Descriptions.Item>
+                <Descriptions.Item label="essay_date">{this.state.date}</Descriptions.Item>
+                <Descriptions.Item label="essay_content">{this.state.content}</Descriptions.Item>
+                <Descriptions.Item label="essay_thumbnail">{this.state.thumbnail}</Descriptions.Item>
             </Descriptions>
         )
     }

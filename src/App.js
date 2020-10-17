@@ -7,6 +7,7 @@ import UserPage from "./pages/userCentre/userCentre";
 import UserPortfolio from "./pages/portfolio/userPortfolio"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import PortfolioEssay from "./components/portfolioEssay";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
               <Route exact path="/signin" exact component={Signin} />
               <Route path="/userCentre/:path/:subpath" component={UserPage} />
               <Route path="/userPortfolio/:path" component={UserPortfolio} />
+              <Route path="/userPortfolio/essays/:id" component={PortfolioEssay} />
             </Switch>
           </div>
         </Router>
