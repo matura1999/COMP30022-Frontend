@@ -101,3 +101,7 @@ form.search-bar button {
 .avatar-container {
   float: right;
 }
+
+.logo:hover{
+  cursor: pointer;
+}

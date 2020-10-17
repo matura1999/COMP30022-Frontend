@@ -5,6 +5,9 @@ import "./header.css";
 import HeaderRight from "./header-right";
 
 export default class Header extends Component {
+    backToHome = () => {
+        window.location.href = "/";
+    }
 
   constructor(props) {
     super(props);
@@ -18,9 +21,9 @@ export default class Header extends Component {
       <Row className="navbar" justify="center" align="middle">
         <Col span={1}></Col>
         <Col span={7}>
-          <Link exact to="/" class="logo">
+          <div className="logo" onClick={this.backToHome}>
             🍋Mojito
-          </Link>
+          </div>
         </Col>
         <Col span={7}>
           <form className="search-bar" action="/search">
