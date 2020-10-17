@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 Install dependencies
 
-### `npm run-script test`
+### `npm run-script dev`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,6 +14,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+### `npm test`
+
+Test the app
 
 ### `npm run-script build`
 Build the app into product mode.
