@@ -1,7 +1,12 @@
 import React, { Component } from "react";
+import {Empty} from "antd";
+import SearchResultNameCard from "./searchResultNameCard"
+import "./searchResult.scss";
 const queryString = require('query-string');
 
 export default class SearchResult extends Component {
+
+
     constructor(props) {
         super(props);
         const parsed = queryString.parse(props.location.search);
@@ -37,11 +42,27 @@ export default class SearchResult extends Component {
     render() {
         const {result} = this.state;
         console.log(result);
-        
-        return (
-            <div className="search-result">
-                This is search result page, the result is in console
-            </div>
-        );
+
+        if(this.state.result.length < 1){
+            return(
+                <div className="searchResult__list">
+                    <Empty className="searchResult__empty" description={"No result found. Please try again. "}/>
+                </div>
+            )
+        }else{
+            return(
+                <div className="searchResult__list">
+                    {this.state.result.map(resultItem=>(
+                        <div className="searchResult__container" >
+                            <SearchResultNameCard
+                                name={resultItem.name}
+                                username={resultItem.username}
+                                intro={resultItem.self_intro}
+                            />
+                        </div>
+                    ))}
+                </div>
+            )
+        }
     }
 }
