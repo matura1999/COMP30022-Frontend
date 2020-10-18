@@ -58,10 +58,6 @@ class MediaList extends React.Component {
     files: this.props.files,
   };
 
-  handleItem = (e) => {
-    console.log("clicked delete");
-  };
-
   render() {
     const filterText = this.props.filterText;
     const rows = [];

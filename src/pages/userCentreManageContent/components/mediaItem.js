@@ -8,8 +8,11 @@ import {
 import EditDescriptionModal from "./editDescriptionModal";
 
 const { Meta } = Card;
+const handleItem = (e) => {
+  console.log("clicked delete");
+};
 
-const MediaItem = ({ source, alt, time, description, handleItem }) => (
+const MediaItem = ({ source, alt, time, description }) => (
   <Card
     className="manageMedia__card"
     style={{ width: 200 }}
