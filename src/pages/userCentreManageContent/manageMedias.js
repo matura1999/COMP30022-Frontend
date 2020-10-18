@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../../components/filterableItemList/FilterableItemList.css";
 import "./manageMedias.scss";
 import { Popconfirm, Popover, Card, Image, Tooltip, Input, Modal } from "antd";
 import {
@@ -7,7 +6,7 @@ import {
   ZoomInOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
-
+import EditDescriptionModal from "./components/editDescriptionModal";
 const { Meta } = Card;
 
 const mediaItemList = [
@@ -15,21 +14,21 @@ const mediaItemList = [
     source:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
     alt: "aa",
-    time: "2020-09-01 01:02:00",
+    time: "2020-09-01 01:01:00",
     description: "This is the description  jsndkjandkajsndajks",
   },
   {
     source:
       "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
     alt: "a",
-    time: "2020-09-01 01:01:00",
+    time: "2020-10-20 01:01:00",
     description:
       "This is the description ffffffffffffffffffffffffffffffffffffffffffffffffff",
   },
   {
     source: "https://www.w3schools.com/images/w3schools_green.jpg",
     alt: "b",
-    time: "2020-09-01 01:01:00",
+    time: "2020-09-01 01:02:00",
     description: "hahahhahha",
   },
   // {
@@ -57,93 +56,86 @@ const mediaItemList = [
 class MediaList extends React.Component {
   state = {
     files: this.props.files,
-    visible: false,
-    confirmLoading: false,
-    clicked: false,
-    hovered: false,
-    show: 0,
   };
-  handleItem = (index) => {
-    const list = this.props.files;
-    list.splice(index, 1);
-    this.setState({ files: list });
+
+  handleItem = (e) => {
     console.log("clicked delete");
   };
 
-  handleHoverChange = (visible, source) => {
-    if (visible) {
-      this.setState({
-        hovered: visible,
-        clicked: false,
-        show: source,
-      });
-    } else {
-      this.setState({
-        hovered: visible,
-        clicked: false,
-        show: 0,
-      });
-    }
-  };
+  // handleHoverChange = (visible, source) => {
+  //   if (visible) {
+  //     this.setState({
+  //       hovered: visible,
+  //       clicked: false,
+  //       show: source,
+  //     });
+  //   } else {
+  //     this.setState({
+  //       hovered: visible,
+  //       clicked: false,
+  //       show: 0,
+  //     });
+  //   }
+  // };
 
-  handleClickChange = (visible, source) => {
-    if (visible) {
-      this.setState({
-        hovered: false,
-        clicked: visible,
-        show: source,
-      });
-    } else {
-      this.setState({
-        hovered: false,
-        clicked: visible,
-        show: 0,
-      });
-    }
-  };
+  // handleClickChange = (visible, source) => {
+  //   if (visible) {
+  //     this.setState({
+  //       hovered: false,
+  //       clicked: visible,
+  //       show: source,
+  //     });
+  //   } else {
+  //     this.setState({
+  //       hovered: false,
+  //       clicked: visible,
+  //       show: 0,
+  //     });
+  //   }
+  // };
 
-  hide = () => {
-    this.setState({
-      clicked: false,
-      hovered: false,
-    });
-  };
+  // hide = () => {
+  //   this.setState({
+  //     clicked: false,
+  //     hovered: false,
+  //   });
+  // };
 
-  showModal = () => {
-    this.setState({
-      visible: true,
-    });
-  };
+  // showModal = () => {
+  //   this.setState({
+  //     visible: true,
+  //   });
+  // };
 
-  handleOk = () => {
-    // const index = e.target.getAttribute("key")
-    let data = this.state.files;
-    data[1].description = document.getElementById("text").value;
-    this.setState({
-      confirmLoading: true,
-      files: data,
-    });
-    setTimeout(() => {
-      this.setState({
-        visible: false,
-        confirmLoading: false,
-      });
-    }, 2000);
-  };
+  // handleOk = () => {
+  //   // const index = e.target.getAttribute("key")
+  //   let data = this.state.files;
+  //   data[1].description = document.getElementById("text").value;
+  //   this.setState({
+  //     confirmLoading: true,
+  //     files: data,
+  //   });
+  //   setTimeout(() => {
+  //     this.setState({
+  //       visible: false,
+  //       confirmLoading: false,
+  //     });
+  //   }, 2000);
+  // };
 
-  handleCancel = () => {
-    console.log("Clicked cancel button");
-    this.setState({
-      visible: false,
-    });
-  };
+  // handleCancel = () => {
+  //   console.log("Clicked cancel button");
+  //   this.setState({
+  //     visible: false,
+  //   });
+  // };
 
   render() {
     const filterText = this.props.filterText;
     const sortMethod = this.props.sortMethod;
     const rows = [];
-    const { TextArea } = Input;
-    const { confirmLoading } = this.state;
+    // const { TextArea } = Input;
+    // const { confirmLoading } = this.state;
 
     const listAfterSearch = this.props.files.filter(({ description }) =>
       description.toLowerCase().includes(filterText.toLowerCase())
@@ -154,7 +146,7 @@ class MediaList extends React.Component {
     }
 
     listAfterSearch.forEach(({ source, alt, time, description }, index) => {
-      console.log({ source, alt, time, description });
+      // console.log({ source, alt, time, description });
       // const hehe = description;
       rows.push(
         <div>
@@ -165,25 +157,8 @@ class MediaList extends React.Component {
               <Image className="manageMedia__image" alt={alt} src={source} />
             }
             actions={[
-              <>
-                <EditOutlined onClick={this.showModal} />
-                <Modal
-                  title="Edit Description"
-                  visible={this.state.visible}
-                  key={index}
-                  confirmLoading={confirmLoading}
-                  onOk={this.handleOk}
-                  onCancel={this.handleCancel}
-                  destroyOnClose
-                >
-                  <TextArea
-                    id="text"
-                    rows={4}
-                    allowClear
-                    defaultValue={description}
-                  />
-                </Modal>
-              </>,
+              <EditDescriptionModal description={description} />,
+
               <Popconfirm
                 title="Are you sure？"
                 key={index}
@@ -195,47 +170,13 @@ class MediaList extends React.Component {
               </Popconfirm>,
             ]}
           >
-            <Popover
-              className={"manageMedia__popover"}
-              style={{ width: 50 }}
-              content={
-                <div>
-                  {time}
-                  <br />
-                  {description}
-                </div>
-              }
-              trigger="hover"
-              autoAdjustOverflow
-              color={"lime"}
-              visible={this.state.show === alt && this.state.hovered}
-              onVisibleChange={(e) => this.handleHoverChange(e, alt)}
-            >
-              <Popover
-                className={"manageMedia__popover"}
-                content={
-                  <div>
-                    {time}
-                    <br />
-                    {description}
-                    <br />
-                    <a onClick={this.hide}>Close</a>
-                  </div>
-                }
-                trigger="click"
-                visible={this.state.show === alt && this.state.clicked}
-                onVisibleChange={(e) => this.handleClickChange(e, alt)}
-              >
-                <Meta
-                  className={"manageMedia__meta"}
-                  id={alt}
-                  title={time}
-                  description={description}
-                />
-              </Popover>
-            </Popover>
+            <Meta
+              className={"manageMedia__meta"}
+              id={alt}
+              title={time}
+              description={description}
+            />
           </Card>
-          <br />
         </div>
       );
     });

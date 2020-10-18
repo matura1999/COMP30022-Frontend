@@ -9,12 +9,9 @@
     height: 50px;
     .ant-card-meta-description {
       height:40px;
-    }
-  }
-
-  &__popover{
-    & .ant-popover-inner {
-      width: 200px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 
