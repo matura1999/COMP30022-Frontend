@@ -11,7 +11,7 @@ import {
 } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import UserAvatar from "../../components/userAvatar/userAvatar";
-import "../../styles/userInfo.css";
+import "./userInfo.css";
 
 const layout = {
   labelCol: { span: 4 },
@@ -168,7 +168,7 @@ export default class UserInfoBasic extends Component {
             <Input />
           </Form.Item>
           <Form.Item name="introduction" label="Self Introduction">
-            <Input.TextArea />
+            <Input.TextArea showCount maxLength={150}/>
           </Form.Item>
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 4 }}>
             <Button

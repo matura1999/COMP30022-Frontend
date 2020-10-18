@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Divider, } from "antd";
-import PortfolioInfoBasic from "../../components/portfolioInfo/portfolioInfoBasic";
-import PortfolioInfoEdu from "../../components/portfolioInfo/portfolioInfoEdu";
-import PortfolioInfoWork from "../../components/portfolioInfo/portfolioInfoWork";
+import PortfolioInfoBasic from "./portfolioInfoBasic";
+import PortfolioInfoEdu from "./portfolioInfoEdu";
+import PortfolioInfoWork from "./portfolioInfoWork";
 
 export default class portfolioFiles extends Component {
     constructor(props) {

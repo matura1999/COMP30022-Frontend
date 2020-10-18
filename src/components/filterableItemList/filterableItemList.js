@@ -1,7 +1,7 @@
 import React from "react";
 import FileItem from "./fileItem";
 import MyPortfolioFileItem from "./myPortfolioFileItem";
-import "../../styles/UserCentre/component/FilterableItemList.css";
+import "./FilterableItemList.css";
 
 class FileList extends React.Component {
   render() {

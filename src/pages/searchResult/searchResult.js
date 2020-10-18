@@ -4,7 +4,7 @@ import SearchResultNameCard from "./searchResultNameCard"
 import "./searchResult.scss";
 const queryString = require('query-string');
 
-export default class SearchResult extends Component {
+export default class Search extends Component {
 
 
     constructor(props) {

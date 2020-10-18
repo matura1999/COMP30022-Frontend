@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/MyPortfolio/userPortfolio.css";
-import { Menu, Row, Col } from "antd";
-import Footer from "../../components/footer/footer";
-import PortfolioInfo from "./portfolioInfo";
-import PortfolioFiles from "./portfolioFiles";
-import PortfolioMedias from "./portfolioMedias";
-import PortfolioEssays from "./portfolioEssays";
+import { Menu, Col } from "antd";
 import {
   IdcardOutlined,
   FileOutlined,
   PictureOutlined,
   FileTextOutlined,
-  UserOutlined,
 } from "@ant-design/icons";
-import PortfolioNameCard from "../../components/portfolioInfo/portfolioNameCard";
+import Footer from "../../components/footer/footer";
+import PortfolioInfo from "../userPortfolioInfo/portfolioInfo";
+import PortfolioFiles from "../userPortfolioFiles/portfolioFiles";
+import PortfolioMedias from "../userPortfolioMedias/portfolioMedias";
+import PortfolioEssays from "../userPortfolioEssays/portfolioEssays";
+import PortfolioNameCard from "./portfolioNameCard";
+import "./userPortfolio.css";
 
 export default class UserPortfolio extends Component {
   constructor(props) {

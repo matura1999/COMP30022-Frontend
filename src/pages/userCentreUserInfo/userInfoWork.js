@@ -106,7 +106,7 @@ export default class UserInfoWork extends Component {
                                                     fieldKey={[field.fieldKey, 'job_desc']}
                                                     rules={[{ required: true, message: 'Missing job description' }]}
                                                 >
-                                                    <Input.TextArea placeholder="Description" />
+                                                    <Input.TextArea placeholder="Description" showCount maxLength={300}/>
                                                 </Form.Item>
                                             </Col>
                                         </Row>

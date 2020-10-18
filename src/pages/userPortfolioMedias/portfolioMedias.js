@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../styles/UserCentre/component/FilterableItemList.css";
+import "../../components/filterableItemList/FilterableItemList.css";
 import "./portfolioMedias.scss";
 import {Card, Image, Popover} from "antd";
 

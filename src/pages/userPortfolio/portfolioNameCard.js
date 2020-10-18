@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "../../styles/MyPortfolio/userPortfolio.css";
-import UserAvatar from "../userAvatar/userAvatar";
+import "../../pages/userPortfolio/userPortfolio.css";
+import UserAvatar from "../../components/userAvatar/userAvatar";
 
 export default class PortfolioNameCard extends Component {
   constructor(props) {

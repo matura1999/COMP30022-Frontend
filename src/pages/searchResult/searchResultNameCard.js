@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/MyPortfolio/userPortfolio.css";
+import "../userPortfolio/userPortfolio.css";
 import UserAvatar from "../../components/userAvatar/userAvatar";
 import "./searchResult.scss";
 

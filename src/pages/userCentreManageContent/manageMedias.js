@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../styles/UserCentre/component/FilterableItemList.css";
+import "../../components/filterableItemList/FilterableItemList.css";
 import "./manageMedias.scss";
 import { Popconfirm, Popover, Card, Image, Tooltip, Input, Modal } from "antd";
 import {

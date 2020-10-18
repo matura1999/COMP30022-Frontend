@@ -18,7 +18,7 @@ import {
 
 const { SubMenu } = Menu;
 
-export default class Sider extends Component {
+export default class UserCentreMenu extends Component {
   menu = (
     <Menu
       mode="inline"

@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import Sider from "../../components/sider/sider";
-import "../../styles/UserCentre/userCentre.css";
 import { Row, Col } from "antd";
-import UserInfoBasic from "../userInformation/userInfoBasic";
-import UserInfoEdu from "../userInformation/userInfoEdu";
-import UserInfoWork from "../userInformation/userInfoWork";
-import UploadFiles from "../uploads/uploadFiles";
-import UploadMedias from "../uploads/uploadMedias";
-import UploadEssays from "../uploads/uploadEssays";
-import ManageMedias from "../manage/manageMedias";
-import ManageFiles from "../manage/manageFiles";
-import ManageEssays from "../manage/manageEssays";
+import UserCentreMenu from "./userCentreMenu";
+import UserInfoBasic from "../userCentreUserInfo/userInfoBasic";
+import UserInfoEdu from "../userCentreUserInfo/userInfoEdu";
+import UserInfoWork from "../userCentreUserInfo/userInfoWork";
+import UploadFiles from "../userCentreUploadContent/uploadFiles";
+import UploadMedias from "../userCentreUploadContent/uploadMedias";
+import UploadEssays from "../userCentreUploadContent/uploadEssays";
+import ManageMedias from "../userCentreManageContent/manageMedias";
+import ManageFiles from "../userCentreManageContent/manageFiles";
+import ManageEssays from "../userCentreManageContent/manageEssays";
 import Footer from "../../components/footer/footer";
+import "./userCentre.css";
 
 export default class UserPage extends Component {
   constructor(props) {
@@ -47,7 +47,7 @@ export default class UserPage extends Component {
         return <ManageFiles />;
       case "/userCentre/manageContent/mediasManagement":
         return <ManageMedias />;
-      case "/userCentre/manageContent/essaysManagement":
+      case "/userCentre/manageContent/essaysManage":
         return <ManageEssays />;
       default:
         return <div>Page not exit</div>
@@ -68,7 +68,7 @@ export default class UserPage extends Component {
               <div className="sider-and-content">
                 <Row>
                   <Col span={6} align={"middle"}>
-                    <Sider selectKey={[selectKey]} openKey={[openKey]} />
+                    <UserCentreMenu selectKey={[selectKey]} openKey={[openKey]} />
                   </Col>
                   <Col span={18} offset={0} style={{ height: "600px" }}>
                     <div class="content">{this.showContent()}</div>
