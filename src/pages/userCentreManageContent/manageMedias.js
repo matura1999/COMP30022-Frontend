@@ -7,7 +7,7 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import EditDescriptionModal from "./components/editDescriptionModal";
-const { Meta } = Card;
+import MediaItem from "./components/mediaItem";
 
 const mediaItemList = [
   {
@@ -64,7 +64,6 @@ class MediaList extends React.Component {
 
   render() {
     const filterText = this.props.filterText;
-    const sortMethod = this.props.sortMethod;
     const rows = [];
 
     const listAfterSearch = this.props.files.filter(({ description }) =>
@@ -75,35 +74,13 @@ class MediaList extends React.Component {
 
     listAfterSearch.forEach(({ source, alt, time, description }, index) => {
       rows.push(
-        <div>
-          <Card
-            className="manageMedia__card"
-            style={{ width: 200 }}
-            cover={
-              <Image className="manageMedia__image" alt={alt} src={source} />
-            }
-            actions={[
-              <EditDescriptionModal description={description} />,
-
-              <Popconfirm
-                title="Are you sure？"
-                key={index}
-                onConfirm={this.handleItem}
-                okText="Yes"
-                cancelText="No"
-              >
-                <DeleteOutlined />
-              </Popconfirm>,
-            ]}
-          >
-            <Meta
-              className={"manageMedia__meta"}
-              id={alt}
-              title={time}
-              description={description}
-            />
-          </Card>
-        </div>
+        <MediaItem
+          source={source}
+          alt={alt}
+          time={time}
+          description={description}
+          handleItem={this.handleItem}
+        />
       );
     });
 
