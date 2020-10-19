@@ -70,7 +70,7 @@ class MediaList extends React.Component {
       }),
     };
     await fetch(
-      "http://localhost:5000/files/media",
+      "https://mojito-portfolio-backend.herokuapp.com/files/media",
       requestOptions
     )
       .then((res) => res.json())

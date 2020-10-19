@@ -66,7 +66,7 @@ export default class UploadMedias extends Component {
         });
         formData.append('user', sessionStorage.getItem('username'))
         reqwest({
-            url: 'http://localhost:5000/files/media',
+            url: 'https://mojito-portfolio-backend.herokuapp.com/files/media',
             method: 'PUT',
             processData: false,
             data: formData,
