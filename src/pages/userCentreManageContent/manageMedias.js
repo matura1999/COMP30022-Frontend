@@ -58,6 +58,35 @@ class MediaList extends React.Component {
     files: this.props.files,
   };
 
+  componentDidMount = async () => {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        user: sessionStorage.getItem("username"),
+      }),
+    };
+    await fetch(
+      "http://localhost:5000/files/media",
+      requestOptions
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.success === false) {
+          setTimeout(() => {
+            this.setState({
+              notice: res.error,
+            });
+          }, 300);
+        } else {
+          console.log(res.data)
+        }
+      });
+  };
+
   render() {
     const filterText = this.props.filterText;
     const rows = [];

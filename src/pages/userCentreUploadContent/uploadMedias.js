@@ -44,20 +44,29 @@ export default class UploadMedias extends Component {
         this.setState({ fileList, descriptionBox: true, })
     };
 
+    StaticDataToFile(name) {
+            var data = new Blob([this.state.description], {type: 'text/plain'});
+        
+            const file = new File([data], name + ".txt");
+        
+            return file;
+    }
+
     handleUpload = () => {
-        const { fileList, description} = this.state;
+        const { fileList} = this.state;
         const formData = new FormData();
         fileList.forEach(file => {
             formData.append('file', file.originFileObj);
+            formData.append('file', this.StaticDataToFile(file.name));
         });
+        
 
         this.setState({
             uploading: true,
         });
         formData.append('user', sessionStorage.getItem('username'))
-        formData.append('description', description)
         reqwest({
-            url: 'https://mojito-portfolio-backend.herokuapp.com/files/media',
+            url: 'http://localhost:5000/files/media',
             method: 'PUT',
             processData: false,
             data: formData,
