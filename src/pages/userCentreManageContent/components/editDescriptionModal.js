@@ -39,7 +39,7 @@ export default class EditDescriptionModal extends React.Component {
       <>
         <EditOutlined key="edit" onClick={this.showModal} />
         <Modal
-          title="Basic Modal"
+          title="Edit Description"
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}

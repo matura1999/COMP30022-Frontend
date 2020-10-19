@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Alert, Form, Input, Button} from 'antd';
 import { Link } from "react-router-dom";
 import "./signIn.scss"
-import 'antd/dist/antd.css';
 const layout = {
     labelCol: { offset: 2, span: 8 },
     wrapperCol: { offset: 2, span: 20 },

@@ -8,7 +8,7 @@ const visitPortfolio = (username) =>{
 }
 
 const SearchResultNameCard = ({ name, username, intro }) => (
-    <div className="searchResult__item" onclick={()=>visitPortfolio(username)}>
+    <a className="searchResult__item" href = {"/userPortfolio/" + username + "/info"}>
         <div className="searchResult__avatarAndInfo">
             <div className="searchResult__avatarContainer">
                 <div className="searchResult__avatar"><UserAvatar size={80}/></div>
@@ -18,7 +18,7 @@ const SearchResultNameCard = ({ name, username, intro }) => (
                 <div className="searchResult__intro" data-testid="searchResult-intro">{intro}</div>
             </div>
         </div>
-    </div>
+    </a>
 );
 
 export default SearchResultNameCard;

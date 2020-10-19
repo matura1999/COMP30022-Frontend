@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0d242ce-2cad-434e-b10f-9426151fe677" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/intro/intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/intro/intro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/searchResult/searchResult.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/searchResult/searchResult.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/searchResult/searchResultNameCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/searchResult/searchResultNameCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/signin/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signin/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/signup/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/userCentre/userCentre.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentre/userCentre.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/userCentre/userCentre.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentre/userCentre.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreUploadContent/uploadEssays.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreUploadContent/uploadEssays.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/userCentreManageContent/components/editDescriptionModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreManageContent/components/editDescriptionModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/userCentreManageContent/manageMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreManageContent/manageMedias.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoBasic.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoBasic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoEdu.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoEdu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoWork.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoWork.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userPortfolio/userPortfolio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userPortfolio/userPortfolio.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoBasic.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoBasic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoEdu.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoEdu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="47" column="73" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="73" />
+              <caret line="47" column="73" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="73" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -40,11 +42,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoBasic.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+              <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/userCentre/userCentre.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="155" column="25" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -121,10 +144,8 @@
         <option value="$PROJECT_DIR$/pages/userPortfolio/userPortfolio.js" />
         <option value="$PROJECT_DIR$/pages/intro/intro.js" />
         <option value="$PROJECT_DIR$/pages/userPortfolio/userPortfolio.scss" />
-        <option value="$PROJECT_DIR$/pages/userCentre/userCentre.scss" />
         <option value="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoWork.js" />
         <option value="$PROJECT_DIR$/pages/userCentreUploadContent/uploadEssays.js" />
-        <option value="$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js" />
         <option value="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfo.js" />
         <option value="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoEdu.js" />
         <option value="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoBasic.js" />
@@ -132,6 +153,8 @@
         <option value="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js" />
         <option value="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfo.scss" />
         <option value="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoBasic.js" />
+        <option value="$PROJECT_DIR$/pages/userCentre/userCentre.scss" />
+        <option value="$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js" />
       </list>
     </option>
   </component>
@@ -175,6 +198,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="userCentre" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="userCentreUploadContent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
@@ -254,7 +283,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129871000" />
+    <option name="totallyTimeSpent" value="129919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -283,15 +312,13 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/signIn/signIn.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/signIn/signIn.css" />
     <entry file="file://$PROJECT_DIR$/pages/signUp/signUp.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-540" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/signUp/signUp.js">
+    <entry file="file://$PROJECT_DIR$/pages/signUp/signup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2304">
           <caret line="112" column="31" lean-forward="true" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="31" />
@@ -353,13 +380,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userPortfolio/userPortfolio.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userPortfolio/userPortfolio.css" />
     <entry file="file://$PROJECT_DIR$/pages/userPortfolioFiles/portfolioFiles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -404,17 +425,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userPortfolio/portfolioNameCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1433">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/signIn/signIn.js">
+    <entry file="file://$PROJECT_DIR$/pages/userPortfolio/portfolioNameCard.js" />
+    <entry file="file://$PROJECT_DIR$/pages/signIn/signin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4356">
           <caret line="121" column="55" lean-forward="true" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
@@ -534,16 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="161" column="36" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -643,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/userCentre/userCentre.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="432">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -668,7 +670,7 @@
     <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="47" column="73" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="73" />
+          <caret line="47" column="73" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="73" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -685,7 +687,17 @@
     <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoBasic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="155" column="25" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

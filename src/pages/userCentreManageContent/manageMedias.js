@@ -75,7 +75,6 @@ class MediaList extends React.Component {
           alt={alt}
           time={time}
           description={description}
-          handleItem={this.handleItem}
         />
       );
     });
