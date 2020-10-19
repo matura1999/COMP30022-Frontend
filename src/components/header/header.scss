@@ -1,0 +1,96 @@
+.header{
+  &__logo{
+    width: 100%;
+    height: 100%;
+    flex: max-content;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+  }
+
+  &__navbar {
+    border: 1px solid #e1e1e1;
+    font-size: 15px;
+    background: transparent;
+  }
+
+  &__searchBar {
+    display: flex;
+    align-content: center;
+  }
+
+  &__searchInput {
+    padding-left: 10px;
+    border: 1px solid #cccccc;
+    width: 90%;
+    font-size: 15px;
+    border-right: none;
+    background: transparent;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  &__searchButton {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #cccccc;
+    border: 1px solid #cccccc;
+    background: transparent;
+    border-left: none;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &__signButtonContainer {
+    width: 50%;
+    height: 60%;
+    display: flex;
+    background: none;
+    float: right;
+  }
+
+  &__signIn {
+    width: 40%;
+    background: None;
+    padding: 5px;
+    display: flex;
+    text-decoration: none;
+  }
+
+  &__signUp {
+    width: 40%;
+    color: white;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    text-decoration: none;
+  }
+
+  &__signInButton {
+    font-size: 1.2vw;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  &__signUpButton {
+    color: white;
+    background-color: #8cc63e;
+    font-size: 1.2vw;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+  }
+
+  &__avatarContainer {
+    display: flex;
+    width:25%;
+    float: right;
+  }
+
+  &__logo:hover{
+    cursor: pointer;
+  }
+}

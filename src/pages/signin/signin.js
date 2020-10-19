@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Alert, Form, Input, Button} from 'antd';
 import { Link } from "react-router-dom";
-import "./signin.css"
-import 'antd/dist/antd.css';
+import "./signIn.scss"
 const layout = {
     labelCol: { offset: 2, span: 8 },
     wrapperCol: { offset: 2, span: 20 },
@@ -11,7 +10,7 @@ const tailLayout = {
     wrapperCol: { offset: 2, span: 20 },
 };
 
-export default class Signin extends Component {
+export default class SignIn extends Component {
 
     constructor(props) {
         super(props);
@@ -59,8 +58,8 @@ export default class Signin extends Component {
     render() {
         if (!sessionStorage.getItem('authorised')) {
             return (
-                <div class="login-box">
-                    <h2 class="sign-in-title">
+                <div class="signIn__body">
+                    <h2 class="signIn__title">
                         <bold>
                             Sign in to Mojito
                         </bold>
@@ -74,7 +73,7 @@ export default class Signin extends Component {
                             closable
                         />
                     )}
-                    <div class="login-form">
+                    <div class="signIn__form">
                         <Form
                             {...layout}
                             name="signin"
@@ -109,15 +108,15 @@ export default class Signin extends Component {
                     </div>
 
 
-                    <div class="signup-redirect">
+                    <div class="signIn__redirectToSignUp">
                         New to Mojito{"?   "}<Link exact to='/signup'><u>Create an account!</u></Link>
                     </div>
                 </div>
             )
         } else {
             return (
-                <div class="login-box">
-                    <h2 class="title">
+                <div class="signIn__body">
+                    <h2 class="signIn__title">
                         <bold>
                             You have already signed in!
                         </bold>

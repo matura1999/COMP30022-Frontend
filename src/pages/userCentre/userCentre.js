@@ -1,27 +1,26 @@
 import React, { Component } from "react";
-import Sider from "../../components/sider/sider";
-import "../../styles/UserCentre/userCentre.css";
 import { Row, Col } from "antd";
-import UserInfoBasic from "../userInformation/userInfoBasic";
-import UserInfoEdu from "../userInformation/userInfoEdu";
-import UserInfoWork from "../userInformation/userInfoWork";
-import UploadFiles from "../uploads/uploadFiles";
-import UploadMedias from "../uploads/uploadMedias";
-import UploadEssays from "../uploads/uploadEssays";
-import ManageMedias from "../manage/manageMedias";
-import ManageFiles from "../manage/manageFiles";
-import ManageEssays from "../manage/manageEssays";
+import UserCentreMenu from "./userCentreMenu";
+import UserInfoBasic from "../userCentreUserInfo/userInfoBasic";
+import UserInfoEdu from "../userCentreUserInfo/userInfoEdu";
+import UserInfoWork from "../userCentreUserInfo/userInfoWork";
+import UploadFiles from "../userCentreUploadContent/uploadFiles";
+import UploadMedias from "../userCentreUploadContent/uploadMedias";
+import UploadEssays from "../userCentreUploadContent/uploadEssays";
+import ManageMedias from "../userCentreManageContent/manageMedias";
+import ManageFiles from "../userCentreManageContent/manageFiles";
+import ManageEssays from "../userCentreManageContent/manageEssays";
 import Footer from "../../components/footer/footer";
+import "./userCentre.scss";
 
-let selectKey = "1";
-let openKey = "sub1";
 export default class UserPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       collapsed: false,
+      selectKey: props.match.params.subpath,
+      openKey: props.match.params.path
     };
-    this.setUpMenu(props.match.params.path, props.match.params.subpath);
   }
 
   toggleCollapsed = () => {
@@ -30,39 +29,7 @@ export default class UserPage extends Component {
     });
   };
 
-  setUpMenu = (path, subpath) => {
-    if (path === "userInfo") {
-      openKey = "sub1";
-      if (subpath === "basic") {
-        selectKey = "1";
-      } else if (subpath === "education") {
-        selectKey = "2";
-      } else if (subpath === "work") {
-        selectKey = "3";
-      }
-    } else if (path === "uploadContent") {
-      openKey = "sub2";
-      if (subpath === "files") {
-        selectKey = "4";
-      } else if (subpath === "medias") {
-        selectKey = "5";
-      } else if (subpath === "essays") {
-        selectKey = "6";
-      }
-    } else if (path === "manageContent") {
-      openKey = "sub3";
-      if (subpath === "files") {
-        selectKey = "7";
-      } else if (subpath === "medias") {
-        selectKey = "8";
-      } else if (subpath === "essays") {
-        selectKey = "9";
-      }
-    }
-  };
-
   showContent = () => {
-    console.log();
     switch (window.location.pathname) {
       case "/userCentre/userInfo/basic":
         return <UserInfoBasic />;
@@ -70,52 +37,45 @@ export default class UserPage extends Component {
         return <UserInfoEdu />;
       case "/userCentre/userInfo/work":
         return <UserInfoWork />;
-      case "/userCentre/uploadContent/files":
+      case "/userCentre/uploadContent/filesUpload":
         return <UploadFiles />;
-      case "/userCentre/uploadContent/medias":
+      case "/userCentre/uploadContent/mediasUpload":
         return <UploadMedias />;
-      case "/userCentre/uploadContent/essays":
+      case "/userCentre/uploadContent/essaysUpload":
         return <UploadEssays />;
-      case "/userCentre/manageContent/files":
+      case "/userCentre/manageContent/filesManagement":
         return <ManageFiles />;
-      case "/userCentre/manageContent/medias":
+      case "/userCentre/manageContent/mediasManagement":
         return <ManageMedias />;
-      case "/userCentre/manageContent/essays":
+      case "/userCentre/manageContent/essaysManagement":
         return <ManageEssays />;
       default:
-        return <div>Page not exit</div>
+        return <div>Page does not exist.</div>
     }
   };
 
   render() {
     if (sessionStorage.getItem('authorised')) {
+      const {selectKey, openKey} = this.state;
       return (
-        <div class="all-but-header">
-          <div class="banner">
-            <h1>User Centre</h1>
+        <div class="userCentre__body">
+          <div class="userCentre__banner">
+            <h1 className ="userCentre__bannerTitle">User Centre</h1>
           </div>
-          <Row>
-            <Col span={3}></Col>
-            <Col span={18}>
-              <div className="sider-and-content">
-                <Row>
-                  <Col span={6} align={"middle"}>
-                    <Sider selectKey={[selectKey]} openKey={[openKey]} />
-                  </Col>
-                  <Col span={18} offset={0} style={{ height: "600px" }}>
-                    <div class="content">{this.showContent()}</div>
-                  </Col>
-                </Row>
-              </div>
+          <Row className="userCentre__menuAndContent">
+            <Col className="userCentre__menu" span={6} >
+              <UserCentreMenu selectKey={[selectKey]} openKey={[openKey]} />
             </Col>
-            <Col span={3}></Col>
+            <Col className="userCentre__content" span={18}>
+              {this.showContent()}
+            </Col>
           </Row>
           <Footer />
         </div>
       );
     } else {
       return (
-        window.location.href='/signin'
+        window.location.href='/signIn'
       )
     }
   }

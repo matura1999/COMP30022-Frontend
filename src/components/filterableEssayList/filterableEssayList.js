@@ -1,6 +1,6 @@
 import React from "react";
 import EssayItem from "./essayItem";
-import "../../styles/UserCentre/component/FilterableItemList.css";
+import "../filterableItemList/FilterableItemList.css";
 
 class EssayList extends React.Component {
     render() {
