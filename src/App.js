@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Header from "./components/header/header";
 import Intro from "./pages/intro/intro";
-import Signup from "./pages/signup/signup";
-import Signin from "./pages/signin/signin";
+import SignUp from "./pages/signUp/signUp";
+import SignIn from "./pages/signIn/signIn";
 import UserCentre from "./pages/userCentre/userCentre";
 import UserPortfolio from "./pages/userPortfolio/userPortfolio"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Search from "./pages/searchResult/searchResult"
+import SearchResult from "./pages/searchResult/searchResult"
 import "./App.css";
 
 class App extends Component {
@@ -18,11 +18,11 @@ class App extends Component {
           <div className="App-body">
             <Switch>
               <Route exact path="/" exact component={Intro} />
-              <Route exact path="/signup" exact component={Signup} />
-              <Route exact path="/signin" exact component={Signin} />
+              <Route exact path="/signUp" exact component={SignUp} />
+              <Route exact path="/signIn" exact component={SignIn} />
               <Route path="/userCentre/:path/:subpath" component={UserCentre} />
               <Route path="/userPortfolio/:username/:path" component={UserPortfolio} />
-              <Route path="/search" component={Search} />
+              <Route path="/searchResult" component={SearchResult} />
             </Switch>
           </div>
         </Router>

@@ -1,20 +1,23 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import "./intro.css";
+import "./intro.scss";
 
 export default class Intro extends Component {
-  startButton = () => {
+  getStartedButton = () => {
     if (!sessionStorage.getItem('authorised')) {
       return (
-        <NavLink exact to="/signup" class="get-start">
-          <button class="get-start-button">GET STARTED NOW</button>
+        <NavLink className="intro__getStartedButtonContainer" exact to="/signup">
+          <button class="intro__getStartedButton">GET STARTED NOW</button>
         </NavLink>
       )
 
     } else {
       return (
-        <NavLink exact to="/userPortfolio/info" class="get-start">
-          <button class="get-start-button">VIEW MY PORTFOLIO</button>
+        <NavLink
+            className="intro__getStartedButtonContainer"
+            exact to={"/userPortfolio/" + sessionStorage.getItem('username') + "/info"}
+        >
+          <button class="intro__getStartedButton">VIEW MY PORTFOLIO</button>
         </NavLink>
       )
     }
@@ -22,18 +25,17 @@ export default class Intro extends Component {
 
   render() {
     return (
-      <div class="intro-page">
-        <div class="slogan">
+      <div class="intro__body">
+        <div class="intro__slogan">
           Built for <br /> uni students
         </div>
-        <div class="intro-text">
+        <div class="intro__introduction">
           Mojito is the online portfolio platform to make your life easier as a
           university student. From archiving your academic work to sharing your
           thoughts and reflections, you can assemble and maintain your
           E-portfolio like a pro.
         </div>
-        {(this.startButton())}
-
+        {(this.getStartedButton())}
       </div>
     );
   }

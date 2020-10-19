@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Alert, Form, Input, Button} from 'antd';
 import { Link } from "react-router-dom";
-import "./signin.css"
+import "./signIn.scss"
 import 'antd/dist/antd.css';
 const layout = {
     labelCol: { offset: 2, span: 8 },
@@ -11,7 +11,7 @@ const tailLayout = {
     wrapperCol: { offset: 2, span: 20 },
 };
 
-export default class Signin extends Component {
+export default class SignIn extends Component {
 
     constructor(props) {
         super(props);

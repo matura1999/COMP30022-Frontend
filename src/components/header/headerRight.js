@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Menu, Dropdown } from "antd";
-import "./header.css";
-import UserAvatar from "../userAvatar/userAvatar";
+import {Row, Menu, Dropdown } from "antd";
 import {
   FolderViewOutlined,
   IdcardOutlined,
@@ -10,6 +8,8 @@ import {
   AppstoreOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
+import UserAvatar from "../userAvatar/userAvatar";
+import "./header.scss";
 
 export default class HeaderRight extends Component {
   onLogout = () => {
@@ -63,21 +63,21 @@ export default class HeaderRight extends Component {
   render() {
     if (!sessionStorage.getItem("authorised")) {
       return (
-        <div class="sign-button-container">
-          <Link exact to="/signin" class="sign-in">
-            <button class="sign-in-button">Sign in</button>
+        <Row className="header__signButtonsContainer">
+          <Link exact to="/signIn" class="header__signIn">
+            <button className="header__signInButton">Sign in</button>
           </Link>
-          <Link exact to="/signup" class="sign-up">
-            <button class="sign-up-button">Sign up</button>
+          <Link exact to="/signUp" class="header__signUp">
+            <button className="header__signUpButton">Sign up</button>
           </Link>
-        </div>
+        </Row>
       );
     } else {
       return (
-        <div class="avatar-container">
+        <div className="header__avatarContainer">
           <Dropdown overlay={this.menu} placement="bottomRight">
             <a
-              className="ant-dropdown-link"
+              className="header__dropdownLink"
               onClick={(e) => e.preventDefault()}
             >
               <UserAvatar size={40} />

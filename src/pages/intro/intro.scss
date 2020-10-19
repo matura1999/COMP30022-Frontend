@@ -1,0 +1,41 @@
+.intro{
+  &__body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../assets/HomepageDecoration 1174x990.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  &__slogan{
+    margin: 5%;
+    margin-bottom: 0;
+    font-size: 100px;
+    line-height: 100%;
+  }
+
+  &__introduction{
+    margin: 2% 50% 0 5%;
+    font-size: 30px;
+  }
+
+  &__getStartedButtonContainer{
+    margin: 3% 5%;
+    height: 10%;
+    width: 20%;
+    background-color: transparent;
+  }
+  &__getStartedButton{
+    height: 100%;
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: #8cc63e;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+  }
+}
