@@ -8,6 +8,8 @@ import UserPortfolio from "./pages/userPortfolio/userPortfolio"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchResult from "./pages/searchResult/searchResult"
 import "./App.css";
+import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 
 class App extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Upload, Button, message, Modal, Input } from 'antd';
-import {PlusOutlined, UploadOutlined} from '@ant-design/icons';
+import { PlusOutlined, UploadOutlined } from '@ant-design/icons';
 import reqwest from 'reqwest';
 import { Row, Col } from 'antd';
 import "./uploadMedia.css";
@@ -20,9 +20,10 @@ export default class UploadMedias extends Component {
         fileList: [],
         uploading: false,
         previewVisible: false,
-        descriptionBox:false,
+        descriptionBox: false,
         previewImage: '',
         previewTitle: '',
+        description: ''
     };
 
     handleCancel = () => this.setState({ previewVisible: false });
@@ -39,23 +40,25 @@ export default class UploadMedias extends Component {
         });
     };
 
-    handleChange = ({ fileList }) => this.setState({ fileList , descriptionBox: true,},);
+    handleChange = ({ fileList }) => {
+        this.setState({ fileList, descriptionBox: true, })
+    };
 
     handleUpload = () => {
-        const { fileList } = this.state;
+        const { fileList, description} = this.state;
         const formData = new FormData();
         fileList.forEach(file => {
-            formData.append('files[]', file);
+            formData.append('file', file.originFileObj);
         });
 
         this.setState({
             uploading: true,
         });
-
-        // You can use any AJAX library you like
+        formData.append('user', sessionStorage.getItem('username'))
+        formData.append('description', description)
         reqwest({
-            url: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-            method: 'post',
+            url: 'https://mojito-portfolio-backend.herokuapp.com/files/media',
+            method: 'PUT',
             processData: false,
             data: formData,
             success: () => {
@@ -80,7 +83,7 @@ export default class UploadMedias extends Component {
         const { previewVisible, descriptionBox, previewImage, previewTitle, uploading, fileList } = this.state;
         const { TextArea } = Input;
         const onChange = e => {
-            console.log(e);
+            this.setState({description: e.target.value});
         };
         let description
         if (descriptionBox) {
@@ -88,10 +91,10 @@ export default class UploadMedias extends Component {
                 <div className="description">
                     <br />
                     <TextArea placeholder="Enter Description Here"
-                              allowClear
-                              onChange={onChange}
-                              rows={5}
-                              // showCount maxLength={100}
+                        allowClear
+                        onChange={onChange}
+                        rows={5}
+                    // showCount maxLength={100}
                     />
                 </div>)
         }
@@ -125,45 +128,44 @@ export default class UploadMedias extends Component {
             <>
                 <Row justify="center">
                     <Col>
-                <div className="add-media">
-                    <Upload     {...props}
-                                action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                        <div className="add-media">
+                            <Upload     {...props}
                                 listType="picture-card"
                                 fileList={fileList}
                                 onPreview={this.handlePreview}
                                 onChange={this.handleChange}>
-                        {fileList.length >= 5 ? null : uploadButton}
-                    </Upload>
-                    <Modal
-                        visible={previewVisible}
-                        title={previewTitle}
-                        footer={null}
-                        onCancel={this.handleCancel}
-                    >
-                        <img alt="example" style={{ width: '100%' }} src={previewImage} />
-                    </Modal>
-                </div>
+                                {fileList.length >= 5 ? null : uploadButton}
+                            </Upload>
+                            <Modal
+                                visible={previewVisible}
+                                title={previewTitle}
+                                footer={null}
+                                onCancel={this.handleCancel}
+                            >
+                                <img alt="example" style={{ width: '100%' }} src={previewImage} />
+                            </Modal>
+                        </div>
                     </Col>
                 </Row>
                 <Row justify="center">
                     <Col span={20}>
-                {description}
+                        {description}
                     </Col>
                 </Row>
                 <Row justify="center">
                     <Col>
-                <div className="start-upload">
-                    <Button
-                        type="primary"
-                        onClick={this.handleUpload}
-                        disabled={fileList.length === 0}
-                        loading={uploading}
-                        size="large"
-                        style={{ marginTop: 16 , backgroundColor: "#8dc63f"}}
-                    >
-                        {uploading ? 'Uploading' : 'Upload Now'}
-                    </Button>
-                </div>
+                        <div className="start-upload">
+                            <Button
+                                type="primary"
+                                onClick={this.handleUpload}
+                                disabled={fileList.length === 0}
+                                loading={uploading}
+                                size="large"
+                                style={{ marginTop: 16, backgroundColor: "#8dc63f" }}
+                            >
+                                {uploading ? 'Uploading' : 'Upload Now'}
+                            </Button>
+                        </div>
                     </Col>
                 </Row>
             </>

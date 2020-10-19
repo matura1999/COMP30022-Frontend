@@ -60,7 +60,7 @@ export default class UserPage extends Component {
       return (
         <div class="userCentre__body">
           <div class="userCentre__banner">
-            <h1>User Centre</h1>
+            <h1 className ="userCentre__bannerTitle">User Centre</h1>
           </div>
           <Row className="userCentre__menuAndContent">
             <Col className="userCentre__menu" span={6} >
