@@ -59,8 +59,8 @@ export default class SignIn extends Component {
     render() {
         if (!sessionStorage.getItem('authorised')) {
             return (
-                <div class="login-box">
-                    <h2 class="sign-in-title">
+                <div class="signIn__body">
+                    <h2 class="signIn__title">
                         <bold>
                             Sign in to Mojito
                         </bold>
@@ -74,7 +74,7 @@ export default class SignIn extends Component {
                             closable
                         />
                     )}
-                    <div class="login-form">
+                    <div class="signIn__form">
                         <Form
                             {...layout}
                             name="signin"
@@ -109,15 +109,15 @@ export default class SignIn extends Component {
                     </div>
 
 
-                    <div class="signup-redirect">
+                    <div class="signIn__redirectToSignUp">
                         New to Mojito{"?   "}<Link exact to='/signup'><u>Create an account!</u></Link>
                     </div>
                 </div>
             )
         } else {
             return (
-                <div class="login-box">
-                    <h2 class="title">
+                <div class="signIn__body">
+                    <h2 class="signIn__title">
                         <bold>
                             You have already signed in!
                         </bold>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "../../pages/userPortfolio/userPortfolio.css";
+import "./userPortfolio.scss";
 import UserAvatar from "../../components/userAvatar/userAvatar";
 
-export default class PortfolioNameCard extends Component {
+export default class UserPortfolioNameCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,16 +37,18 @@ export default class PortfolioNameCard extends Component {
   };
 
   render() {
-    return (
-      <div className="portfolio-name-card">
-        <div className="portfolio-avatar-container">
-          <UserAvatar size={80} />
+        return (
+        <div className="userPortfolio__nameCard">
+            <div className="userPortfolio__avatarContainer">
+                <UserAvatar size={80} />
+            </div>
+            <div className="userPortfolio__nameContainer">
+                <h2>{this.state.name}</h2>
+            </div>
+            <div className="userPortfolio__introContainer">
+                <h3>{this.state.intro}</h3>
+            </div>
         </div>
-        <h2>{this.state.name}</h2>
-        <div className="portfolio-intro-container">
-          <h3>{this.state.intro}</h3>
-        </div>
-      </div>
-    );
+        );
   }
 }

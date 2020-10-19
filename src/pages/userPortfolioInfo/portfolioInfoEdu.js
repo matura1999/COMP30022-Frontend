@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Descriptions, Badge,} from "antd";
+import "../userPortfolio/userPortfolio.scss";
 
 export default class PortfolioInfoEdu extends Component {
     constructor(props){
@@ -49,12 +50,12 @@ export default class PortfolioInfoEdu extends Component {
 
     render(){
         if (this.state.records.length < 1) {
-            return (<div className="portfolio-descriptions">This user has not uploaded his educational background.</div>)
+            return (<div className="puserPortfolio__descriptions">This user has not uploaded his educational background.</div>)
         } else {
             return(
                 <div>
                     {this.state.records.map(record=>(
-                        <Descriptions className="portfolio-descriptions" column={4}>
+                        <Descriptions className="userPortfolio__descriptions" column={4}>
                             <Descriptions.Item label="Level">{record.level}</Descriptions.Item>
                             <Descriptions.Item label="Institution">{record.institution}</Descriptions.Item>
                             <Descriptions.Item label="Major">{this.recordMajor(record.major)}</Descriptions.Item>

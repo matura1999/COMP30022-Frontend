@@ -53,15 +53,13 @@ export default class SignUp extends Component {
     render() {
         if (!sessionStorage.getItem('authorised')) {
             return (
-                <div class="main-page">
-                    <div class="sign-up-title">
-                        <h3 class="sign-up-sub-header">
+                <div class="signUp__body">
+                    <div class="signUp__titlesContainer">
+                        <h3 class="signUp__subTitle">
                             Join Mojito
                         </h3>
-                        <h2 class="sign-up-header">
-                            <b>
-                                Create your account
-                            </b>
+                        <h2 class="signUp__title">
+                            <b>Create your account</b>
                         </h2>
                     </div>
                     {this.state.notice && (
@@ -73,7 +71,7 @@ export default class SignUp extends Component {
                             closable
                         />
                     )}
-                    <div class='signup-form'>
+                    <div class='signUp__form'>
                         <Form
                             {...layout}
                             layout="vertical"
@@ -113,8 +111,8 @@ export default class SignUp extends Component {
                             </Button>
                             </Form.Item>
                         </Form>
-                        <div class="signin-redirect">
-                            Already have an accont{"?   "}<Link exact to='/signin'><u>Sign in!</u></Link>
+                        <div class="signUp__redirectToSignIn">
+                            Already have an accont{"?   "}<Link exact to='/signIn'><u>Sign in!</u></Link>
                         </div>
                     </div>
                 </div>

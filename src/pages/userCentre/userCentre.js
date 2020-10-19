@@ -11,7 +11,7 @@ import ManageMedias from "../userCentreManageContent/manageMedias";
 import ManageFiles from "../userCentreManageContent/manageFiles";
 import ManageEssays from "../userCentreManageContent/manageEssays";
 import Footer from "../../components/footer/footer";
-import "./userCentre.css";
+import "./userCentre.scss";
 
 export default class UserPage extends Component {
   constructor(props) {
@@ -47,10 +47,10 @@ export default class UserPage extends Component {
         return <ManageFiles />;
       case "/userCentre/manageContent/mediasManagement":
         return <ManageMedias />;
-      case "/userCentre/manageContent/essaysManage":
+      case "/userCentre/manageContent/essaysManagement":
         return <ManageEssays />;
       default:
-        return <div>Page not exit</div>
+        return <div>Page does not exist.</div>
     }
   };
 
@@ -58,32 +58,24 @@ export default class UserPage extends Component {
     if (sessionStorage.getItem('authorised')) {
       const {selectKey, openKey} = this.state;
       return (
-        <div class="all-but-header">
-          <div class="banner">
+        <div class="userCentre__body">
+          <div class="userCentre__banner">
             <h1>User Centre</h1>
           </div>
-          <Row>
-            <Col span={3}></Col>
-            <Col span={18}>
-              <div className="sider-and-content">
-                <Row>
-                  <Col span={6} align={"middle"}>
-                    <UserCentreMenu selectKey={[selectKey]} openKey={[openKey]} />
-                  </Col>
-                  <Col span={18} offset={0} style={{ height: "600px" }}>
-                    <div class="content">{this.showContent()}</div>
-                  </Col>
-                </Row>
-              </div>
+          <Row className="userCentre__menuAndContent">
+            <Col className="userCentre__menu" span={6} >
+              <UserCentreMenu selectKey={[selectKey]} openKey={[openKey]} />
             </Col>
-            <Col span={3}></Col>
+            <Col className="userCentre__content" span={18}>
+              {this.showContent()}
+            </Col>
           </Row>
           <Footer />
         </div>
       );
     } else {
       return (
-        window.location.href='/signin'
+        window.location.href='/signIn'
       )
     }
   }

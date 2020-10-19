@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import {Descriptions, Badge} from "antd";
+import {Descriptions,} from "antd";
+import "../userPortfolio/userPortfolio.scss";
 
 export default class PortfolioInfoWork extends Component {
     constructor(props){
@@ -33,12 +34,12 @@ export default class PortfolioInfoWork extends Component {
 
     render(){
         if(this.state.records.length < 1){
-            return(<div className="portfolio-descriptions">This user has not uploaded his work experience.</div>)
+            return(<div className="userPortfolio__descriptions">This user has not uploaded his work experience.</div>)
         }else{
             return(
                 <div>
                     {this.state.records.map(record=>(
-                        <Descriptions className="portfolio-descriptions" column={4}>
+                        <Descriptions className="userPortfolio__descriptions" column={4}>
                             <Descriptions.Item label="Start Date">
                                 {record.dateRange[0].slice(0,10)}
                             </Descriptions.Item>

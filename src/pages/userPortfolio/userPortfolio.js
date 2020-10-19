@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Menu, Col } from "antd";
+import { Menu, } from "antd";
 import {
   IdcardOutlined,
   FileOutlined,
@@ -12,8 +12,8 @@ import PortfolioInfo from "../userPortfolioInfo/portfolioInfo";
 import PortfolioFiles from "../userPortfolioFiles/portfolioFiles";
 import PortfolioMedias from "../userPortfolioMedias/portfolioMedias";
 import PortfolioEssays from "../userPortfolioEssays/portfolioEssays";
-import PortfolioNameCard from "./portfolioNameCard";
-import "./userPortfolio.css";
+import UserPortfolioNameCard from "./userPortfolioNameCard";
+import "./userPortfolio.scss";
 
 export default class UserPortfolio extends Component {
   constructor(props) {
@@ -47,10 +47,9 @@ export default class UserPortfolio extends Component {
   render() {
     const { current, user } = this.state;
     return (
-      <div className="portfolio-all-but-header">
-        <Col span={18} offset={3}>
-          <div class="name-card-and-menu">
-            <PortfolioNameCard user={user}/>
+      <div className="userPortfolio__body">
+        <div className="userPortfolio__nameCardAndMenu">
+            <UserPortfolioNameCard user={user}/>
             <Menu
               onClick={this.handleClick}
               selectedKeys={[current]}
@@ -77,12 +76,11 @@ export default class UserPortfolio extends Component {
                 </Link>
               </Menu.Item>
             </Menu>
-          </div>
-          <div class="portfolio-content" style={{ height: "auto" }}>
-            {this.showContent()}
-          </div>
-        </Col>
-        <div className="portfolio__footer">
+        </div>
+        <div className="userPortfolio__content" >
+          {this.showContent()}
+        </div>
+        <div className="userPortfolio__footer">
           <Footer />
         </div>
       </div>

@@ -36,11 +36,7 @@ export default class PortfolioEssay extends Component {
 
     render(){
         return(
-            <Descriptions className="portfolio-descriptions">
-                <Descriptions.Item label="Date of Birth">{this.state.dob}</Descriptions.Item>
-                <Descriptions.Item label="Phone">{this.state.phone}</Descriptions.Item>
-                <Descriptions.Item label="Email">{this.state.email}</Descriptions.Item>
-            </Descriptions>
+
         )
     }
 }
