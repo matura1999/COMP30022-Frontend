@@ -6,7 +6,7 @@ export default class Intro extends Component {
   getStartedButton = () => {
     if (!sessionStorage.getItem('authorised')) {
       return (
-        <NavLink className="intro__getStartedButtonContainer" exact to="/signup">
+        <NavLink className="intro__getStartedButtonContainer" exact to="/signUp">
           <button class="intro__getStartedButton">GET STARTED NOW</button>
         </NavLink>
       )

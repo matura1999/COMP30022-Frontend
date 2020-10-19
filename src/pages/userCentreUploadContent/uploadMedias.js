@@ -154,12 +154,12 @@ export default class UploadMedias extends Component {
                     <Col>
                 <div className="start-upload">
                     <Button
+                        className="userCentre__formButton"
                         type="primary"
                         onClick={this.handleUpload}
                         disabled={fileList.length === 0}
                         loading={uploading}
                         size="large"
-                        style={{ marginTop: 16 , backgroundColor: "#8dc63f"}}
                     >
                         {uploading ? 'Uploading' : 'Upload Now'}
                     </Button>

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Form, Input, Button, Space, Row, Col, Select, message} from 'antd';
+import { Form, Input, Button, Space, Row, Col, message, DatePicker} from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+
+const { RangePicker } = DatePicker;
 
 export default class UserInfoEdu extends Component {
     constructor(props){
@@ -63,22 +65,17 @@ export default class UserInfoEdu extends Component {
                                 {fields.map(field => (
                                     <Space key={field.key} align="baseline">
                                         <Row gutter={16}>
-                                            <Col span={6}>
+                                            <Col span={8}>
                                                 <Form.Item
                                                     {...field}
-                                                    name={[field.name, 'level']}
-                                                    fieldKey={[field.fieldKey, 'level']}
-                                                    rules={[{ required: true, message: 'Please select level of education! ' }]}
+                                                    name={[field.name, 'dateRange']}
+                                                    fieldKey={[field.fieldKey, 'dateRange']}
+                                                    rules={[{ type: 'array', required: true, message: 'Please select time!' }]}
                                                 >
-                                                    <Select style={{ width: 180 }} placeholder="Level">
-                                                        <Select.Option value="secondary">Secondary Education</Select.Option>
-                                                        <Select.Option value="subDegree">Sub-degree</Select.Option>
-                                                        <Select.Option value="bachelor">Bachelor</Select.Option>
-                                                        <Select.Option value="postgraduate">Postgraduate</Select.Option>
-                                                    </Select>
+                                                    <RangePicker />
                                                 </Form.Item>
                                             </Col>
-                                            <Col span={6}>
+                                            <Col span={8}>
                                                 <Form.Item
                                                     {...field}
                                                     name={[field.name, 'institution']}
@@ -88,7 +85,7 @@ export default class UserInfoEdu extends Component {
                                                     <Input placeholder="Institution" />
                                                 </Form.Item>
                                             </Col>
-                                            <Col span={6}>
+                                            <Col span={8}>
                                                 <Form.Item
                                                     {...field}
                                                     name={[field.name, 'major']}
@@ -97,17 +94,14 @@ export default class UserInfoEdu extends Component {
                                                     <Input placeholder="Major (optional)" />
                                                 </Form.Item>
                                             </Col>
-                                            <Col span={6}>
+                                            <Col span={24}>
                                                 <Form.Item
                                                     {...field}
-                                                    name={[field.name, 'status']}
-                                                    fieldKey={[field.fieldKey, 'status']}
-                                                    rules={[{ required: true, message: 'Please select status! ' }]}
+                                                    name={[field.name, 'study_desc']}
+                                                    fieldKey={[field.fieldKey, 'study_desc']}
+                                                    rules={[{ required: true, message: 'Missing study description' }]}
                                                 >
-                                                    <Select style={{ width: 180 }} placeholder="Status">
-                                                        <Select.Option value="ongoing">Ongoing</Select.Option>
-                                                        <Select.Option value="finished">Finished</Select.Option>
-                                                    </Select>
+                                                    <Input.TextArea placeholder="Description" showCount maxLength={300}/>
                                                 </Form.Item>
                                             </Col>
                                         </Row>
@@ -137,7 +131,12 @@ export default class UserInfoEdu extends Component {
                 </Form.List>
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" size="large" style={{ backgroundColor: "#8dc63f" }}>
+                    <Button
+                        className="userCentre__formButton"
+                        type="primary"
+                        htmlType="submit"
+                        size="large"
+                    >
                         Save
                     </Button>
                 </Form.Item>

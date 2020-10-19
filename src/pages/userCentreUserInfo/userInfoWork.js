@@ -136,7 +136,12 @@ export default class UserInfoWork extends Component {
                 </Form.List>
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" size="large" style={{ backgroundColor: "#8dc63f" }}>
+                    <Button
+                        className="userCentre__formButton"
+                        type="primary"
+                        htmlType="submit"
+                        size="large"
+                    >
                         Save
                     </Button>
                 </Form.Item>

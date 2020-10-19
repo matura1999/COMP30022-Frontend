@@ -1,0 +1,36 @@
+.portfolioInfo{
+  &__basicInfoContainer{
+    background-color: #45612d;
+  }
+
+  &__recordsContainer{
+    padding: 2.5% 10%;
+  }
+
+  &__recordContainer{
+    padding: 2% 10%;
+  }
+
+  &__recordTitle{
+    font-size: 18px;
+  }
+
+  &__recordDesc{
+    font-size: 16px;
+  }
+
+  &__title{
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: url("../../assets/PortfolioInfoTitleBackground.png");
+    font-size: 30px;
+    color: white;
+    height: 45px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+}

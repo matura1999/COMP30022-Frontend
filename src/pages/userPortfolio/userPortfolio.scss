@@ -4,7 +4,13 @@
     }
 
     &__nameCardAndMenu{
+        display: flex;
+        flex-direction: column;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
         background-color: #ffffff;
+        background-image: url("../../assets/UserPortfolioNameCardDecoration.png");
         border-left: #e1e1e1 1px groove;
         border-right: #e1e1e1 1px groove;
         border-bottom: #e1e1e1 1px groove;
@@ -29,9 +35,5 @@
         border: #e1e1e1 1px groove;
         padding: 20px;
         min-height: 350px;
-    }
-
-    &__descriptions {
-        padding: 20px;
     }
 }
