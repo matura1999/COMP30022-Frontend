@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import {Descriptions,} from "antd";
-import "../userPortfolio/userPortfolio.scss";
+import {Row, Col,} from "antd";
+import "./portfolioInfo.scss";
 
 export default class PortfolioInfoBasic extends Component {
     constructor(props) {
@@ -51,11 +51,21 @@ export default class PortfolioInfoBasic extends Component {
 
     render(){
         return(
-            <Descriptions className="userPortfolio__descriptions" column={4}>
-                <Descriptions.Item label="Date of Birth">{this.state.dob}</Descriptions.Item>
-                <Descriptions.Item label="Phone">{this.displaySlashInstead(this.state.phone)}</Descriptions.Item>
-                <Descriptions.Item label="Email">{this.displaySlashInstead(this.state.email)}</Descriptions.Item>
-            </Descriptions>
-        )
-    }
+            <div className="portfolioInfo__recordsContainer">
+                <div className="portfolioInfo__recordContainer" >
+                    <Row className="portfolioInfo__recordTitle">
+                        <Col span={7}>
+                            DoB: {this.state.dob}
+                        </Col>
+                        <Col span={6}>
+                            Phone: {this.displaySlashInstead(this.state.phone)}
+                        </Col>
+                        <Col span={11}>
+                            Email: {this.displaySlashInstead(this.state.email)}
+                        </Col>
+                    </Row>
+                </div>
+            </div>
+            )
+        }
 }

@@ -12,6 +12,7 @@ import {
 import { UploadOutlined } from "@ant-design/icons";
 import UserAvatar from "../../components/userAvatar/userAvatar";
 import "./userInfo.css";
+import "../userCentre/userCentre.scss"
 
 const layout = {
   labelCol: { span: 4 },
@@ -195,10 +196,10 @@ export default class UserInfoBasic extends Component {
           </Form.Item>
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 4 }}>
             <Button
+                className="userCentre__formButton"
               type="primary"
               htmlType="submit"
-              size="large"
-              style={{ backgroundColor: "#8dc63f" }}
+                size="large"
             >
               Save All Changes
             </Button>

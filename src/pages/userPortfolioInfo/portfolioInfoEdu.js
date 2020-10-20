@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import {Descriptions, Badge,} from "antd";
-import "../userPortfolio/userPortfolio.scss";
+import {Empty} from "antd";
+import "./portfolioInfo.scss";
 
 export default class PortfolioInfoEdu extends Component {
     constructor(props){
@@ -32,17 +32,9 @@ export default class PortfolioInfoEdu extends Component {
             })
     }
 
-    badgeStatus(record){
-        if(record.status === "ongoing"){
-            return(["processing","Ongoing"])
-        }else{
-            return(["default","Finished"])
-        }
-    }
-
     recordMajor(major){
         if(major == null){
-            return ('\\')
+            return ('None')
         }else{
             return major
         }
@@ -50,19 +42,27 @@ export default class PortfolioInfoEdu extends Component {
 
     render(){
         if (this.state.records.length < 1) {
-            return (<div className="puserPortfolio__descriptions">This user has not uploaded his educational background.</div>)
+            return (
+                <Empty
+                    className="portfolioInfo__noRecord"
+                    image={Empty.PRESENTED_IMAGE_SIMPLE}
+                    description={"Nothing here. "}
+                />
+            )
         } else {
             return(
-                <div>
+                <div className="portfolioInfo__recordsContainer">
                     {this.state.records.map(record=>(
-                        <Descriptions className="userPortfolio__descriptions" column={4}>
-                            <Descriptions.Item label="Level">{record.level}</Descriptions.Item>
-                            <Descriptions.Item label="Institution">{record.institution}</Descriptions.Item>
-                            <Descriptions.Item label="Major">{this.recordMajor(record.major)}</Descriptions.Item>
-                            <Descriptions.Item label="Status">
-                                <Badge status={this.badgeStatus(record)[0]} text={this.badgeStatus(record)[1]} />
-                            </Descriptions.Item>
-                        </Descriptions>
+                        <div className="portfolioInfo__recordContainer" >
+                            <div className="portfolioInfo__recordTitle">
+                                {record.dateRange[0].slice(0,10)}{" ~ "}{record.dateRange[1].slice(0,10)}
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{record.institution}
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.recordMajor(record.major)}<br/>
+                            </div>
+                            <div className="portfolioInfo__recordDesc">
+                                {record.study_desc}
+                            </div>
+                        </div>
                     ))}
                 </div>
             )

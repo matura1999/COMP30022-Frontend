@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import {Descriptions,} from "antd";
-import "../userPortfolio/userPortfolio.scss";
+import {Empty} from "antd";
+import "./portfolioInfo.scss";
 
 export default class PortfolioInfoWork extends Component {
     constructor(props){
@@ -34,22 +34,27 @@ export default class PortfolioInfoWork extends Component {
 
     render(){
         if(this.state.records.length < 1){
-            return(<div className="userPortfolio__descriptions">This user has not uploaded his work experience.</div>)
+            return (
+                <Empty
+                    className="portfolioInfo__noRecord"
+                    image={Empty.PRESENTED_IMAGE_SIMPLE}
+                    description={"Nothing here. "}
+                />
+            )
         }else{
             return(
-                <div>
+                <div className="portfolioInfo__recordsContainer">
                     {this.state.records.map(record=>(
-                        <Descriptions className="userPortfolio__descriptions" column={4}>
-                            <Descriptions.Item label="Start Date">
-                                {record.dateRange[0].slice(0,10)}
-                            </Descriptions.Item>
-                            <Descriptions.Item label="End Date">
-                                {record.dateRange[1].slice(0,10)}
-                            </Descriptions.Item>
-                            <Descriptions.Item label="Company">{record.company}</Descriptions.Item>
-                            <Descriptions.Item label="Job">{record.job}</Descriptions.Item>
-                            <Descriptions.Item label="Job Description">{record.job_desc}</Descriptions.Item>
-                        </Descriptions>
+                        <div className="portfolioInfo__recordContainer" >
+                            <div className="portfolioInfo__recordTitle">
+                                {record.dateRange[0].slice(0,10)}{" ~ "}{record.dateRange[1].slice(0,10)}
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{record.company}
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{record.job}<br/>
+                            </div>
+                            <div className="portfolioInfo__recordDesc">
+                                {record.job_desc}
+                            </div>
+                        </div>
                     ))}
                 </div>
             )
