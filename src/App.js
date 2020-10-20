@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "./components/header/header";
 import Intro from "./pages/intro/intro";
-import SignUp from "./pages/signUp/signUp";
-import SignIn from "./pages/signIn/signIn";
+import SignUp from "./pages/signup/signUp";
+import SignIn from "./pages/signin/signIn";
 import UserCentre from "./pages/userCentre/userCentre";
 import UserPortfolio from "./pages/userPortfolio/userPortfolio";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";

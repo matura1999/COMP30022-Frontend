@@ -1,10 +1,6 @@
 import React from "react";
-import { Popconfirm, Popover, Card, Image, Tooltip, Input, Modal } from "antd";
-import {
-  EditOutlined,
-  ZoomInOutlined,
-  DeleteOutlined,
-} from "@ant-design/icons";
+import { Popconfirm, Card, Image } from "antd";
+import { DeleteOutlined } from "@ant-design/icons";
 import EditDescriptionModal from "./editDescriptionModal";
 import "../manageMedias.scss";
 
