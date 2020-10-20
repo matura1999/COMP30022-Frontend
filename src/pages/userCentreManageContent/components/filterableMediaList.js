@@ -1,18 +1,12 @@
 import React, { Component } from "react";
 import "../manageMedias.scss";
-import { Popconfirm, Popover, Card, Image, Tooltip, Input, Modal } from "antd";
-import {
-  EditOutlined,
-  ZoomInOutlined,
-  DeleteOutlined,
-} from "@ant-design/icons";
-import EditDescriptionModal from "./editDescriptionModal";
 import MediaItem from "./mediaItem";
+import MyPortfolioMediaItem from "./myPortfoiloMediaItem";
 
 class MediaList extends React.Component {
   render() {
-    // console.log(this.props.medias);
     const filterText = this.props.filterText;
+    const useFor = this.props.useFor;
     const rows = [];
 
     const listAfterSearch = this.props.medias.filter(({ description }) =>
@@ -21,18 +15,33 @@ class MediaList extends React.Component {
 
     listAfterSearch.sort((a, b) => b.time.localeCompare(a.time));
 
-    listAfterSearch.forEach(
-      ({ source, time, description, descriptionUrl }, index) => {
-        rows.push(
-          <MediaItem
-            source={source}
-            time={time}
-            description={description}
-            descriptionUrl={descriptionUrl}
-          />
-        );
-      }
-    );
+    if (useFor === "manage") {
+      listAfterSearch.forEach(
+        ({ source, time, description, descriptionUrl }, index) => {
+          rows.push(
+            <MediaItem
+              source={source}
+              time={time}
+              description={description}
+              descriptionUrl={descriptionUrl}
+            />
+          );
+        }
+      );
+    } else {
+      listAfterSearch.forEach(
+        ({ source, time, description, descriptionUrl }, index) => {
+          rows.push(
+            <MyPortfolioMediaItem
+              source={source}
+              time={time}
+              description={description}
+              descriptionUrl={descriptionUrl}
+            />
+          );
+        }
+      );
+    }
 
     return <div className="manageMedia__content">{rows}</div>;
   }
@@ -84,6 +93,7 @@ class FilterableMediaList extends React.Component {
         <MediaList
           medias={this.props.medias}
           filterText={this.state.filterText}
+          useFor={this.props.useFor}
         />
       </div>
     );

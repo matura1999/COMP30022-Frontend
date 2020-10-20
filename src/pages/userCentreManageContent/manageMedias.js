@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FilterableMediaList from "./components/filterableMediaList";
-import "./manageMedias.scss";
+
 export default class manageMedias extends Component {
   constructor(props) {
     super(props);
@@ -46,16 +46,6 @@ export default class manageMedias extends Component {
               description,
               descriptionUrl,
             }) => {
-              // const name = fileUrl.split("/").pop();
-              // const type = name.split(".").pop().toUpperCase();
-              // const kbSize = Math.round(size / 1024);
-              // let fileSize = "";
-              // if (kbSize <= 1024) {
-              //   fileSize = `${kbSize}KB`;
-              // } else {
-              //   const mbSize = Math.round(kbSize / 1024);
-              //   fileSize = `${mbSize}MB`;
-              // }
               let dateObj = new Date(date);
               const createdDate = dateObj.toLocaleString();
               const mediaObject = {
@@ -82,6 +72,8 @@ export default class manageMedias extends Component {
     });
   };
   render() {
-    return <FilterableMediaList medias={this.state.mediaItemList} />;
+    return (
+      <FilterableMediaList medias={this.state.mediaItemList} useFor="manage" />
+    );
   }
 }
