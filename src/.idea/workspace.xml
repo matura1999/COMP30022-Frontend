@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0d242ce-2cad-434e-b10f-9426151fe677" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/searchResult/searchResult.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/searchResult/searchResult.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/searchResult/searchResultNameCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/searchResult/searchResultNameCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/signin/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signin/signin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/signup/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentre/userCentre.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentre/userCentre.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentre/userCentre.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentre/userCentre.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreManageContent/components/editDescriptionModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreManageContent/components/editDescriptionModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreManageContent/manageMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreManageContent/manageMedias.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoBasic.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreUserInfo/userInfoBasic.js" afterDir="false" />
-    </list>
+    <list default="true" id="e0d242ce-2cad-434e-b10f-9426151fe677" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -160,7 +143,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="770" />
-    <option name="y" value="-23" />
+    <option name="y" value="-25" />
     <option name="width" value="2880" />
     <option name="height" value="1545" />
   </component>
@@ -283,7 +266,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129919000" />
+    <option name="totallyTimeSpent" value="130037000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
