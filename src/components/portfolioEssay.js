@@ -35,8 +35,5 @@ export default class PortfolioEssay extends Component {
     }
 
     render(){
-        return(
-
-        )
     }
 }

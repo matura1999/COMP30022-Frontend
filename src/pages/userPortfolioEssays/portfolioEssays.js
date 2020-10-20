@@ -74,6 +74,9 @@ const essayList = [
 
 
 export default class portfolioEssays extends Component {
+
+
+
     render() {
         const rows = [];
         essayList.forEach(({ name, thumbnail, content, date }) => {
