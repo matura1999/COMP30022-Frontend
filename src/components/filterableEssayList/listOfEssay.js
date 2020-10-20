@@ -1,7 +1,10 @@
 import React from "react";
 import "./listOfEssay.css";
+import {Menu} from "antd";
 
-const ListOfEssay = ({ name, thumbnail, content, date }) => (
+
+
+const ListOfEssay = ({ react, name, thumbnail, content, date }) => (
     <div className="essays__container">
         <div className="essays__item">
             <div className="essays__iconAndInfo">

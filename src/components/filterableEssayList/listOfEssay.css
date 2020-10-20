@@ -41,11 +41,13 @@
 .essays__title {
     font-size: 30px;
     font-weight: 900;
+    color: black;
 }
 
 .essays__content {
     font-size: 15px;
     font-weight: 500;
+    color: #9e9e9e;
 }
 
 .essays__date {
