@@ -9,10 +9,6 @@ import EditDescriptionModal from "./editDescriptionModal";
 import "../manageMedias.scss";
 
 const { Meta } = Card;
-// const handleItem = (e) => {
-//   e.preventDefault();
-//   deleteElement();
-// };
 
 const deleteElement = async (source, descriptionUrl) => {
   const requestOptions = {
