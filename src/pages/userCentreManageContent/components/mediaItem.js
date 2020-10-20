@@ -54,7 +54,6 @@ const MediaItem = ({ source, time, description, descriptionUrl }) => (
 
       <Popconfirm
         title="Are you sure？"
-        // key={index}
         onConfirm={(event) => {
           event.preventDefault();
           deleteElement(source, descriptionUrl);
