@@ -8,11 +8,6 @@
     max-width: 1024px;
 }
 
-.essays__item:hover {
-
-
-}
-
 .essays__iconAndInfo {
     display: flex;
     align-items: center;
@@ -35,7 +30,10 @@
     display: flex;
     flex-direction: column;
     max-width: 900px;
+}
 
+.essays__info:hover {
+    background-color: #F2F6F1
 }
 
 .essays__title {
@@ -48,6 +46,9 @@
     font-size: 15px;
     font-weight: 500;
     color: #9e9e9e;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .essays__date {
