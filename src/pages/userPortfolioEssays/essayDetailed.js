@@ -14,10 +14,20 @@ const essay =
 
 export default class essayDetailed extends Component {
 
+    constructor(props) {
+        super(props);
+
+    }
     render() {
-        let Thumbnail= (<img width="150px" height="100px" src={essay.thumbnail} alt="THUMBNAIL"/>)
+        let Thumbnail= (<img width="150px" height="100px" src={this.props.essay.thumbnail} alt="THUMBNAIL"/>)
         return (
-            <div>{Thumbnail}</div>
+            <div>
+                <div className="essay__picture">{Thumbnail}</div>
+                <div className="essay__title">{this.props.essay.name}</div>
+                <div className="essay__content">{this.props.essay.content}</div>
+                <div className="essay__date">{this.props.essay.date}</div>
+            </div>
+
         )
     }
 }
