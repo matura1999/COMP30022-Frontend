@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import ListOfEssay from "../../components/filterableEssayList/listOfEssay";
-import PortfolioEssays from "../userPortfolioEssays/essayDetailed";
-import {Link} from "react-router-dom";
-
+import React, { Component} from "react";
+import {BrowserRouter as Router, withRouter, Link, Route} from "react-router-dom";
+import PortfolioEssayDetailed from "../userPortfolioEssays/essayDetailed";
+import  "../../components/filterableEssayList/listOfEssay.css"
 
 
 const essayList = [
@@ -75,41 +74,53 @@ const essayList = [
 
 
 
-export default class portfolioEssays extends Component {
+class portfolioEssays extends Component {
+    constructor(props) {
+        super(props);
 
-
-    goToEssay = () => {
-        window.location.href = "src/pages/userPortfolioEssays/essayDetailed"
     }
+
+
+    showContent = (content) => {
+        if (window.location.pathname === "/userPortfolio/" + sessionStorage.getItem('username') + "/essays") {
+            return <div className="portfolio_essayList">{content}</div>;
+        } else{
+            console.log(this.props.match);
+            // return <PortfolioEssayDetailed essay={essayList.find(item=>item.name== this.props.match.params.path)}/>;
+            return <PortfolioEssayDetailed essay={essayList[0]}/>;
+        }
+    };
 
 
     render() {
         const rows = [];
-        essayList.forEach(({ name, thumbnail, content, date }) => {
+            essayList.forEach(({ name, thumbnail, content, date }) => {
             // rows.push(<ListOfEssay react={goToEssay} name={name} thumbnail={<img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL"/>} content={content} date={date} />);
             let Thumbnail= (<img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL"/>)
             rows.push(
-                <div className="essays__container">
-                    <div className="essays__item">
-                        <div className="essays__iconAndInfo">
-                            <div className="essays__typeIconContainer">
-                                <div className="essays__thumbnail">{Thumbnail}</div>
-                            </div>
+                    <div className="essays__container">
+                        <div className="essays__item">
+                            <div className="essays__iconAndInfo">
+                                <div className="essays__typeIconContainer">
+                                    <div className="essays__thumbnail">{Thumbnail}</div>
+                                </div>
 
-                            <div className="essays__info">
-                                {/*<a onClick={window.location.href = "/userPortfolio/" + sessionStorage.getItem('username') + "/info/" + name}>*/}
-                                <a onClick={this.goToEssay}>
-                                <div className="essays__title">{name}</div>
-                                <div className="essays__content">{content}</div>
-                                <div className="essays__date">{date}</div>
-                                </a>
+                                <div className="essays__info">
+                                    <Link exact to={{pathname:"/userPortfolio/" + sessionStorage.getItem('username') + "/essays/" + name, query : { name: name }}} >
+                                    <div className="essays__title">{name}</div>
+                                    <div className="essays__content">{content}</div>
+                                    <div className="essays__date">{date}</div>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             )
         });
 
-        return <div className="portfolio_essayList">{rows}</div>;
+        // return <div className="portfolio_essayList">{rows}</div>;
+        return(this.showContent(rows))
     }
 }
+
+export default withRouter(portfolioEssays);

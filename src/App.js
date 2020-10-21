@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Header from "./components/header/header";
 import Intro from "./pages/intro/intro";
-import SignUp from "./pages/signup/signUp";
-import SignIn from "./pages/signin/signIn";
+import SignUp from "./pages/signUp/signUp";
+import SignIn from "./pages/signIn/signIn";
 import UserCentre from "./pages/userCentre/userCentre";
 import UserPortfolio from "./pages/userPortfolio/userPortfolio";
+import PortfolioEssayDetailed from "./pages/userPortfolioEssays/essayDetailed";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchResult from "./pages/searchResult/searchResult";
 import "./App.css";
@@ -28,6 +29,10 @@ class App extends Component {
                 component={UserPortfolio}
               />
               <Route path="/searchResult" component={SearchResult} />
+              <Route exact
+                  path="/userPortfolio/:username/:path/:subpath"
+                  component={PortfolioEssayDetailed}
+              />
             </Switch>
           </div>
         </Router>
