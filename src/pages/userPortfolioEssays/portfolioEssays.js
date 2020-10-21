@@ -2,6 +2,15 @@ import React, { Component} from "react";
 import {BrowserRouter as Router, withRouter, Link, Route} from "react-router-dom";
 import PortfolioEssayDetailed from "../userPortfolioEssays/essayDetailed";
 import  "../../components/filterableEssayList/listOfEssay.css"
+import UserInfoBasic from "../userCentreUserInfo/userInfoBasic";
+import UserInfoEdu from "../userCentreUserInfo/userInfoEdu";
+import UserInfoWork from "../userCentreUserInfo/userInfoWork";
+import UploadFiles from "../userCentreUploadContent/uploadFiles";
+import UploadMedias from "../userCentreUploadContent/uploadMedias";
+import UploadEssays from "../userCentreUploadContent/uploadEssays";
+import ManageFiles from "../userCentreManageContent/manageFiles";
+import ManageMedias from "../userCentreManageContent/manageMedias";
+import ManageEssays from "../userCentreManageContent/manageEssays";
 
 
 const essayList = [
@@ -16,7 +25,7 @@ const essayList = [
         thumbnail: "https://static.billboard.com/files/media/ateez-1-2020-kq-entertainment-1024x677.jpg",
     },
     {
-        name: "The Tortoise and the Hare",
+        name: "The_Tortoise_and_the_Hare",
         content: "'Cause I-I-I'm in the stars tonight\n" +
             "So watch me bring the fire and set the night alight (hey)\n" +
             "Shining through the city with a little funk and soul\n" +
@@ -37,7 +46,7 @@ const essayList = [
         thumbnail: 'https://pbs.twimg.com/media/EcOkixUU4AADQ7T.jpg',
     },
     {
-        name: "NCT 2020",
+        name: "NCT_2020",
         content: "Shoes on, get up in the morn\n" +
             "Cup of milk, let's rock and roll\n" +
             "King Kong, kick the drum, rolling on like a rolling stone\n" +
@@ -49,7 +58,7 @@ const essayList = [
         thumbnail: 'https://static.billboard.com/files/2020/09/NCT-2020-RESONANCE-Pt-1-billboard-1548-1600784845-1024x677.jpg',
     },
     {
-        name: "Ice Cream",
+        name: "Ice_Cream",
         content: "Look so good, yeah, look so sweet (Hey)\n" +
             "Lookin' good enough to eat\n" +
             "Coldest with the kiss, so he call me ice cream\n" +
@@ -59,7 +68,7 @@ const essayList = [
         date: "2018-09-01 01:01:00",
         thumbnail: 'https://s.yimg.com/ny/api/res/1.2/fHxH29M3wXOFl.MgJKOt5g--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en/stylecaster_935/c5a30443d4db06a57d1acaddb29fa85a'    },
     {
-        name: "#",
+        name: "None",
         content: "Eh, can't let it hide, burn\n" +
             "Oh, the look in your eyes has changed (Hey!)\n" +
             "The obstacles that were too high\n" +
@@ -82,12 +91,29 @@ class portfolioEssays extends Component {
 
 
     showContent = (content) => {
-        if (window.location.pathname === "/userPortfolio/" + sessionStorage.getItem('username') + "/essays") {
-            return <div className="portfolio_essayList">{content}</div>;
-        } else{
-            console.log(this.props.match);
-            // return <PortfolioEssayDetailed essay={essayList.find(item=>item.name== this.props.match.params.path)}/>;
-            return <PortfolioEssayDetailed essay={essayList[0]}/>;
+        // if (window.location.pathname === "/userPortfolio/" + sessionStorage.getItem('username') + "/essays") {
+        //     return <div className="portfolio_essayList">{content}</div>;
+        // } else{
+        //     console.log(this.props.match);
+        //     // return <PortfolioEssayDetailed essay={essayList.find(item=>item.name== this.props.match.params.path)}/>;
+        //     return <PortfolioEssayDetailed essay={essayList[0]}/>;
+        // }
+        switch (window.location.pathname) {
+            case "/userPortfolio/" + sessionStorage.getItem('username') + "/essays":
+                return <div className="portfolio_essayList">{content}</div>;
+            case "/userPortfolio/" + sessionStorage.getItem('username') + "/essays/Horizon":
+                return <PortfolioEssayDetailed essay={essayList[0]}/>;
+            case "/userPortfolio/" + sessionStorage.getItem('username') + "/essays/The_Tortoise_and_the_Hare":
+                return <PortfolioEssayDetailed essay={essayList[1]}/>;
+            case "/userPortfolio/" + sessionStorage.getItem('username') + "/essays/Fearless":
+                return <PortfolioEssayDetailed essay={essayList[2]}/>;
+            case "/userPortfolio/" + sessionStorage.getItem('username') + "/essays/NCT_2020":
+                return <PortfolioEssayDetailed essay={essayList[3]}/>;
+            case "/userPortfolio/" + sessionStorage.getItem('username') + "/essays/Ice_Cream":
+                return <PortfolioEssayDetailed essay={essayList[4]}/>;
+            case "/userPortfolio/" + sessionStorage.getItem('username') + "/essays/None":
+                return <PortfolioEssayDetailed essay={essayList[5]}/>;
+
         }
     };
 
@@ -106,7 +132,7 @@ class portfolioEssays extends Component {
                                 </div>
 
                                 <div className="essays__info">
-                                    <Link exact to={{pathname:"/userPortfolio/" + sessionStorage.getItem('username') + "/essays/" + name, query : { name: name }}} >
+                                    <Link exact to={"/userPortfolio/" + sessionStorage.getItem('username') + "/essays/" +name}>
                                     <div className="essays__title">{name}</div>
                                     <div className="essays__content">{content}</div>
                                     <div className="essays__date">{date}</div>
