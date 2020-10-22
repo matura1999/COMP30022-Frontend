@@ -11,23 +11,9 @@ import {
 } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import UserAvatar from "../../components/userAvatar/userAvatar";
+import UserInfoForm from "./components/userInfoForm";
 import "./userInfo.css";
-import "../userCentre/userCentre.scss"
-
-const layout = {
-  labelCol: { span: 4 },
-  wrapperCol: { span: 16 },
-};
-const validateMessages = {
-  required: "${label} is required!",
-  types: {
-    email: "Invalid email!",
-    number: "Invalid number!",
-  },
-  number: {
-    range: "${label} must be between ${min} and ${max}",
-  },
-};
+import "../userCentre/userCentre.scss";
 
 export default class UserInfoBasic extends Component {
   constructor(props) {
@@ -128,12 +114,12 @@ export default class UserInfoBasic extends Component {
   };
 
   render() {
-    const sendingData = {user: sessionStorage.getItem('username')};
+    const sendingData = { user: sessionStorage.getItem("username") };
     const props = {
       name: "file",
       multiple: true,
       action: "https://mojito-portfolio-backend.herokuapp.com/files/avatar",
-      method: 'PUT',
+      method: "PUT",
       data: sendingData,
       onChange(info) {
         const { status } = info.file;
@@ -147,7 +133,6 @@ export default class UserInfoBasic extends Component {
         }
       },
     };
-    
     return (
       <div>
         <div class="avatar">
@@ -157,9 +142,10 @@ export default class UserInfoBasic extends Component {
             </Col>
             <Col span={12}>
               <div class="upload-button">
-                <Upload {...props}
+                <Upload
+                  {...props}
                   showUploadList={false}
-                  accept='.jpg,.png,.jpeg'
+                  accept=".jpg,.png,.jpeg"
                 >
                   <Button icon={<UploadOutlined />}>Upload New Avatar</Button>
                 </Upload>
@@ -168,7 +154,17 @@ export default class UserInfoBasic extends Component {
             <Col span={4}></Col>
           </Row>
         </div>
-        <Form
+
+        <UserInfoForm
+          name={this.state.name}
+          dob={this.state.dob}
+          phone={this.state.phone}
+          email={this.state.email}
+          intro={this.state.intro}
+          onFinish={this.onFinish}
+        />
+
+        {/* <Form
           {...layout}
           name="basic-info"
           onFinish={this.onFinish}
@@ -180,31 +176,31 @@ export default class UserInfoBasic extends Component {
             </span>
           </Form.Item>
           <Form.Item name="name" label="Name" rules={[{ required: true }]}>
-            <Input initialValue={this.state.name} />
+            <Input deafultValue={this.state.name} />
           </Form.Item>
           <Form.Item name="dob" label="DoB">
             <DatePicker />
           </Form.Item>
           <Form.Item name="phone" label="Phone">
-            <Input />
+            <Input deafultValue={this.state.name} />
           </Form.Item>
           <Form.Item name="email" label="Email" rules={[{ type: "email" }]}>
-            <Input />
+            <Input deafultValue={this.state.name} />
           </Form.Item>
           <Form.Item name="introduction" label="Self Introduction">
-            <Input.TextArea showCount maxLength={150}/>
+            <Input.TextArea showCount maxLength={150} />
           </Form.Item>
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 4 }}>
             <Button
-                className="userCentre__formButton"
+              className="userCentre__formButton"
               type="primary"
               htmlType="submit"
-                size="large"
+              size="large"
             >
               Save All Changes
             </Button>
           </Form.Item>
-        </Form>
+        </Form> */}
       </div>
     );
   }
