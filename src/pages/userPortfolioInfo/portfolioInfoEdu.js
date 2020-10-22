@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Empty} from "antd";
+import {Spin} from "antd";
 import "./portfolioInfo.scss";
 
 export default class PortfolioInfoEdu extends Component {
@@ -43,11 +43,14 @@ export default class PortfolioInfoEdu extends Component {
     render(){
         if (this.state.records.length < 1) {
             return (
-                <Empty
-                    className="portfolioInfo__noRecord"
-                    image={Empty.PRESENTED_IMAGE_SIMPLE}
-                    description={"Nothing here. "}
-                />
+                <div className="portfolioInfo__recordsContainer">
+                    <div className="loadingSpin">
+                        <Spin
+                            size="large"
+                            tip="Loading..."
+                        />
+                    </div>
+                </div>
             )
         } else {
             return(

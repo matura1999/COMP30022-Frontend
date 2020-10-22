@@ -115,7 +115,6 @@ export default class SignIn extends Component {
                   htmlType="submit"
                   size="large"
                   block
-                  style={{ background: "#8CC63E" }}
                 >
                   Sign in
                 </Button>

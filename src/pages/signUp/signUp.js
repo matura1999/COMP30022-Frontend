@@ -105,7 +105,12 @@ export default class SignUp extends Component {
 
                             <br></br>
                             <Form.Item {...tailLayout}>
-                                <Button type="primary" htmlType="submit" size='large' block style={{ background: '#8CC63E' }}>
+                                <Button
+                                    type="primary"
+                                    htmlType="submit"
+                                    size='large'
+                                    block
+                                >
                                     Sign up
                             </Button>
                             </Form.Item>

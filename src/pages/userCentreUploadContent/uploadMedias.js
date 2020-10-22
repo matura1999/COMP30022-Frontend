@@ -170,7 +170,7 @@ export default class UploadMedias extends Component {
                                 disabled={fileList.length === 0}
                                 loading={uploading}
                                 size="large"
-                                style={{ marginTop: 16, backgroundColor: "#8dc63f" }}
+                                style={{ marginTop: 16}}
                             >
                                 {uploading ? 'Uploading' : 'Upload Now'}
                             </Button>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Spin} from "antd";
 import FilterableItemList from "../../components/filterableItemList/filterableItemList";
 
 export default class ManageFiles extends Component {
@@ -68,8 +69,19 @@ export default class ManageFiles extends Component {
   };
 
   render() {
-    return (
-      <FilterableItemList files={this.state.fileItemList} useFor="manage" />
-    );
+    if (this.state.fileItemList.length < 1) {
+      return (
+          <div className="loadingSpin">
+            <Spin
+                size="large"
+                tip="Loading..."
+            />
+          </div>
+      );
+    }else {
+      return (
+          <FilterableItemList files={this.state.fileItemList} useFor="manage"/>
+      );
+    }
   }
 }
