@@ -1,32 +1,16 @@
 import React from "react";
-// import { Form, Input, DatePicker, Button } from "antd";
-// import React, { Component } from "react";
-// import Moment from "react-moment";
 import moment from "moment";
-import {
-  Form,
-  Input,
-  DatePicker,
-  Button,
-  Upload,
-  message,
-  Col,
-  Row,
-} from "antd";
-import DobPicker from "./dobPicker";
+import { Form, Input, DatePicker, Button } from "antd";
 const UserInfoForm = ({ name, dob, phone, email, intro, onFinish }) => {
-  //   const dateFormat = "";
-  //   console.log(dob);
-  //   let dateObj = new Date(dob);
-
   const [form] = Form.useForm();
-  //   const dateObj = moment().format("YYYY/MM/DD");
-  //   const dateOfBirth = dateObj.toString();
+
+  let momentObj = moment(dob);
+  console.log("moment:", momentObj);
 
   form.setFieldsValue({
     name: name,
     phone: phone,
-    // dob: dateObj,
+    dob: momentObj,
     email: email,
     introduction: intro,
   });
@@ -44,7 +28,6 @@ const UserInfoForm = ({ name, dob, phone, email, intro, onFinish }) => {
       range: "${label} must be between ${min} and ${max}",
     },
   };
-
   return (
     <Form
       {...layout}
@@ -56,24 +39,17 @@ const UserInfoForm = ({ name, dob, phone, email, intro, onFinish }) => {
       <Form.Item label="Username">
         <span className="username">{sessionStorage.getItem("username")} </span>
       </Form.Item>
-      {/* <Input initialValue={name} /> */}
       <Form.Item name="name" label="Name" rules={[{ required: true }]}>
         <Input />
-        {/* <Input defaultValue="26888888" /> */}
       </Form.Item>
       <Form.Item name="dob" label="DoB">
-        {/* <DatePicker defaultValue={moment("2020-10-20")} /> */}
-        {/* <DatePicker defaultValue={moment().format("YYYY/MM/DD")} /> */}
-        <DobPicker />
-        {/* <DatePicker /> */}
+        <DatePicker />
       </Form.Item>
       <Form.Item name="phone" label="Phone">
         <Input />
-        {/* <Input deafultValue={phone} /> */}
       </Form.Item>
       <Form.Item name="email" label="Email" rules={[{ type: "email" }]}>
         <Input />
-        {/* <Input deafultValue={email} /> */}
       </Form.Item>
       <Form.Item name="introduction" label="Self Introduction">
         <Input.TextArea showCount maxLength={150} deafultValue={intro} />

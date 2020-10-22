@@ -1,14 +1,5 @@
 import React, { Component } from "react";
-import {
-  Form,
-  Input,
-  DatePicker,
-  Button,
-  Upload,
-  message,
-  Col,
-  Row,
-} from "antd";
+import { Button, Upload, message, Col, Row } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import UserAvatar from "../../components/userAvatar/userAvatar";
 import UserInfoForm from "./components/userInfoForm";
@@ -28,6 +19,7 @@ export default class UserInfoBasic extends Component {
   }
 
   onFinish = (values) => {
+    // console.log(values);
     var dob = null;
     var phone = "";
     var email = "";
@@ -96,7 +88,6 @@ export default class UserInfoBasic extends Component {
         if (res.success === false) {
           setTimeout(() => {}, 300);
         } else {
-          // return data, include all basic user information
           const data = res.data;
           var dob = null;
           if (data.dob) {
@@ -115,6 +106,7 @@ export default class UserInfoBasic extends Component {
 
   render() {
     const sendingData = { user: sessionStorage.getItem("username") };
+    const { name, dob, phone, email, intro } = this.state;
     const props = {
       name: "file",
       multiple: true,
@@ -133,6 +125,8 @@ export default class UserInfoBasic extends Component {
         }
       },
     };
+    console.log("name:", this.state.name);
+    console.log("dob:", this.state.dob);
     return (
       <div>
         <div class="avatar">
@@ -156,51 +150,13 @@ export default class UserInfoBasic extends Component {
         </div>
 
         <UserInfoForm
-          name={this.state.name}
-          dob={this.state.dob}
-          phone={this.state.phone}
-          email={this.state.email}
-          intro={this.state.intro}
+          name={name}
+          dob={dob}
+          phone={phone}
+          email={email}
+          intro={intro}
           onFinish={this.onFinish}
         />
-
-        {/* <Form
-          {...layout}
-          name="basic-info"
-          onFinish={this.onFinish}
-          validateMessages={validateMessages}
-        >
-          <Form.Item label="Username">
-            <span className="username">
-              {sessionStorage.getItem("username")}{" "}
-            </span>
-          </Form.Item>
-          <Form.Item name="name" label="Name" rules={[{ required: true }]}>
-            <Input deafultValue={this.state.name} />
-          </Form.Item>
-          <Form.Item name="dob" label="DoB">
-            <DatePicker />
-          </Form.Item>
-          <Form.Item name="phone" label="Phone">
-            <Input deafultValue={this.state.name} />
-          </Form.Item>
-          <Form.Item name="email" label="Email" rules={[{ type: "email" }]}>
-            <Input deafultValue={this.state.name} />
-          </Form.Item>
-          <Form.Item name="introduction" label="Self Introduction">
-            <Input.TextArea showCount maxLength={150} />
-          </Form.Item>
-          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 4 }}>
-            <Button
-              className="userCentre__formButton"
-              type="primary"
-              htmlType="submit"
-              size="large"
-            >
-              Save All Changes
-            </Button>
-          </Form.Item>
-        </Form> */}
       </div>
     );
   }
