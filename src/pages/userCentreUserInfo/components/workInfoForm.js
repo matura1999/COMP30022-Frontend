@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 import { Form, Input, DatePicker, Button } from "antd";
-const UserInfoForm = ({ name, dob, phone, email, intro, onFinish }) => {
+const WorkInfoForm = ({ name, dob, phone, email, intro, onFinish }) => {
   const [form] = Form.useForm();
 
   let momentObj = moment(dob);
@@ -68,4 +68,4 @@ const UserInfoForm = ({ name, dob, phone, email, intro, onFinish }) => {
   );
 };
 
-export default UserInfoForm;
+export default WorkInfoForm;

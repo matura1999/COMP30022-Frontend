@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, Upload, message, Col, Row } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import UserAvatar from "../../components/userAvatar/userAvatar";
-import UserInfoForm from "./components/userInfoForm";
+import BasicInfoForm from "./components/basicInfoForm";
 import "./userInfo.scss";
 import "../userCentre/userCentre.scss";
 
@@ -144,7 +144,7 @@ export default class UserInfoBasic extends Component {
             </Col>
         </Row>
 
-        <UserInfoForm
+        <BasicInfoForm
           name={name}
           dob={dob}
           phone={phone}

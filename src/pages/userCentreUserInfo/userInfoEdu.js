@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Form, Input, Button, Space, Row, Col, message, DatePicker} from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+//import EduInfoForm from "./components/eduInfoForm";
 
 const { RangePicker } = DatePicker;
 
