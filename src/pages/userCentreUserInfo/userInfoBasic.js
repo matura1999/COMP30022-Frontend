@@ -3,7 +3,7 @@ import { Button, Upload, message, Col, Row } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import UserAvatar from "../../components/userAvatar/userAvatar";
 import UserInfoForm from "./components/userInfoForm";
-import "./userInfo.css";
+import "./userInfo.scss";
 import "../userCentre/userCentre.scss";
 
 export default class UserInfoBasic extends Component {
@@ -128,14 +128,12 @@ export default class UserInfoBasic extends Component {
     console.log("name:", this.state.name);
     console.log("dob:", this.state.dob);
     return (
-      <div>
-        <div class="avatar">
-          <Row>
-            <Col span={4} offset={4}>
+      <div className="userInfo__basicInfo">
+        <Row class="userInfo__avatarContainer">
+            <Col className="userInfo__avatar" offset={4}>
               <UserAvatar size={80} />
             </Col>
-            <Col span={12}>
-              <div class="upload-button">
+            <Col className="userInfo__avatarUploadButton" offset={2}>
                 <Upload
                   {...props}
                   showUploadList={false}
@@ -143,11 +141,8 @@ export default class UserInfoBasic extends Component {
                 >
                   <Button icon={<UploadOutlined />}>Upload New Avatar</Button>
                 </Upload>
-              </div>
             </Col>
-            <Col span={4}></Col>
-          </Row>
-        </div>
+        </Row>
 
         <UserInfoForm
           name={name}

@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import {Spin} from "antd";
 import FilterableMediaList from "../userCentreManageContent/components/filterableMediaList";
 
-export default class manageMedias extends Component {
+export default class portfolioMedias extends Component {
   constructor(props) {
     super(props);
     this.state = {
       notice: "",
       mediaItemList: [],
+      user: this.props.user,
     };
   }
 
@@ -19,7 +20,7 @@ export default class manageMedias extends Component {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        user: sessionStorage.getItem("username"),
+        user: this.state.user,
       }),
     };
     await fetch(
