@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Spin} from "antd";
 import FilterableItemList from "../../components/filterableItemList/filterableItemList";
 
 export default class portfolioFiles extends Component {
@@ -69,10 +70,21 @@ export default class portfolioFiles extends Component {
   };
 
   render() {
-    return (
-      <div className="myPortfolioFileList">
-        <FilterableItemList files={this.state.fileItemList} useFor="present" />
-      </div>
-    );
+    if (this.state.fileItemList.length < 1) {
+      return (
+          <div className="loadingSpin">
+            <Spin
+                size="large"
+                tip="Loading..."
+            />
+          </div>
+      );
+    }else {
+      return (
+          <div className="myPortfolioFileList">
+            <FilterableItemList files={this.state.fileItemList} useFor="present"/>
+          </div>
+      );
+    }
   }
 }

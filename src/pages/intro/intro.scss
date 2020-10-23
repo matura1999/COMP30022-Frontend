@@ -23,19 +23,9 @@
 
   &__getStartedButtonContainer{
     margin: 3% 5%;
-    height: 10%;
-    width: 20%;
-    background-color: transparent;
-  }
-  &__getStartedButton{
     height: 100%;
-    width: 100%;
-    border: none;
-    color: white;
-    background-color: #7cb305;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 5px;
-    text-align: center;
+    width: 20%;
+    display: flex;
+    background-color: transparent;
   }
 }

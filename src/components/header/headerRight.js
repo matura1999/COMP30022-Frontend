@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import {Row, Menu, Dropdown } from "antd";
+import {Row, Menu, Dropdown,Button } from "antd";
 import {
   FolderViewOutlined,
   IdcardOutlined,
@@ -65,10 +65,10 @@ export default class HeaderRight extends Component {
       return (
         <Row className="header__signButtonsContainer">
           <Link exact to="/signIn" class="header__signIn">
-            <button className="header__signInButton">Sign in</button>
+            <Button className="header__signInButton">Sign in</Button>
           </Link>
           <Link exact to="/signUp" class="header__signUp">
-            <button className="header__signUpButton">Sign up</button>
+            <Button className="header__signUpButton" type="primary">Sign up</Button>
           </Link>
         </Row>
       );

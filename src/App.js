@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchResult from "./pages/searchResult/searchResult";
 import "./App.css";
 import "antd/dist/antd.css";
-import "./overwriteAntDesignColor.css";
+import "./overwriteAntDesignStyle.css";
 
 class App extends Component {
   render() {

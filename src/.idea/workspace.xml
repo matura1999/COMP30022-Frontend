@@ -3,24 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e0d242ce-2cad-434e-b10f-9426151fe677" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/filterableEssayList/essayItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/filterableEssayList/essayItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/filterableItemList/fileItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/filterableItemList/fileItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/filterableItemList/myPortfolioFileItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/filterableItemList/myPortfolioFileItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/userAvatar/userAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/userAvatar/userAvatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/overwriteAntDesignColor.css" beforeDir="false" afterPath="$PROJECT_DIR$/overwriteAntDesignColor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header/headerRight.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/headerRight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/overwriteAntDesignColor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/intro/intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/intro/intro.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/intro/intro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/intro/intro.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/searchResult/searchResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/searchResult/searchResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/searchResult/searchResult.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/searchResult/searchResult.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/signIn/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signIn/signIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/signUp/signUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signUp/signUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreManageContent/components/filterableMediaList.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreManageContent/components/filterableMediaList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreManageContent/manageFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreManageContent/manageFiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreManageContent/manageMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreManageContent/manageMedias.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoEdu.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoEdu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/userPortfolioFiles/portfolioFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userPortfolioFiles/portfolioFiles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/userPortfolioMedias/portfolioMedias.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userPortfolioMedias/portfolioMedias.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,20 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoBasic.js">
+        <entry file="file://$PROJECT_DIR$/components/header/header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="67" column="71" selection-start-line="67" selection-start-column="71" selection-end-line="67" selection-end-column="71" />
+            <state relative-caret-position="453">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -55,52 +38,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfo.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoEdu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="52" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/searchResult/searchResult.js">
+        <entry file="file://$PROJECT_DIR$/pages/signIn/signIn.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
-              <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/userCentreManageContent/manageFiles.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/intro/intro.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="78" column="16" lean-forward="true" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+            <state relative-caret-position="288">
+              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -109,28 +59,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js">
+        <entry file="file://$PROJECT_DIR$/pages/intro/intro.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="61" />
+            <state relative-caret-position="345">
+              <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/userPortfolio/userPortfolio.scss">
+        <entry file="file://$PROJECT_DIR$/components/header/header.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-519">
-              <caret line="13" column="39" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="39" />
+            <state relative-caret-position="108">
+              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/userCentreManageContent/manageMedias.js">
+        <entry file="file://$PROJECT_DIR$/components/header/headerRight.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2535">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="26" />
+            <state relative-caret-position="252">
+              <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,11 +104,16 @@
       <find>#</find>
       <find>#002766</find>
       <find>#f4ffb8</find>
+      <find>Button</find>
+      <find>ant-btn-primary</find>
+      <find>14px</find>
     </findStrings>
     <replaceStrings>
       <replace>#7cb305</replace>
       <replace>#5b8c00</replace>
       <replace>#fcffe6</replace>
+      <replace>16px</replace>
+      <replace>15px</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -164,19 +122,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/userInfo/userInfoBasic.js" />
-        <option value="$PROJECT_DIR$/components/filterableItemList/filterableItemList.js" />
-        <option value="$PROJECT_DIR$/pages/userPortfolio/portfolioMedias.js" />
         <option value="$PROJECT_DIR$/components/portfolioInfo/portfolioNameCard.js" />
         <option value="$PROJECT_DIR$/pages/search/searchResultNameCard.js" />
         <option value="$PROJECT_DIR$/components/filterableEssayList/filterableEssayList.js" />
         <option value="$PROJECT_DIR$/components/header/header.css" />
-        <option value="$PROJECT_DIR$/components/header/header.js" />
         <option value="$PROJECT_DIR$/pages/signin/signin.css" />
         <option value="$PROJECT_DIR$/pages/signin/signin.js" />
-        <option value="$PROJECT_DIR$/components/header/headerRight.js" />
         <option value="$PROJECT_DIR$/pages/signUp/signUp.scss" />
-        <option value="$PROJECT_DIR$/pages/signIn/signIn.scss" />
         <option value="$PROJECT_DIR$/pages/userCentre/userCentreMenu.js" />
         <option value="$PROJECT_DIR$/pages/userCentre/userCentre.js" />
         <option value="$PROJECT_DIR$/components/footer/footer.js" />
@@ -194,15 +146,10 @@
         <option value="$PROJECT_DIR$/pages/userCentre/userCentre.scss" />
         <option value="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoBasic.js" />
         <option value="$PROJECT_DIR$/pages/userPortfolioEssays/portfolioEssays.js" />
-        <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/overwriteAntDesignColor.css" />
         <option value="$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js" />
-        <option value="$PROJECT_DIR$/pages/intro/intro.js" />
-        <option value="$PROJECT_DIR$/pages/intro/intro.scss" />
         <option value="$PROJECT_DIR$/components/userAvatar/userAvatar.js" />
-        <option value="$PROJECT_DIR$/pages/signIn/signIn.js" />
         <option value="$PROJECT_DIR$/pages/signUp/signUp.js" />
-        <option value="$PROJECT_DIR$/components/header/header.scss" />
         <option value="$PROJECT_DIR$/pages/searchResult/searchResult.scss" />
         <option value="$PROJECT_DIR$/components/filterableEssayList/essayItem.css" />
         <option value="$PROJECT_DIR$/components/filterableItemList/myPortfolioFileItem.scss" />
@@ -215,12 +162,23 @@
         <option value="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js" />
         <option value="$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfo.scss" />
         <option value="$PROJECT_DIR$/App.css" />
+        <option value="$PROJECT_DIR$/pages/userPortfolioMedias/portfolioMedias.js" />
+        <option value="$PROJECT_DIR$/pages/userPortfolioFiles/portfolioFiles.js" />
+        <option value="$PROJECT_DIR$/components/header/headerRight.js" />
+        <option value="$PROJECT_DIR$/App.js" />
+        <option value="$PROJECT_DIR$/pages/signIn/signIn.js" />
+        <option value="$PROJECT_DIR$/pages/signIn/signIn.scss" />
+        <option value="$PROJECT_DIR$/overwriteAntDesignStyle.css" />
+        <option value="$PROJECT_DIR$/components/header/header.scss" />
+        <option value="$PROJECT_DIR$/components/header/header.js" />
+        <option value="$PROJECT_DIR$/pages/intro/intro.scss" />
+        <option value="$PROJECT_DIR$/pages/intro/intro.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="285" />
-    <option name="y" value="-55" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="675" />
+    <option name="y" value="212" />
     <option name="width" value="2880" />
     <option name="height" value="1545" />
   </component>
@@ -247,25 +205,7 @@
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="filterableEssayList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="filterableItemList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="userAvatar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
@@ -282,44 +222,7 @@
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="searchResult" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="userCentre" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="userCentreManageContent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="userCentreManageContent" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="userCentreUploadContent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="userPortfolio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="userPortfolioInfo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -380,17 +283,19 @@
       <workItem from="1603286080524" duration="38000" />
       <workItem from="1603331665743" duration="4904000" />
       <workItem from="1603356162833" duration="5651000" />
+      <workItem from="1603419610403" duration="74000" />
+      <workItem from="1603419867818" duration="7269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142015000" />
+    <option name="totallyTimeSpent" value="149358000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="373" y="11" width="1152" height="618" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22046204" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29874778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -403,7 +308,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.08486563" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.12295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info active="true" anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24983256" />
@@ -413,22 +318,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/userCentreUserInfo/userInfo.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userCentre/userCentreMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="82" column="68" selection-start-line="82" selection-start-column="68" selection-end-line="82" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userCentreUploadContent/uploadEssays.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/userCentreUploadContent/uploadEssays.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -513,15 +402,6 @@
     <entry file="file://$PROJECT_DIR$/pages/userPortfolioMedias/portfolioMedias.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userPortfolioMedias/portfolioMedias.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/userPortfolioEssays/portfolioEssays.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -539,47 +419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/overwriteAntDesignColor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1021498">
-          <caret line="30566" column="121" selection-start-line="30566" selection-start-column="121" selection-end-line="30566" selection-end-column="121" />
-          <folding>
-            <element signature="e#567565#568216#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/userCentre/userCentre.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
           <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/intro/intro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/intro/intro.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -590,30 +433,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/signIn/signIn.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/signIn/signIn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="115" column="30" lean-forward="true" selection-start-line="115" selection-start-column="30" selection-end-line="116" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/header/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-591">
-          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -640,33 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2160">
           <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/header/headerRight.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/header/header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/signUp/signUp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3564">
-          <caret line="111" column="36" lean-forward="true" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -733,58 +525,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/searchResult/searchResult.js">
+    <entry file="file://$PROJECT_DIR$/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userCentreManageContent/manageMedias.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2535">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userCentreManageContent/manageFiles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="78" column="16" lean-forward="true" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userPortfolio/userPortfolio.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-519">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="39" />
+        <state relative-caret-position="345">
+          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoBasic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
+        <state relative-caret-position="2340">
           <caret line="67" column="71" selection-start-line="67" selection-start-column="71" selection-end-line="67" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -793,14 +544,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfo.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="216">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoEdu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="1548">
           <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="52" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -808,10 +559,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.css">
+    <entry file="file://$PROJECT_DIR$/pages/userPortfolioInfo/portfolioInfoWork.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userCentreUploadContent/uploadMedias.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userPortfolio/userPortfolio.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userCentreManageContent/manageMedias.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userCentreManageContent/manageFiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="80" column="10" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="80" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/overwriteAntDesignColor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="6639" column="4" lean-forward="true" selection-start-line="6639" selection-start-column="4" selection-end-line="6639" selection-end-column="26" />
+          <folding>
+            <element signature="e#567565#568216#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userPortfolio/userPortfolio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1296">
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userPortfolioFiles/portfolioFiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userPortfolioMedias/portfolioMedias.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/signUp/signUp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/header/headerRight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/searchResult/searchResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1368">
+          <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/overwriteAntDesignStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107491">
+          <caret line="30863" column="22" selection-start-line="30863" selection-start-column="22" selection-end-line="30863" selection-end-column="22" />
+          <folding>
+            <element signature="e#567565#568216#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/signIn/signIn.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/signIn/signIn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/header/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/header/header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/intro/intro.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/intro/intro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

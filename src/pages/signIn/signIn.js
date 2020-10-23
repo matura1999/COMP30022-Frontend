@@ -85,7 +85,6 @@ export default class SignIn extends Component {
               onFinishFailed={this.onFinishFailed}
             >
               <Form.Item
-                style={{ fontSize: "20px" }}
                 label="Username or email address"
                 name="username"
                 rules={[
