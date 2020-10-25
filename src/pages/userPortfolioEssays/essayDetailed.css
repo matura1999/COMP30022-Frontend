@@ -22,6 +22,7 @@
 
 .essay_details_content {
     font-size: medium;
+    white-space:pre-wrap;
 }
 
 .essay_details_date {

@@ -71,5 +71,24 @@
     background-color: #7cb305;
     color: white;
   }
+
+  &__editModal{
+    width: 50vw;
+  }
+
+
+  &__editTitle{
+    margin: 10px;
+    margin-top: 0;
+  }
+
+  &__editContent{
+    height: 40vh;
+    margin: 10px;
+  }
+
+  &__uploadThumbnail{
+    margin: 10px;
+  }
 }
 

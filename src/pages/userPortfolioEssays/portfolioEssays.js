@@ -84,18 +84,11 @@ const essayList = [
   },
   {
     name: "Why Not",
-    content:
-      "They all agreed and nodded simultaneously, putting a half-hearted smile on Chans face. Realizing their attempt at making him feel better, he put on a determined face, and walked passed the group looking at the building in front of them. Chans determination was contagious as the eight of them lined up beside him, all with looks of pure determination and strength. They started walking towards their destination, but not without Chan reminding them of the rules." +
-      "“Everyone remembers. Don’t wander off. Don’t make a mess. Don’t go anywhere without anyone else going with you, including the bathroom. Don’t cause a scene. Don’t talk to strangers. And. DO. NOT. PUT. ANYTHING IN THE CART THAT WE DON’T NEED. Got it?” Chan looked to his right, seeing four nods, he looked to his left, seeing four more nods. “Good. Now let’s do this.” The nine of them walked, with strong posture, straight through the gates of hell. Or in anyone else’s case, the door to the supermarket." +
-      "Chan paced back and worth, running into Woojin a few times, as he was pacing in the opposite direction. Minho and Changbin just stood, leaning against the shelves on the opposite sides of the aisle. They looked at each other a few times, to anyone looking at the two, it would have looked like they were communicating to each other telepathically. Changbin jerked his head towards the two eldest." +
-      "Changbin stared off above him thinking for a second before a grimace crossed his face. He leaned back against the shelf, and finally looked at the others. “I’ve decided to stay.” Saying it as if it was his idea." +
-      "“Jeongin! Why are you just standing there?” Seungmin said getting off the ground, from when he bumped into Jeongin. The younger didn’t respond, only pointing to thing he was aweing at. Seungmin hesitantly looked at the display, his eyes immediately growing larger, mouth agape. Both maknaes bent looking through the glass. Both had huge eyes, mouths open." +
-      "“Yeah, but I’m more relieved you guys are okay. What were you even looking at?” Chan asked looking over to the display case. Seeing a four-layer chocolate cake, with chocolate icing, and chocolate flowers. Topped with multiple chocolate covered strawberries, which was drizzled in strawberry sauce. “Okay… I fully understand why you snuck away.”" +
-      "When they got to him, they stood over him just looking at him. “Suengmin, Jeongin, do you know where the others are?” Minho asked, killing the silence as Chan was still suffering on the ground.",
+    content: "sada\n\n\nsd",
 
     date: "2019-09-01 01:01:00",
     thumbnail:
-      "https://thebiaslistcom.files.wordpress.com/2020/10/loona-why-not.jpg?w=610&h=348",
+      "https://i.guim.co.uk/img/media/1b60dd804c5925e953b08208652e742ef940164d/0_346_5184_3110/master/5184.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=3551ab4f5922d2cfb034f53ee2feb454",
   },
 ];
 
