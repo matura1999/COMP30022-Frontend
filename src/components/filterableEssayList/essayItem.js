@@ -1,7 +1,7 @@
 // this is the file item component for the file management page
 import React from "react";
 import "./essayItem.scss";
-
+import EditEssayModal from "./editEssayModal";
 const EssayItem = ({ name, thumbnail, content, date }) => (
   <div className="essayItem__container">
     <div className="essayItem__item">
@@ -24,7 +24,8 @@ const EssayItem = ({ name, thumbnail, content, date }) => (
       </div>
 
       <div className="essayItem__options">
-        <button className="essayItem__edit">Edit</button>
+        {/* <button className="essayItem__edit">Edit</button> */}
+        <EditEssayModal title={name} content={content} />
         <button className="essayItem__delete">Delete</button>
       </div>
     </div>

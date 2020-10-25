@@ -15,10 +15,10 @@ export default class EditDescriptionModal extends React.Component {
   };
 
   handleOk = (e) => {
+    console.log(this.state.currentDescription);
     this.setState({
       visible: false,
     });
-    console.log(this.state.currentDescription);
   };
 
   handleCancel = (e) => {
