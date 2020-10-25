@@ -1,10 +1,16 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Col, Row } from "antd";
+import { Link} from "react-router-dom";
+import { Col, Row, Input } from "antd";
 import HeaderRight from "./headerRight";
 import "./header.scss";
 
+const { Search } = Input;
+
 export default class Header extends Component {
+    onSearch = (value) =>{
+        window.location.href = "/searchResult?name="+ value;
+    }
+
     backToHome = () => {
         window.location.href = "/";
     }
@@ -23,19 +29,14 @@ export default class Header extends Component {
               🍋Mojito
           </Col>
           <Col span={8} offset={5} className="header__searchBarContainer">
-              <form className="header__searchBar" action="/searchResult">
-                <input
-                    className="header__searchInput"
-                    type="text"
-                    placeholder="Search Portfolio by Name"
-                    name="name"
-                />
-                <button className="header__searchButton" type="submit">
-                  <i className="fa fa-search" />
-                </button>
-              </form>
+              <Search
+                  className="header__searchBar"
+                  placeholder="Search Portfolio by Name"
+                  onSearch={this.onSearch}
+                  htmlType="submit"
+              />
           </Col>
-          <Col span={7} offset={1} className="header__headerRightContainer">
+          <Col span={6} offset={2} className="header__headerRightContainer">
               <HeaderRight />
           </Col>
       </Row>

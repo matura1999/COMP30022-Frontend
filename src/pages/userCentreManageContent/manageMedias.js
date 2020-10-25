@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Spin} from "antd";
 import FilterableMediaList from "./components/filterableMediaList";
 
 export default class manageMedias extends Component {
@@ -72,8 +73,19 @@ export default class manageMedias extends Component {
     });
   };
   render() {
-    return (
-      <FilterableMediaList medias={this.state.mediaItemList} useFor="manage" />
-    );
+    if (this.state.mediaItemList.length < 1) {
+      return (
+          <div className="loadingSpin">
+            <Spin
+                size="large"
+                tip="Loading..."
+            />
+          </div>
+      )
+    } else {
+      return (
+          <FilterableMediaList medias={this.state.mediaItemList} useFor="manage"/>
+      );
+    }
   }
 }

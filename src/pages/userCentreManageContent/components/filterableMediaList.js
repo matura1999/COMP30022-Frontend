@@ -87,13 +87,13 @@ class FilterableMediaList extends React.Component {
     return (
       <div>
         <SearchBar
-          filterText={this.state.filterText}
-          onFilterTextChange={this.handleFilterTextChange}
+            filterText={this.state.filterText}
+            onFilterTextChange={this.handleFilterTextChange}
         />
         <MediaList
-          medias={this.props.medias}
-          filterText={this.state.filterText}
-          useFor={this.props.useFor}
+            medias={this.props.medias}
+            filterText={this.state.filterText}
+            useFor={this.props.useFor}
         />
       </div>
     );

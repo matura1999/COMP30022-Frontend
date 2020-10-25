@@ -1,33 +1,10 @@
 import React, { Component } from "react";
-import {
-  Form,
-  Input,
-  DatePicker,
-  Button,
-  Upload,
-  message,
-  Col,
-  Row,
-} from "antd";
+import { Button, Upload, message, Col, Row } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import UserAvatar from "../../components/userAvatar/userAvatar";
-import "./userInfo.css";
-import "../userCentre/userCentre.scss"
-
-const layout = {
-  labelCol: { span: 4 },
-  wrapperCol: { span: 16 },
-};
-const validateMessages = {
-  required: "${label} is required!",
-  types: {
-    email: "Invalid email!",
-    number: "Invalid number!",
-  },
-  number: {
-    range: "${label} must be between ${min} and ${max}",
-  },
-};
+import BasicInfoForm from "./components/basicInfoForm";
+import "./userInfo.scss";
+import "../userCentre/userCentre.scss";
 
 export default class UserInfoBasic extends Component {
   constructor(props) {
@@ -42,6 +19,7 @@ export default class UserInfoBasic extends Component {
   }
 
   onFinish = (values) => {
+    // console.log(values);
     var dob = null;
     var phone = "";
     var email = "";
@@ -110,7 +88,6 @@ export default class UserInfoBasic extends Component {
         if (res.success === false) {
           setTimeout(() => {}, 300);
         } else {
-          // return data, include all basic user information
           const data = res.data;
           var dob = null;
           if (data.dob) {
@@ -128,12 +105,13 @@ export default class UserInfoBasic extends Component {
   };
 
   render() {
-    const sendingData = {user: sessionStorage.getItem('username')};
+    const sendingData = { user: sessionStorage.getItem("username") };
+    const { name, dob, phone, email, intro } = this.state;
     const props = {
       name: "file",
       multiple: true,
       action: "https://mojito-portfolio-backend.herokuapp.com/files/avatar",
-      method: 'PUT',
+      method: "PUT",
       data: sendingData,
       onChange(info) {
         const { status } = info.file;
@@ -147,64 +125,33 @@ export default class UserInfoBasic extends Component {
         }
       },
     };
-    
+    console.log("name:", this.state.name);
+    console.log("dob:", this.state.dob);
     return (
-      <div>
-        <div class="avatar">
-          <Row>
-            <Col span={4} offset={4}>
+      <div className="userInfo__basicInfo">
+        <Row class="userInfo__avatarContainer">
+            <Col className="userInfo__avatar" offset={4}>
               <UserAvatar size={80} />
             </Col>
-            <Col span={12}>
-              <div class="upload-button">
-                <Upload {...props}
+            <Col className="userInfo__avatarUploadButton" offset={2}>
+                <Upload
+                  {...props}
                   showUploadList={false}
-                  accept='.jpg,.png,.jpeg'
+                  accept=".jpg,.png,.jpeg"
                 >
                   <Button icon={<UploadOutlined />}>Upload New Avatar</Button>
                 </Upload>
-              </div>
             </Col>
-            <Col span={4}></Col>
-          </Row>
-        </div>
-        <Form
-          {...layout}
-          name="basic-info"
+        </Row>
+
+        <BasicInfoForm
+          name={name}
+          dob={dob}
+          phone={phone}
+          email={email}
+          intro={intro}
           onFinish={this.onFinish}
-          validateMessages={validateMessages}
-        >
-          <Form.Item label="Username">
-            <span className="username">
-              {sessionStorage.getItem("username")}{" "}
-            </span>
-          </Form.Item>
-          <Form.Item name="name" label="Name" rules={[{ required: true }]}>
-            <Input initialValue={this.state.name} />
-          </Form.Item>
-          <Form.Item name="dob" label="DoB">
-            <DatePicker />
-          </Form.Item>
-          <Form.Item name="phone" label="Phone">
-            <Input />
-          </Form.Item>
-          <Form.Item name="email" label="Email" rules={[{ type: "email" }]}>
-            <Input />
-          </Form.Item>
-          <Form.Item name="introduction" label="Self Introduction">
-            <Input.TextArea showCount maxLength={150}/>
-          </Form.Item>
-          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 4 }}>
-            <Button
-                className="userCentre__formButton"
-              type="primary"
-              htmlType="submit"
-                size="large"
-            >
-              Save All Changes
-            </Button>
-          </Form.Item>
-        </Form>
+        />
       </div>
     );
   }

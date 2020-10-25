@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Empty} from "antd";
+import {Spin} from "antd";
 import SearchResultNameCard from "./searchResultNameCard"
 import "./searchResult.scss";
 const queryString = require('query-string');
@@ -44,8 +44,11 @@ export default class SearchResult extends Component {
 
         if(this.state.result.length < 1){
             return(
-                <div className="searchResult__list">
-                    <Empty className="searchResult__empty" description={"No result found. Please try again. "}/>
+                <div className="loadingSpin">
+                    <Spin
+                        size="large"
+                        tip="Loading..."
+                    />
                 </div>
             )
         }else{

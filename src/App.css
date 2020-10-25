@@ -82,3 +82,10 @@ h1 {
 button {
   cursor: pointer;
 }
+
+.loadingSpin{
+  width: 10%;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  margin: auto;
+}

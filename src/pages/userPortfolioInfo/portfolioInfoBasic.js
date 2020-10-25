@@ -52,19 +52,26 @@ export default class PortfolioInfoBasic extends Component {
     render(){
         return(
             <div className="portfolioInfo__recordsContainer">
-                <div className="portfolioInfo__recordContainer" >
-                    <Row className="portfolioInfo__recordTitle">
-                        <Col span={7}>
-                            DoB: {this.state.dob}
-                        </Col>
-                        <Col span={6}>
-                            Phone: {this.displaySlashInstead(this.state.phone)}
-                        </Col>
-                        <Col span={11}>
-                            Email: {this.displaySlashInstead(this.state.email)}
-                        </Col>
-                    </Row>
-                </div>
+                <Row className="portfolioInfo__recordContainer" >
+                    <Col className="portfolioInfo__recordTitle" span={8}>
+                        DoB: <br/>
+                        <div className= "portfolioInfo__recordDesc">
+                            {this.state.dob}
+                        </div>
+                    </Col>
+                    <Col className="portfolioInfo__recordTitle" span={7}>
+                        Phone: <br/>
+                        <div className= "portfolioInfo__recordDesc">
+                            {this.displaySlashInstead(this.state.phone)}
+                        </div>
+                    </Col>
+                    <Col className="portfolioInfo__recordTitle" span={9}>
+                        Email: <br/>
+                        <div className= "portfolioInfo__recordDesc">
+                            {this.displaySlashInstead(this.state.email)}
+                        </div>
+                    </Col>
+                </Row>
             </div>
             )
         }

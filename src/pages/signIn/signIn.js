@@ -3,7 +3,7 @@ import { Alert, Form, Input, Button } from "antd";
 import { Link } from "react-router-dom";
 import "./signIn.scss";
 const layout = {
-  labelCol: { offset: 2, span: 8 },
+  labelCol: { offset: 2, span: 20 },
   wrapperCol: { offset: 2, span: 20 },
 };
 const tailLayout = {
@@ -85,7 +85,6 @@ export default class SignIn extends Component {
               onFinishFailed={this.onFinishFailed}
             >
               <Form.Item
-                style={{ fontSize: "20px" }}
                 label="Username or email address"
                 name="username"
                 rules={[
@@ -115,7 +114,6 @@ export default class SignIn extends Component {
                   htmlType="submit"
                   size="large"
                   block
-                  style={{ background: "#8CC63E" }}
                 >
                   Sign in
                 </Button>

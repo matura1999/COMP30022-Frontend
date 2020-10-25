@@ -7,7 +7,7 @@ export default class UserAvatar extends Component {
     const size = this.props.size;
     return (
       <Avatar
-        style={{ backgroundColor: "#8dc63f" }}
+        style={{ backgroundColor: "#7cb305" }}
         size={size}
         icon={<UserOutlined />}
       />

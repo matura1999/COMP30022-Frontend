@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "./components/header/header";
 import Intro from "./pages/intro/intro";
-import SignUp from "./pages/signup/signUp";
-import SignIn from "./pages/signin/signIn";
+import SignUp from "./pages/signUp/signUp";
+import SignIn from "./pages/signIn/signIn";
 import UserCentre from "./pages/userCentre/userCentre";
 import UserPortfolio from "./pages/userPortfolio/userPortfolio";
 import PortfolioEssayDetailed from "./pages/userPortfolioEssays/essayDetailed";
@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchResult from "./pages/searchResult/searchResult";
 import "./App.css";
 import "antd/dist/antd.css";
-import "antd/dist/antd.less";
+import "./overwriteAntDesignStyle.css";
 
 class App extends Component {
   render() {

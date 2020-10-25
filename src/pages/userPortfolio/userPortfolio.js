@@ -56,22 +56,22 @@ export default class UserPortfolio extends Component {
               mode="horizontal"
             >
               <Menu.Item key="info" icon={<IdcardOutlined />}>
-                <Link exact to={"/userPortfolio/" + sessionStorage.getItem('username') + "/info"}>
+                <Link exact to={"/userPortfolio/" + this.state.user + "/info"}>
                   Info
                 </Link>
               </Menu.Item>
               <Menu.Item key="files" icon={<FileOutlined />}>
-                <Link exact to={"/userPortfolio/" + sessionStorage.getItem('username') + "/files"}>
+                <Link exact to={"/userPortfolio/" + this.state.user + "/files"}>
                   Files
                 </Link>
               </Menu.Item>
               <Menu.Item key="medias" icon={<PictureOutlined />}>
-                <Link exact to={"/userPortfolio/" + sessionStorage.getItem('username') + "/medias"}>
+                <Link exact to={"/userPortfolio/" + this.state.user + "/medias"}>
                   Medias
                 </Link>
               </Menu.Item>
               <Menu.Item key="essays" icon={<FileTextOutlined />}>
-                <Link exact to={"/userPortfolio/" + sessionStorage.getItem('username') + "/essays"}>
+                <Link exact to={"/userPortfolio/" + this.state.user + "/essays"}>
                   Essays
                 </Link>
               </Menu.Item>

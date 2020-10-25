@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { Button } from "antd";
 import "./intro.scss";
 
 export default class Intro extends Component {
@@ -7,7 +8,14 @@ export default class Intro extends Component {
     if (!sessionStorage.getItem('authorised')) {
       return (
         <NavLink className="intro__getStartedButtonContainer" exact to="/signUp">
-          <button class="intro__getStartedButton">GET STARTED NOW</button>
+          <Button
+              type="primary"
+              size="large"
+              block
+              className="intro__getStartedButton"
+          >
+            GET STARTED NOW
+          </Button>
         </NavLink>
       )
 
@@ -17,7 +25,14 @@ export default class Intro extends Component {
             className="intro__getStartedButtonContainer"
             exact to={"/userPortfolio/" + sessionStorage.getItem('username') + "/info"}
         >
-          <button class="intro__getStartedButton">VIEW MY PORTFOLIO</button>
+          <Button
+              type="primary"
+              size="large"
+              block
+              className="intro__getStartedButton"
+          >
+            VIEW MY PORTFOLIO
+          </Button>
         </NavLink>
       )
     }
