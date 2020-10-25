@@ -95,7 +95,7 @@ const essayList = [
 
     date: "2019-09-01 01:01:00",
     thumbnail:
-      "https://thebiaslistcom.files.wordpress.com/2020/10/loona-why-not.jpg?w=610&h=348",
+      "https://i.guim.co.uk/img/media/1b60dd804c5925e953b08208652e742ef940164d/0_346_5184_3110/master/5184.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=3551ab4f5922d2cfb034f53ee2feb454",
   },
 ];
 
