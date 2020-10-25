@@ -83,7 +83,11 @@
   }
 
   &__editContent{
-    height: 50vh;
+    height: 40vh;
+    margin: 10px;
+  }
+
+  &__uploadThumbnail{
     margin: 10px;
   }
 }
