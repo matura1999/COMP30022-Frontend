@@ -84,8 +84,7 @@ const essayList = [
   },
   {
     name: "Why Not",
-    content:
-      "When they got to him, they st\nood over him just looking at him. “Suengmin, Jeongin, do you know where the others are?” Minho asked, killing the silence as Chan was still suffering on the ground.",
+    content: "sadasd",
 
     date: "2019-09-01 01:01:00",
     thumbnail:
