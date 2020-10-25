@@ -84,7 +84,7 @@ const essayList = [
   },
   {
     name: "Why Not",
-    content: "sadasd",
+    content: "sada\n\n\nsd",
 
     date: "2019-09-01 01:01:00",
     thumbnail:
