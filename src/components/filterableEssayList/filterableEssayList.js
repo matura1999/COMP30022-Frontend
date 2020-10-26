@@ -8,27 +8,46 @@ class EssayList extends React.Component {
     const sortMethod = this.props.sortMethod;
     const rows = [];
 
-    const listAfterSearch = this.props.posts.filter(({ name }) =>
+    const listAfterSearch = this.props.essays.filter(({ name }) =>
       name.toLowerCase().includes(filterText.toLowerCase())
     );
 
     if (sortMethod === "byName") {
       listAfterSearch.sort((a, b) => a.name.localeCompare(b.name));
     } else if (sortMethod === "byDate") {
-      listAfterSearch.sort((a, b) => a.date.localeCompare(b.date));
+      listAfterSearch.sort((a, b) => b.date.localeCompare(a.date));
     }
-
+    console.log(listAfterSearch);
     listAfterSearch.forEach(({ name, thumbnail, content, date }) => {
-      rows.push(
-        <EssayItem
-          name={name}
-          thumbnail={
-            <img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL" />
-          }
-          content={content}
-          date={date}
-        />
-      );
+      if (thumbnail) {
+        rows.push(
+          <EssayItem
+            name={name}
+            thumbnail={
+              <img
+                width="150px"
+                height="100px"
+                src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${thumbnail}`}
+                alt="THUMBNAIL"
+              />
+            }
+            content={content}
+            date={date}
+          />
+        );
+      } else {
+        rows.push(
+          <EssayItem
+            name={name}
+            thumbnail={
+              // <img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL" />
+              "No Thumbnail"
+            }
+            content={content}
+            date={date}
+          />
+        );
+      }
     });
 
     return <div className="manageEssayList">{rows}</div>;
@@ -99,7 +118,7 @@ class FilterableEssayList extends React.Component {
           onSortChange={this.handleSortChange}
         />
         <EssayList
-          posts={this.props.posts}
+          essays={this.props.essays}
           filterText={this.state.filterText}
           sortMethod={this.state.sortMethod}
         />
