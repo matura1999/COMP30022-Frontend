@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import {Spin} from "antd";
+import { Spin } from "antd";
 import FilterableMediaList from "./components/filterableMediaList";
 
 export default class manageMedias extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      notice: "",
       mediaItemList: [],
     };
   }
@@ -67,24 +66,19 @@ export default class manageMedias extends Component {
       });
   };
 
-  handleFilterTextChange = (filterText) => {
-    this.setState({
-      filterText: filterText,
-    });
-  };
   render() {
     if (this.state.mediaItemList.length < 1) {
       return (
-          <div className="loadingSpin">
-            <Spin
-                size="large"
-                tip="Loading..."
-            />
-          </div>
-      )
+        <div className="loadingSpin">
+          <Spin size="large" tip="Loading..." />
+        </div>
+      );
     } else {
       return (
-          <FilterableMediaList medias={this.state.mediaItemList} useFor="manage"/>
+        <FilterableMediaList
+          medias={this.state.mediaItemList}
+          useFor="manage"
+        />
       );
     }
   }

@@ -45,11 +45,11 @@ export default class UploadMedias extends Component {
     };
 
     StaticDataToFile(name) {
-            var data = new Blob([this.state.description], {type: 'text/plain'});
+        var data = new Blob([this.state.description], {type: 'text/plain'});
         
-            const file = new File([data], name + ".txt");
+        const file = new File([data], name + ".txt");
         
-            return file;
+        return file;
     }
 
     handleUpload = () => {
