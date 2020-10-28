@@ -9,6 +9,7 @@ export default class portfolioFiles extends Component {
       user:this.props.user,
       notice: "",
       fileItemList: [],
+      loading: true,
     };
   }
 
@@ -39,6 +40,7 @@ export default class portfolioFiles extends Component {
         } else {
           this.setState({
             notice: res.message,
+            loading: false,
           });
 
           res.files.map(({ Key: fileUrl, LastModified: date, Size: size }) => {
@@ -70,7 +72,8 @@ export default class portfolioFiles extends Component {
   };
 
   render() {
-    if (this.state.fileItemList.length < 1) {
+    const {loading} = this.state;
+    if (loading) {
       return (
           <div className="loadingSpin">
             <Spin

@@ -80,7 +80,7 @@ export default class HeaderRight extends Component {
               className="header__dropdownLink"
               onClick={(e) => e.preventDefault()}
             >
-              <UserAvatar size={40} />
+              <UserAvatar size={40} username={sessionStorage.getItem('username')} isLoginUser={true}/>
             </a>
           </Dropdown>
         </div>

@@ -19,7 +19,6 @@ export default class UserInfoBasic extends Component {
   }
 
   onFinish = (values) => {
-    // console.log(values);
     var dob = null;
     var phone = "";
     var email = "";
@@ -109,7 +108,7 @@ export default class UserInfoBasic extends Component {
     const { name, dob, phone, email, intro } = this.state;
     const props = {
       name: "file",
-      multiple: true,
+      multiple: false,
       action: "https://mojito-portfolio-backend.herokuapp.com/files/avatar",
       method: "PUT",
       data: sendingData,
@@ -119,19 +118,22 @@ export default class UserInfoBasic extends Component {
           console.log(info.file, info.fileList);
         }
         if (status === "done") {
-          message.success(`${info.file.name} uploaded successfully.`);
+          message.success(`Avatar uploaded successfully.`);
+          const extention = info.file.name.split('.').pop();
+          sessionStorage.setItem('avatar', sessionStorage.getItem('username') + '/avatar/avatar.' + extention);
+          setTimeout(() => {
+            window.location.reload(true)
+          }, 300);
         } else if (status === "error") {
           message.error(`upload failed.`);
         }
       },
     };
-    console.log("name:", this.state.name);
-    console.log("dob:", this.state.dob);
     return (
       <div className="userInfo__basicInfo">
         <Row class="userInfo__avatarContainer">
             <Col className="userInfo__avatar" offset={4}>
-              <UserAvatar size={80} />
+              <UserAvatar size={80} username={sessionStorage.getItem('username')} isLoginUser={true}/>
             </Col>
             <Col className="userInfo__avatarUploadButton" offset={2}>
                 <Upload

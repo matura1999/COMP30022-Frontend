@@ -8,6 +8,7 @@ export default class PortfolioInfoEdu extends Component {
         this.state = {
             records: [],
             user: this.props.user,
+            loading: true
         }
     }
 
@@ -23,11 +24,9 @@ export default class PortfolioInfoEdu extends Component {
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {
-                    setTimeout(() => {
-
-                    }, 300);
+                    this.setState({loading: false})
                 } else {
-                    this.setState({records:res.data.records})
+                    this.setState({records:res.data.records, loading: false})
                 }
             })
     }
@@ -41,7 +40,8 @@ export default class PortfolioInfoEdu extends Component {
     }
 
     render(){
-        if (this.state.records.length < 1) {
+        const {loading} = this.state;
+        if (loading) {
             return (
                 <div className="portfolioInfo__recordsContainer">
                     <div className="loadingSpin">

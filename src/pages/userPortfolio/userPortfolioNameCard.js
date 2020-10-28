@@ -9,6 +9,7 @@ export default class UserPortfolioNameCard extends Component {
       user: this.props.user,
       name: "",
       intro: "",
+      avatar: null
     };
   }
 
@@ -36,11 +37,30 @@ export default class UserPortfolioNameCard extends Component {
       });
   };
 
+  // read user avatar source information and save it in session
+  findAvatar = async (username) => {
+    const requestOptions = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    };
+    await fetch(
+      "https://mojito-portfolio-backend.herokuapp.com/files/avatar/" + username,
+      requestOptions
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({avatar: res.data})
+      });
+  }
+
   render() {
         return (
         <div className="userPortfolio__nameCard">
             <div className="userPortfolio__avatarContainer">
-                <UserAvatar size={80} />
+                <UserAvatar size={80} username={this.state.user} isLoginUser={false}/>
             </div>
             <div className="userPortfolio__nameContainer">
                 <h2>{this.state.name}</h2>
