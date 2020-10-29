@@ -60,7 +60,9 @@ export default class UserPortfolioNameCard extends Component {
         return (
         <div className="userPortfolio__nameCard">
             <div className="userPortfolio__avatarContainer">
-                <UserAvatar size={80} username={this.state.user} isLoginUser={false}/>
+                <div className="userPortfolio__avatar">
+                    <UserAvatar size={80} username={this.state.user} isLoginUser={false}/>
+                </div>
             </div>
             <div className="userPortfolio__nameContainer">
                 <h2>{this.state.name}</h2>

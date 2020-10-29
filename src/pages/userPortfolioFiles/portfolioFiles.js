@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Spin} from "antd";
+import { Empty, Spin } from 'antd';
 import FilterableItemList from "../../components/filterableItemList/filterableItemList";
 
 export default class portfolioFiles extends Component {
@@ -75,14 +75,17 @@ export default class portfolioFiles extends Component {
     const {loading} = this.state;
     if (loading) {
       return (
-          <div className="loadingSpin">
-            <Spin
-                size="large"
-                tip="Loading..."
-            />
+          <div className="loadingOrEmptyContainer">
+            <Spin className="spin" size="large" tip="Loading..."/>
           </div>
-      );
-    }else {
+      )
+    } else if (this.state.fileItemList.length < 1) {
+      return(
+          <div className="loadingOrEmptyContainer">
+            <Empty description={"This user has not uploaded any file yet."}/>
+          </div>
+      )
+    } else{
       return (
           <div className="myPortfolioFileList">
             <FilterableItemList files={this.state.fileItemList} useFor="present"/>

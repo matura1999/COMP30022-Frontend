@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Spin} from "antd";
+import { Empty, Spin } from 'antd';
 import FilterableItemList from "../../components/filterableItemList/filterableItemList";
 
 export default class ManageFiles extends Component {
@@ -75,13 +75,16 @@ export default class ManageFiles extends Component {
     const {loading} = this.state;
     if (loading) {
       return (
-          <div className="loadingSpin">
-            <Spin
-                size="large"
-                tip="Loading..."
-            />
+          <div className="loadingOrEmptyContainer">
+            <Spin className="spin" size="large" tip="Loading..."/>
           </div>
       );
+    } else if (this.state.fileItemList.length < 1) {
+      return(
+          <div className="loadingOrEmptyContainer">
+            <Empty description={"You have not uploaded any file yet."}/>
+          </div>
+      )
     }else {
       return (
           <FilterableItemList files={this.state.fileItemList} useFor="manage"/>

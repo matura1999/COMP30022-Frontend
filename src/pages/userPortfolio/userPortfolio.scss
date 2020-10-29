@@ -18,8 +18,11 @@
 
     &__avatarContainer {
         padding: 20px;
-        width: 10%;
-        margin: auto;
+    }
+
+    &__avatar{
+        width: 80px;
+        margin: 0 auto;
     }
 
     &__introContainer {

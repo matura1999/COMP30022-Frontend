@@ -83,9 +83,12 @@ button {
   cursor: pointer;
 }
 
-.loadingSpin{
-  width: 10%;
+.loadingOrEmptyContainer{
   padding-top: 5vh;
   padding-bottom: 5vh;
-  margin: auto;
+}
+
+.spin{
+  width: 100%;
+  margin: 0 auto;
 }

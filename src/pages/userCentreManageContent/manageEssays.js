@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Spin } from "antd";
+import { Empty, Spin } from 'antd';
 import FilterableEssayList from "../../components/filterableEssayList/filterableEssayList";
 
 export default class ManageEssays extends Component {
@@ -70,11 +70,17 @@ export default class ManageEssays extends Component {
     const {loading} = this.state;
     if (loading) {
       return (
-        <div className="loadingSpin">
-          <Spin size="large" tip="Loading..." />
-        </div>
+          <div className="loadingOrEmptyContainer">
+            <Spin className="spin" size="large" tip="Loading..."/>
+          </div>
       );
-    } else {
+    } else if (this.state.essayItemList.length < 1) {
+      return(
+          <div className="loadingOrEmptyContainer">
+            <Empty description={"You have not uploaded any essay yet."}/>
+          </div>
+      )
+    }else {
       return <FilterableEssayList essays={this.state.essayItemList} />;
     }
   }
