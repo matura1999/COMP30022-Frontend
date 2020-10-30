@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Avatar } from "antd";
+import {Avatar,} from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 export default class UserAvatar extends Component {
@@ -32,7 +32,9 @@ export default class UserAvatar extends Component {
       )
         .then((res) => res.json())
         .then((res) => {
-          this.setState({ src: res.data })
+          this.setState({
+            src: res.data,
+          })
         });
   }
 

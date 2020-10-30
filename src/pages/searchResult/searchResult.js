@@ -30,12 +30,11 @@ export default class SearchResult extends Component {
             .then(res => {
                 console.log(res)
                 if (res.success === false) {
-                    this.setState({
-                        notice: res.error,
-                        loading: false,
-                    });
                     setTimeout(() => {
-
+                        this.setState({
+                            notice: res.error,
+                            loading: false,
+                        });
                     }, 300);
                 } else {
                     this.setState({

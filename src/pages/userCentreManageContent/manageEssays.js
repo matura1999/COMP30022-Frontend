@@ -31,13 +31,13 @@ export default class ManageEssays extends Component {
           setTimeout(() => {
             this.setState({
               notice: res.error,
-              loading: false
+              loading: false,
             });
           }, 300);
         } else {
           this.setState({
             notice: res.message,
-            loading: false
+            loading: false,
           });
           console.log(res.data);
           const temEssayList = [];
