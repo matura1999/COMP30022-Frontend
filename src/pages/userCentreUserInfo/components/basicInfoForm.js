@@ -5,7 +5,6 @@ const BasicInfoForm = ({ name, dob, phone, email, intro, onFinish }) => {
   const [form] = Form.useForm();
 
   let momentObj = moment(dob);
-  console.log("moment:", momentObj);
 
   form.setFieldsValue({
     name: name,

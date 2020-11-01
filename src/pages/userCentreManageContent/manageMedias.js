@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Spin } from "antd";
+import { Empty, Spin } from 'antd';
 import FilterableMediaList from "./components/filterableMediaList";
 
 export default class manageMedias extends Component {
@@ -7,6 +7,7 @@ export default class manageMedias extends Component {
     super(props);
     this.state = {
       mediaItemList: [],
+      loading: true,
     };
   }
 
@@ -31,13 +32,14 @@ export default class manageMedias extends Component {
           setTimeout(() => {
             this.setState({
               notice: res.error,
+              loading: false
             });
           }, 300);
         } else {
           this.setState({
             notice: res.message,
+            loading: false
           });
-          console.log(res.data);
           const temMediaList = [];
           res.data.map(
             ({
@@ -67,13 +69,20 @@ export default class manageMedias extends Component {
   };
 
   render() {
-    if (this.state.mediaItemList.length < 1) {
+    const {loading} = this.state;
+    if (loading) {
       return (
-        <div className="loadingSpin">
-          <Spin size="large" tip="Loading..." />
+        <div className="loadingOrEmptyContainer">
+          <Spin className="spin" size="large" tip="Loading..."/>
         </div>
       );
-    } else {
+    } else if (this.state.mediaItemList.length < 1) {
+      return(
+          <div className="loadingOrEmptyContainer">
+            <Empty description={"You have not uploaded any media yet."}/>
+          </div>
+      )
+    }else{
       return (
         <FilterableMediaList
           medias={this.state.mediaItemList}

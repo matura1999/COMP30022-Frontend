@@ -25,7 +25,7 @@ export default class SignIn extends Component {
     console.log("Failed:", errorInfo);
   };
 
-  onFinish = (values) => {
+  onFinish = async (values) => {
     const requestOptions = {
       method: "POST",
       headers: {
@@ -37,12 +37,12 @@ export default class SignIn extends Component {
         password: values.password,
       }),
     };
-    fetch(
+    await fetch(
       "https://mojito-portfolio-backend.herokuapp.com/user/find",
       requestOptions
     )
       .then((res) => res.json())
-      .then((res) => {
+      .then(async (res) => {
         console.log(res);
         if (res.success === false) {
           setTimeout(() => {
@@ -54,10 +54,30 @@ export default class SignIn extends Component {
           sessionStorage.setItem("authorised", true);
           sessionStorage.setItem("user", res.id);
           sessionStorage.setItem("username", res.username);
+          await this.findAvatar(res.username);
           window.location.href = "/";
         }
       });
   };
+
+  // read user avatar source information and save it in session
+  findAvatar = async (username) => {
+    const requestOptions = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    };
+    await fetch(
+      "https://mojito-portfolio-backend.herokuapp.com/files/avatar/" + username,
+      requestOptions
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        sessionStorage.setItem('avatar', res.data)
+      });
+  }
 
   render() {
     if (!sessionStorage.getItem("authorised")) {

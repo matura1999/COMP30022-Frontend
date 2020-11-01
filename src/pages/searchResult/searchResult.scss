@@ -11,12 +11,20 @@
     margin: 1% 12.5% 1% 12.5%;
   }
 
+  &__container:hover{
+    background-color: #7cb305;
+    margin: 1% 10% 1% 10%;
+    cursor: pointer;
+    color: white
+  }
+
   &__item {
-    margin: 15px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: black
+    color: black;
+    background-color:transparent;
   }
   &__item:hover{
     color: white;
@@ -55,11 +63,5 @@
     font-size: 15px;
     font-weight: 900;
     max-width: 50vw;
-  }
-
-  &__container:hover{
-    background-color: #7cb305;
-    margin: 1% 10% 1% 10%;
-    cursor: pointer;
   }
 }

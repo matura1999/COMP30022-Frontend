@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Spin} from "antd";
+import { Empty, Spin } from 'antd';
 import "./portfolioInfo.scss";
 
 export default class PortfolioInfoEdu extends Component {
@@ -8,6 +8,7 @@ export default class PortfolioInfoEdu extends Component {
         this.state = {
             records: [],
             user: this.props.user,
+            loading: true
         }
     }
 
@@ -23,11 +24,9 @@ export default class PortfolioInfoEdu extends Component {
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {
-                    setTimeout(() => {
-
-                    }, 300);
+                    this.setState({loading: false})
                 } else {
-                    this.setState({records:res.data.records})
+                    this.setState({records:res.data.records, loading: false})
                 }
             })
     }
@@ -41,18 +40,20 @@ export default class PortfolioInfoEdu extends Component {
     }
 
     render(){
-        if (this.state.records.length < 1) {
+        const {loading} = this.state;
+        if (loading) {
             return (
-                <div className="portfolioInfo__recordsContainer">
-                    <div className="loadingSpin">
-                        <Spin
-                            size="large"
-                            tip="Loading..."
-                        />
-                    </div>
+                <div className="loadingOrEmptyContainer">
+                    <Spin className="spin" size="large" tip="Loading..."/>
                 </div>
             )
-        } else {
+        } else if (this.state.records.length < 1) {
+            return(
+                <div className="portfolioInfo__recordsContainer">
+                    <Empty description={"This user has not uploaded any education record yet."}/>
+                </div>
+            )
+        } else{
             return(
                 <div className="portfolioInfo__recordsContainer">
                     {this.state.records.map(record=>(

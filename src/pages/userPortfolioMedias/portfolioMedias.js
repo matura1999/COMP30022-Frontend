@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Spin} from "antd";
+import { Empty, Spin } from 'antd';
 import FilterableMediaList from "../userCentreManageContent/components/filterableMediaList";
 
 export default class portfolioMedias extends Component {
@@ -9,6 +9,7 @@ export default class portfolioMedias extends Component {
       notice: "",
       mediaItemList: [],
       user: this.props.user,
+      loading: true,
     };
   }
 
@@ -30,14 +31,14 @@ export default class portfolioMedias extends Component {
       .then((res) => res.json())
       .then((res) => {
         if (res.success === false) {
-          setTimeout(() => {
             this.setState({
               notice: res.error,
+              loading: false,
             });
-          }, 300);
         } else {
           this.setState({
             notice: res.message,
+            loading: false,
           });
           console.log(res.data);
           const temMediaList = [];
@@ -73,16 +74,21 @@ export default class portfolioMedias extends Component {
       filterText: filterText,
     });
   };
+
   render() {
-    if (this.state.mediaItemList.length < 1) {
+    const {loading} = this.state;
+    if (loading) {
       return (
-          <div className="loadingSpin">
-            <Spin
-                size="large"
-                tip="Loading..."
-            />
+          <div className="loadingOrEmptyContainer">
+            <Spin className="spin" size="large" tip="Loading..."/>
           </div>
-      );
+      )
+    } else if (this.state.mediaItemList.length < 1) {
+      return(
+          <div className="loadingOrEmptyContainer">
+            <Empty description={"This user has not uploaded any media yet."}/>
+          </div>
+      )
     }else {
       return (
           <FilterableMediaList medias={this.state.mediaItemList} useFor="present"/>
