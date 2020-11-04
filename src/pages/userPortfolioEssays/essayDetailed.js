@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { Spin } from 'antd';
 import "./essayDetailed.css";
 
 export default class EssayDetailed extends Component {
   constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       loading: true,
       username: this.props.username,
       id: this.props.id,
@@ -14,7 +15,7 @@ export default class EssayDetailed extends Component {
       thumbnail: '',
     }
   }
-  
+
   componentDidMount = async () => {
     const requestOptions = {
       method: "POST",
@@ -34,9 +35,9 @@ export default class EssayDetailed extends Component {
       .then((res) => res.json())
       .then((res) => {
         if (res.success === false) {
-            this.setState({
-              loading: false,
-            });
+          this.setState({
+            loading: false,
+          });
         } else {
           console.log(res.data)
           const essay = res.data.essay
@@ -57,9 +58,16 @@ export default class EssayDetailed extends Component {
       })
   }
   render() {
-    const{title, content, date, thumbnail} = this.state
+    const { title, content, date, thumbnail, loading } = this.state
     var Thumbnail;
-    if(thumbnail){
+    if (loading) {
+      return (
+        <div className="loadingOrEmptyContainer">
+          <Spin className="spin" size="large" tip="Loading..." />
+        </div>
+      );
+    }
+    if (thumbnail) {
       Thumbnail = (
         <img className="essay_details_picture" src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${thumbnail}`} alt="THUMBNAIL" />
       );

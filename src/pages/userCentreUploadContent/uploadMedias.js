@@ -103,7 +103,6 @@ export default class UploadMedias extends Component {
                         allowClear
                         onChange={onChange}
                         rows={5}
-                    // showCount maxLength={100}
                     />
                 </div>)
         }
@@ -142,7 +141,9 @@ export default class UploadMedias extends Component {
                                 listType="picture-card"
                                 fileList={fileList}
                                 onPreview={this.handlePreview}
-                                onChange={this.handleChange}>
+                                onChange={this.handleChange}
+                                accept=".jpg,.png,.jpeg, .gif"
+                                >
                                 {fileList.length >= 5 ? null : uploadButton}
                             </Upload>
                             <Modal
