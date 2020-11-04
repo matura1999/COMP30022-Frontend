@@ -1,12 +1,18 @@
-import { Input, Modal } from "antd";
+import { Input, Modal, message } from "antd";
 import { EditOutlined } from "@ant-design/icons";
 import React, { Component } from "react";
+import reqwest from 'reqwest';
 
-export default class EditDescriptionModal extends React.Component {
-  state = {
-    visible: false,
-    currentDescription: this.props.description,
-  };
+export default class EditDescriptionModal extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      visible: false,
+      currentDescription: this.props.description,
+      source: this.props.source
+    };
+  }
+
 
   showModal = () => {
     this.setState({
@@ -14,11 +20,36 @@ export default class EditDescriptionModal extends React.Component {
     });
   };
 
-  handleOk = (e) => {
+  StaticDataToFile(name) {
+    var data = new Blob([this.state.currentDescription], { type: 'text/plain' });
+
+    const file = new File([data], name + ".txt");
+    console.log(file);
+    return file;
+  }
+
+  handleOk = async (e) => {
     console.log(this.state.currentDescription);
+    const formData = new FormData();
+    formData.append('file', this.StaticDataToFile(this.state.source.split('/').pop()));
+    formData.append('user', sessionStorage.getItem('username'))
+    await reqwest({
+      url: 'https://mojito-portfolio-backend.herokuapp.com/files/media',
+      method: 'PUT',
+      processData: false,
+      data: formData,
+      success: () => {
+        message.success(`Description edit successfully.`);
+      },
+
+      error: () => {
+        message.error('Description edit failed.');
+      },
+    });
     this.setState({
       visible: false,
     });
+    window.location.reload()
   };
 
   handleCancel = (e) => {

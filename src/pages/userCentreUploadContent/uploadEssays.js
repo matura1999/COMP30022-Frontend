@@ -15,7 +15,11 @@ export default class UploadEssays extends Component {
 
 
     beforeUpload = info => {
-        this.setState({ fileList: [info] });
+        if(info.type == "image/jpeg" || info.type == "image/png"){
+            this.setState({ fileList: [info] });
+        } else {
+            message.error("Invalid file type, please upload a jpg/png image")
+        }
         return false;
     }
 
@@ -23,7 +27,7 @@ export default class UploadEssays extends Component {
         this.setState({ fileList: [] })
     };
 
-    onFinish = (values) => {
+    onFinish = async (values) => {
         const { fileList} = this.state;
         const formData = new FormData();
         fileList.forEach(file => {
@@ -38,17 +42,18 @@ export default class UploadEssays extends Component {
         formData.append('title', values.title)
         formData.append('content', values.body)
         formData.append('date', new Date())
-        reqwest({
+        formData.append('updateImage', true)
+        await reqwest({
             url: 'https://mojito-portfolio-backend.herokuapp.com/files/essay',
             method: 'PUT',
             processData: false,
             data: formData,
-            success: () => {
+            success: async () => {
                 this.setState({
                     fileList: [],
                     uploading: false,
                 });
-                message.success(`Uploaded successfully.`);
+                await message.success(`Uploaded successfully.`);
                 window.location.reload(false);
             },
 

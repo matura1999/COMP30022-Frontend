@@ -18,10 +18,11 @@ class EssayList extends React.Component {
       listAfterSearch.sort((a, b) => b.date.localeCompare(a.date));
     }
     console.log(listAfterSearch);
-    listAfterSearch.forEach(({ name, thumbnail, content, date }) => {
+    listAfterSearch.forEach(({ id, name, thumbnail, content, date }) => {
       if (thumbnail) {
         rows.push(
           <EssayItem
+            id={id}
             name={name}
             thumbnail={
               <img
@@ -38,9 +39,9 @@ class EssayList extends React.Component {
       } else {
         rows.push(
           <EssayItem
+            id={id}
             name={name}
             thumbnail={
-              // <img width="150px" height="100px" src={thumbnail} alt="THUMBNAIL" />
               "No Thumbnail"
             }
             content={content}

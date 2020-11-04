@@ -2,7 +2,7 @@
 import React from "react";
 import "./essayItem.scss";
 import EditEssayModal from "./editEssayModal";
-const EssayItem = ({ name, thumbnail, content, date }) => (
+const EssayItem = ({ id, name, thumbnail, content, date }) => (
   <div className="essayItem__container">
     <div className="essayItem__item">
       <div className="essayItem__iconAndInfo">
@@ -25,7 +25,7 @@ const EssayItem = ({ name, thumbnail, content, date }) => (
 
       <div className="essayItem__options">
         {/* <button className="essayItem__edit">Edit</button> */}
-        <EditEssayModal title={name} content={content} />
+        <EditEssayModal title={name} content={content} id={id}/>
         <button className="essayItem__delete">Delete</button>
       </div>
     </div>

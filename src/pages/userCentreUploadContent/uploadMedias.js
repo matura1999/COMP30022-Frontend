@@ -41,7 +41,15 @@ export default class UploadMedias extends Component {
     };
 
     handleChange = ({ fileList }) => {
-        this.setState({ fileList, descriptionBox: true, })
+        const tempList = []
+        for(const file of fileList){
+            if (file.type.slice(0,5) == 'image'){
+                tempList.push(file)
+            } else {
+                message.error(file.name + " is not an image")
+            }
+        }
+        this.setState({ fileList: tempList, descriptionBox: true, })
     };
 
     StaticDataToFile(name) {
@@ -60,7 +68,6 @@ export default class UploadMedias extends Component {
             formData.append('file', this.StaticDataToFile(file.name));
         });
         
-
         this.setState({
             uploading: true,
         });

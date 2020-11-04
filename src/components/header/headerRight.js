@@ -17,6 +17,9 @@ export default class HeaderRight extends Component {
     window.sessionStorage.clear();
   };
 
+  goToMyPortfolio = () => {
+    window.location.href = "/userPortfolio/" + sessionStorage.getItem('username') + '/info'
+  }
   goToUserInfo = () => {
     window.location.href = "/userCentre/userInfo/basic"
   }
@@ -32,9 +35,9 @@ export default class HeaderRight extends Component {
   menu = (
     <Menu>
       <Menu.Item>
-        <Link exact to={"/userPortfolio/" + sessionStorage.getItem('username') + "/info"}>
+        <a onClick={this.goToMyPortfolio}>
           <FolderViewOutlined /> My Portfolio
-        </Link>
+        </a>
       </Menu.Item>
       <Menu.Item>
         <a onClick={this.goToUserInfo}>

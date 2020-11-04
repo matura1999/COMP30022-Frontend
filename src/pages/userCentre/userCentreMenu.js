@@ -79,7 +79,7 @@ export default class UserCentreMenu extends Component {
             Manage Medias
           </Link>
         </Menu.Item>
-        <Menu.Item key="essaysManage">
+        <Menu.Item key="essaysManagement">
           <Link exact to="/userCentre/manageContent/essaysManagement">
             <FileTextOutlined />
             Manage Essays

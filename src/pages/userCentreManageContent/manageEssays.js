@@ -39,10 +39,9 @@ export default class ManageEssays extends Component {
             notice: res.message,
             loading: false,
           });
-          console.log(res.data);
           const temEssayList = [];
           res.data.map(({ essay, image }) => {
-            const { title, content, date } = essay;
+            const { _id, title, content, date } = essay;
             const dateObj = new Date(date);
             const createdDate = dateObj.toLocaleString();
             var imageUrl = null;
@@ -51,6 +50,7 @@ export default class ManageEssays extends Component {
             }
 
             const essayObject = {
+              id: _id,
               date: createdDate,
               name: title,
               content: content,
@@ -59,7 +59,6 @@ export default class ManageEssays extends Component {
 
             temEssayList.push(essayObject);
           });
-          console.log(temEssayList);
           this.setState({
             essayItemList: temEssayList,
           });

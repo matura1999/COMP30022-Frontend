@@ -15,13 +15,11 @@ const deleteElement = async (source, descriptionUrl) => {
     },
     body: JSON.stringify({ key: source }),
   };
-  console.log(source);
   await fetch(
     "https://mojito-portfolio-backend.herokuapp.com/files",
     requestOptions
   );
 
-  console.log(descriptionUrl);
   requestOptions.body = JSON.stringify({ key: descriptionUrl });
   await fetch(
     "https://mojito-portfolio-backend.herokuapp.com/files",
@@ -42,7 +40,7 @@ const MediaItem = ({ source, time, description, descriptionUrl }) => (
       />
     }
     actions={[
-      <EditDescriptionModal description={description} />,
+      <EditDescriptionModal description={description} source={source}/>,
 
       <Popconfirm
         title="Are you sure？"

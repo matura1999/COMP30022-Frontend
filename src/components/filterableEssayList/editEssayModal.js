@@ -1,53 +1,81 @@
-import { Button, Modal, Input, Upload, message } from "antd";
+import { Button, Modal, Input, Upload, message, Switch } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import React, { Component } from "react";
+import reqwest from 'reqwest'
 
-const props = {
-  name: "file",
-  action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
-  headers: {
-    authorization: "authorization-text",
-  },
-  onChange(info) {
-    if (info.file.status !== "uploading") {
-      console.log(info.file, info.fileList);
-    }
-    if (info.file.status === "done") {
-      message.success(`${info.file.name} file uploaded successfully`);
-    } else if (info.file.status === "error") {
-      message.error(`${info.file.name} file upload failed.`);
-    }
-  },
-};
 export default class EditEssayModal extends React.Component {
-  state = {
-    // loading: false,
-    visible: false,
-
-    currentTitle: this.props.title,
-    currentContent: this.props.content,
-  };
-
+  constructor(props){
+    super(props)
+    this.state = {
+      fileList: [],
+      visible: false,
+      currentEssayId: this.props.id,
+      currentTitle: this.props.title,
+      currentContent: this.props.content,
+      disabled: true,
+      savedTitle: this.props.title,
+      savedContent: this.props.content,
+      uploading: false,
+    };
+  }
+  
   showModal = () => {
     this.setState({
       visible: true,
     });
   };
 
-  handleOk = (e) => {
-    // this.setState({ loading: true });
-    // setTimeout(() => {
-    //   this.setState({ loading: false, visible: false });
-    // }, 3000);
-    console.log(this.state.currentTitle);
-    console.log(this.state.currentContent);
+  handleOk = async (e) => {
+    const { fileList, currentContent, currentTitle, currentEssayId, disabled } = this.state;
+    const formData = new FormData();
+    if(disabled){
+      formData.append('updateImage', false)
+    } else {
+      formData.append('updateImage', true)
+      fileList.forEach(file => {
+        formData.append('file', file);
+      });
+    }
+    this.setState({
+      uploading: true,
+    });
+    formData.append('username', sessionStorage.getItem('username'))
+    formData.append('title', currentTitle)
+    formData.append('content', currentContent)
+    formData.append('date', new Date())
+    formData.append('id', currentEssayId)
+    
+    await reqwest({
+      url: 'https://mojito-portfolio-backend.herokuapp.com/files/essay',
+      method: 'PUT',
+      processData: false,
+      data: formData,
+      success: async () => {
+        this.setState({
+          fileList: [],
+          uploading: false,
+        });
+        await message.success(`Essay updated successfully.`);
+        
+      },
+
+      error: () => {
+        this.setState({
+          uploading: false,
+        });
+        message.error('Essay update failed.');
+      },
+    });
+
     this.setState({
       visible: false,
     });
+    window.location.reload();
   };
 
   handleCancel = (e) => {
-    this.setState({ visible: false });
+    const {savedTitle, savedContent} = this.state;
+    this.setState({ visible: false, fileList: [], disabled: true, currentContent:savedContent, currentTitle:savedTitle});
   };
 
   handleTitleChange = (e) => {
@@ -62,8 +90,30 @@ export default class EditEssayModal extends React.Component {
     });
   };
 
+  beforeUpload = info => {
+    if (info.type == "image/jpeg" || info.type == "image/png") {
+      this.setState({ fileList: [info] });
+    } else {
+      message.error("Invalid file type, please upload a jpg/png image")
+    }
+    return false;
+  }
+
+  handleRemove = () => {
+    this.setState({ fileList: [] })
+  };
+
+  onChange = (checked) => {
+    this.setState({ disabled: !checked })
+  }
+
   render() {
-    // const { visible, loading } = this.state;
+    const { fileList } = this.state
+    const props = {
+      beforeUpload: this.beforeUpload,
+      onRemove: this.handleRemove,
+      fileList
+    };
     const { visible } = this.state;
     const { TextArea } = Input;
     return (
@@ -108,8 +158,12 @@ export default class EditEssayModal extends React.Component {
             rows={4}
             allowClear
           />
+          <span>Update Image?</span>
+          <Switch defaultChecked={false} onChange={this.onChange} checkedChildren="Yes" unCheckedChildren="No"></Switch><br />
           <Upload {...props}>
             <Button
+              uploading={this.state.uploading}
+              disabled={this.state.disabled}
               className="essayItem__uploadThumbnail"
               icon={<UploadOutlined />}
             >
