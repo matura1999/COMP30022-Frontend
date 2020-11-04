@@ -106,7 +106,7 @@ export default class UploadMedias extends Component {
                     />
                 </div>)
         }
-        const uploadButton = (
+        const addMediaButton = (
             <div className="description">
                 <PlusOutlined />
                 <div style={{ marginTop: 8 }}>Add Media</div>
@@ -144,7 +144,7 @@ export default class UploadMedias extends Component {
                                 onChange={this.handleChange}
                                 accept=".jpg,.png,.jpeg, .gif"
                                 >
-                                {fileList.length >= 5 ? null : uploadButton}
+                                {fileList.length >= 5 ? null : addMediaButton}
                             </Upload>
                             <Modal
                                 visible={previewVisible}

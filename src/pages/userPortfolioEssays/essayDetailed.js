@@ -53,6 +53,7 @@ export default class EssayDetailed extends Component {
             title: title,
             content: content,
             thumbnail: imageUrl,
+            loading: false,
           })
         }
       })

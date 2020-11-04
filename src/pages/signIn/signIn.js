@@ -15,6 +15,7 @@ export default class SignIn extends Component {
     super(props);
     this.state = {
       notice: "",
+      signing: false,
     };
 
     this.onFinish = this.onFinish.bind(this);
@@ -26,6 +27,10 @@ export default class SignIn extends Component {
   };
 
   onFinish = async (values) => {
+    this.setState({
+      signing: true,
+    });
+
     const requestOptions = {
       method: "POST",
       headers: {
@@ -48,6 +53,7 @@ export default class SignIn extends Component {
           setTimeout(() => {
             this.setState({
               notice: res.error,
+              signing: false,
             });
           }, 300);
         } else {
@@ -80,6 +86,7 @@ export default class SignIn extends Component {
   }
 
   render() {
+    const {signing} = this.state
     if (!sessionStorage.getItem("authorised")) {
       return (
         <div class="signIn__body">
@@ -132,10 +139,11 @@ export default class SignIn extends Component {
                 <Button
                   type="primary"
                   htmlType="submit"
+                  loading={signing}
                   size="large"
                   block
                 >
-                  Sign in
+                  {signing ? 'Signing In' : 'Sign In'}
                 </Button>
               </Form.Item>
             </Form>

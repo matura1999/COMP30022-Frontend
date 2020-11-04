@@ -9,6 +9,7 @@ export default class UploadEssays extends Component {
         super(props);
         this.state = {
             fileList: [],
+            uploading: false,
         };
     }
 
@@ -28,6 +29,10 @@ export default class UploadEssays extends Component {
         fileList.forEach(file => {
             formData.append('file', file);
         });
+
+        this.setState({
+            uploading: true,
+        });
         
         formData.append('username', sessionStorage.getItem('username'))
         formData.append('title', values.title)
@@ -41,8 +46,10 @@ export default class UploadEssays extends Component {
             success: () => {
                 this.setState({
                     fileList: [],
+                    uploading: false,
                 });
                 message.success(`Uploaded successfully.`);
+                window.location.reload(false);
             },
 
             error: () => {
@@ -55,7 +62,7 @@ export default class UploadEssays extends Component {
     };
 
     render() {
-        const {fileList} = this.state
+        const {fileList, uploading} = this.state
         const props = {
             beforeUpload: this.beforeUpload,
             onRemove: this.handleRemove,
@@ -66,12 +73,19 @@ export default class UploadEssays extends Component {
             <div className="essay_component">
 
                 <Form name="nest-messages" onFinish={this.onFinish} id="essay_component">
-                    <Form.Item name='title' placeholder="Enter Title Here">
+                    <Form.Item
+                        name='title'
+                        rules={[{ required: true, message: 'Title is required!' }]}
+                    >
                         <Input placeholder="Enter Title Here" bordered={false} />
                     </Form.Item>
                     <Divider />
                     <Form.Item name='body' >
-                        <Input.TextArea rows={10} placeholder="Enter Content Here" bordered={false} />
+                        <Input.TextArea
+                            rows={10}
+                            placeholder="Enter Content Here"
+                            bordered={false}
+                        />
                     </Form.Item>
                     <Divider />
                     <Upload {...props}
@@ -89,9 +103,10 @@ export default class UploadEssays extends Component {
                         <Button className="userCentre__formButton"
                             type="primary"
                             htmlType="submit"
+                            loading={uploading}
                             size="large"
                         >
-                            Submit Now
+                            {uploading ? 'Submitting' : 'Submit Now'}
                     </Button>
                     </Space>
                     </Form.Item>

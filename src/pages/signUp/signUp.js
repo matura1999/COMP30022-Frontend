@@ -111,7 +111,7 @@ export default class SignUp extends Component {
                                     size='large'
                                     block
                                 >
-                                    Sign up
+                                    Sign Up
                             </Button>
                             </Form.Item>
                         </Form>
@@ -126,7 +126,7 @@ export default class SignUp extends Component {
                 <div class="login-box">
                     <h2 class="title">
                         <bold>
-                            You have already signed in
+                            You have already signed in!
                         </bold>
                     </h2>
                 </div>
