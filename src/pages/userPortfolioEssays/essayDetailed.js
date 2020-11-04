@@ -94,7 +94,9 @@ export default class EssayDetailed extends Component {
                     </Link>
                 </div>
                 <div className="essay_details_title">{title}</div>
+
                 <div className="essay_details_date">{date}</div>
+                <div className="essay_details_user">{username}</div>
                 <div className="essay_details_content">{content}</div>
                 <div className="essay_details_thumbnail">
                     {

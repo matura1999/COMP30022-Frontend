@@ -2,7 +2,7 @@
     margin-left: auto;
     margin-right: auto;
     align-self: center;
-    padding-left: 28%;
+    padding-left: 25%;
     padding-right: 25%;
 }
 
@@ -31,6 +31,12 @@
 
 .essay_details_date {
     padding-top: 2%;
+    padding-right: 22%;
+    font-size: medium;
+    text-align: right;
+}
+
+.essay_details_user {
     padding-bottom: 2%;
     padding-right: 22%;
     font-size: medium;
