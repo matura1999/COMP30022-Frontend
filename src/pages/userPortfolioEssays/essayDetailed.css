@@ -29,3 +29,14 @@
     font-size: medium;
     text-align: right;
 }
+
+.essay_details_no_thumbnail{
+    background-color: #DFE88C;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-size: 50px;
+    display: flex;
+    text-align: center;
+    
+}

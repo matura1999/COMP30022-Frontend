@@ -5,7 +5,6 @@ import SignUp from "./pages/signUp/signUp";
 import SignIn from "./pages/signIn/signIn";
 import UserCentre from "./pages/userCentre/userCentre";
 import UserPortfolio from "./pages/userPortfolio/userPortfolio";
-import PortfolioEssayDetailed from "./pages/userPortfolioEssays/essayDetailed";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchResult from "./pages/searchResult/searchResult";
 import "./App.css";
@@ -23,16 +22,13 @@ class App extends Component {
               <Route exact path="/" exact component={Intro} />
               <Route exact path="/signUp" exact component={SignUp} />
               <Route exact path="/signIn" exact component={SignIn} />
-              <Route path="/userCentre/:path/:subpath" component={UserCentre} />
+              <Route exact path="/userCentre/:path/:subpath" component={UserCentre} />
               <Route
+                exact
                 path="/userPortfolio/:username/:path"
                 component={UserPortfolio}
               />
               <Route path="/searchResult" component={SearchResult} />
-              <Route exact
-                  path="/userPortfolio/:username/:path/:subpath"
-                  component={PortfolioEssayDetailed}
-              />
             </Switch>
           </div>
         </Router>

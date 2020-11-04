@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import UserAvatar from "../../components/userAvatar/userAvatar";
 import "./searchResult.scss";
-
-const visitPortfolio = (username) =>{
-    window.location.href = "/userPortfolio/" + username + "/info";
-}
 
 const SearchResultNameCard = ({ name, username, intro }) => (
     <a className="searchResult__item" href = {"/userPortfolio/" + username + "/info"}>

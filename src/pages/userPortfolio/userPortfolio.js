@@ -12,12 +12,14 @@ import PortfolioInfo from "../userPortfolioInfo/portfolioInfo";
 import PortfolioFiles from "../userPortfolioFiles/portfolioFiles";
 import PortfolioMedias from "../userPortfolioMedias/portfolioMedias";
 import PortfolioEssays from "../userPortfolioEssays/portfolioEssays";
+import EssayDetailed from "../userPortfolioEssays/essayDetailed"
 import UserPortfolioNameCard from "./userPortfolioNameCard";
 import "./userPortfolio.scss";
 
 export default class UserPortfolio extends Component {
   constructor(props) {
     super(props);
+    console.log(props.match)
     this.state = {
       collapsed: false,
       current: props.match.params.path,
@@ -40,7 +42,12 @@ export default class UserPortfolio extends Component {
       case "medias":
         return <PortfolioMedias user={user}/>;
       case "essays":
-        return <PortfolioEssays user={user}/>;
+        if(window.location.href.split('/').pop() =="essays"){
+          return <PortfolioEssays user={user}/>;
+        } else {
+          const essayID = window.location.href.split('/').pop().slice(7,)
+          return <EssayDetailed id={essayID} username={user}/>
+        }
     }
   };
 
