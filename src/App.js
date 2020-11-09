@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "./components/header/header";
 import Intro from "./pages/intro/intro";
-import SignUp from "./pages/signup/signUp";
-import SignIn from "./pages/signin/signIn";
+import SignUp from "./pages/signUp/signUp";
+import SignIn from "./pages/signIn/signIn";
 import UserCentre from "./pages/userCentre/userCentre";
 import UserPortfolio from "./pages/userPortfolio/userPortfolio";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -22,7 +22,11 @@ class App extends Component {
               <Route exact path="/" exact component={Intro} />
               <Route exact path="/signUp" exact component={SignUp} />
               <Route exact path="/signIn" exact component={SignIn} />
-              <Route exact path="/userCentre/:path/:subpath" component={UserCentre} />
+              <Route
+                exact
+                path="/userCentre/:path/:subpath"
+                component={UserCentre}
+              />
               <Route
                 exact
                 path="/userPortfolio/:username/:path"
