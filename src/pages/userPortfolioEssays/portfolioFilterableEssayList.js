@@ -6,6 +6,7 @@ class PortfolioEssayList extends React.Component {
   render() {
     const filterText = this.props.filterText;
     const sortMethod = this.props.sortMethod;
+    const username = this.props.username;
     const rows = [];
 
     const listAfterSearch = this.props.essays.filter(({ name }) =>
@@ -18,40 +19,38 @@ class PortfolioEssayList extends React.Component {
       listAfterSearch.sort((a, b) => b.date.localeCompare(a.date));
     }
     console.log(listAfterSearch);
-    listAfterSearch.forEach(
-      ({ username, id, name, thumbnail, content, date }) => {
-        if (thumbnail) {
-          rows.push(
-            <PortfolioEssayItem
-              id={id}
-              name={name}
-              thumbnail={
-                <img
-                  width="150px"
-                  height="100px"
-                  src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${thumbnail}`}
-                  alt="THUMBNAIL"
-                />
-              }
-              content={content}
-              date={date}
-              username={username}
-            />
-          );
-        } else {
-          rows.push(
-            <PortfolioEssayItem
-              id={id}
-              name={name}
-              thumbnail={"No Thumbnail"}
-              content={content}
-              date={date}
-              username={username}
-            />
-          );
-        }
+    listAfterSearch.forEach(({ id, name, thumbnail, content, date }) => {
+      if (thumbnail) {
+        rows.push(
+          <PortfolioEssayItem
+            id={id}
+            name={name}
+            thumbnail={
+              <img
+                // width="150px"
+                // height="100px"
+                src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${thumbnail}`}
+                alt="THUMBNAIL"
+              />
+            }
+            content={content}
+            date={date}
+            username={username}
+          />
+        );
+      } else {
+        rows.push(
+          <PortfolioEssayItem
+            id={id}
+            name={name}
+            thumbnail={"No Thumbnail"}
+            content={content}
+            date={date}
+            username={username}
+          />
+        );
       }
-    );
+    });
 
     return <div className="myPortfolioEssayList">{rows}</div>;
   }
@@ -122,6 +121,7 @@ class PortfolioFilterableEssayList extends React.Component {
         />
         <PortfolioEssayList
           essays={this.props.essays}
+          username={this.props.username}
           filterText={this.state.filterText}
           sortMethod={this.state.sortMethod}
         />

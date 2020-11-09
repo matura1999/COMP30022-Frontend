@@ -1,9 +1,7 @@
 .portfolioFile {
-
     &__item {
         display: flex;
         margin-bottom: 20px;
-        // width: 50%;
         align-items: center;
         justify-content: center;
     }
@@ -15,7 +13,7 @@
     }
 
     &__typeIcon {
-        background-color: #DFE88C;
+        background-color: #dfe88c;
         height: 78px;
         width: 78px;
         font-size: 18px;
@@ -28,7 +26,6 @@
     &__info {
         display: flex;
         flex-direction: column;
-
     }
 
     &__title {
@@ -50,7 +47,6 @@
     &__size {
         font-size: 18px;
         font-weight: 500;
-
     }
 
     &__size {
@@ -65,7 +61,6 @@
         align-items: center;
         width: 300px;
     }
-
 
     &__date {
         padding-top: 3px;
@@ -84,9 +79,6 @@
         border-radius: 5px;
     }
 
-
-
-
     &__download:hover {
         background-color: #7cb305;
         color: white;
@@ -95,12 +87,8 @@
 
 .myPortfolioFileList .fileList {
     margin: 30px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    grid-gap: 1rem;
     justify-content: space-between;
-    flex-wrap: wrap;
-
-    &::after {
-        content: "";
-        width: 410px;
-    }
 }

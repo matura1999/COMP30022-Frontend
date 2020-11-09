@@ -23,24 +23,17 @@
     &__content {
         font-size: medium;
         white-space:pre-wrap;
-        padding-right: 20%;
-        padding-left: 20%;
-        padding-bottom: 2%;
+        padding: 2% 15%;
     }
     
     &__date {
-        padding-top: 2%;
-        padding-right: 22%;
+        margin-right: 22%;
         font-size: medium;
         text-align: right;
+        height: 5vh;
+
     }
-    
-    &__user {
-        padding-bottom: 2%;
-        padding-right: 22%;
-        font-size: medium;
-        text-align: right;
-    }
+
     
     &__back {
         padding-left: 1%;

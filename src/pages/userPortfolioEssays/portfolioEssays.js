@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, withRouter, Link } from "react-router-dom";
 import { Empty, Spin } from "antd";
-// import "./portfolioEssays.scss";
 import PortfolioFilterableEssayList from "./portfolioFilterableEssayList";
 class portfolioEssays extends Component {
   constructor(props) {
@@ -77,7 +76,12 @@ class portfolioEssays extends Component {
         </div>
       );
     } else {
-      return <PortfolioFilterableEssayList essays={this.state.essayItemList} />;
+      return (
+        <PortfolioFilterableEssayList
+          essays={essayItemList}
+          username={username}
+        />
+      );
     }
   }
 }

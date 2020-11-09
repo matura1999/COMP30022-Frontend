@@ -78,12 +78,6 @@ export default class EssayDetailed extends Component {
           alt="THUMBNAIL"
         />
       );
-    } else {
-      Thumbnail = (
-        <span className="essayDetailed__picture">
-          <span className="essayDetailed__no_thumbnail">No Thumbnail</span>
-        </span>
-      );
     }
     return (
       <div className="essayDetailed__container">
@@ -101,7 +95,6 @@ export default class EssayDetailed extends Component {
         <div className="essayDetailed__title">{title}</div>
 
         <div className="essayDetailed__date">{date}</div>
-        <div className="essayDetailed__user">{username}</div>
         <div className="essayDetailed__content">{content}</div>
         <div className="essayDetailed__thumbnail">{Thumbnail}</div>
       </div>

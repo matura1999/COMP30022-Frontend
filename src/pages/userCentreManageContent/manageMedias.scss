@@ -1,13 +1,13 @@
-.manageMedia,.myPortfolioMedia {
+.manageMedia,
+.myPortfolioMedia {
   &__card {
     margin-bottom: 30px !important;
-
   }
 
   &__meta {
     height: 50px;
     .ant-card-meta-description {
-      height:40px;
+      height: 40px;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -32,16 +32,12 @@
 
   &__content {
     margin: 30px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap: 1rem;
     justify-content: space-between;
-    flex-wrap: wrap;
-
-    &::after {
-      content: "";
-      width: 200px;
-    }
   }
-  &__searchBar{
+  &__searchBar {
     border: 1px solid #c2c0c0;
     font-size: 18px;
     padding: 5px 10px;
