@@ -51,7 +51,7 @@ class EssayItem extends React.Component{
     
           <div className="essayItem__options">
             <EditEssayModal title={name} content={content} id={id}/>
-            <button className="essayItem__delete" onClick={()=>this.deleteEssay(id)}>Delete {name}</button>
+            <button className="essayItem__delete" onClick={()=>this.deleteEssay(id)}>Delete</button>
           </div>
         </div>
       </div>
