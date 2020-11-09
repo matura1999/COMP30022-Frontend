@@ -2,34 +2,62 @@
 import React from "react";
 import "./essayItem.scss";
 import EditEssayModal from "./editEssayModal";
-const EssayItem = ({ id, name, thumbnail, content, date }) => (
-  <div className="essayItem__container">
-    <div className="essayItem__item">
-      <div className="essayItem__iconAndInfo">
-        <div className="essayItem__thumbnail" data-testid="essayItem-thumbnail">
-          {thumbnail}
-        </div>
+class EssayItem extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {}
+  }
 
-        <div className="essayItem__info">
-          <div className="essayItem__title" data-testid="essayItem-name">
-            {name}
+  deleteEssay = async (id) => {
+    console.log(id)
+    const requestOptions = {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({ id:id, username: sessionStorage.getItem('username')}),
+    };
+    await fetch(
+      "https://mojito-portfolio-backend.herokuapp.com/essay",
+      requestOptions
+    );
+    window.location.reload(false);
+  }
+
+  render(){
+    const {name, content, id, thumbnail, date} = this.props
+    console.log(id)
+    return (
+      <div className="essayItem__container">
+        <div className="essayItem__item">
+          <div className="essayItem__iconAndInfo">
+            <div className="essayItem__thumbnail" data-testid="essayItem-thumbnail">
+              {thumbnail}
+            </div>
+    
+            <div className="essayItem__info">
+              <div className="essayItem__title" data-testid="essayItem-name">
+                {name}
+              </div>
+              <div className="essayItem__content" data-testid="essayItem-content">
+                {content}
+              </div>
+              <div className="essayItem__date" data-testid="essayItem-date">
+                {date}
+              </div>
+            </div>
           </div>
-          <div className="essayItem__content" data-testid="essayItem-content">
-            {content}
-          </div>
-          <div className="essayItem__date" data-testid="essayItem-date">
-            {date}
+    
+          <div className="essayItem__options">
+            <EditEssayModal title={name} content={content} id={id}/>
+            <button className="essayItem__delete" onClick={()=>this.deleteEssay(id)}>Delete {name}</button>
           </div>
         </div>
       </div>
+    )
 
-      <div className="essayItem__options">
-        {/* <button className="essayItem__edit">Edit</button> */}
-        <EditEssayModal title={name} content={content} id={id}/>
-        <button className="essayItem__delete">Delete</button>
-      </div>
-    </div>
-  </div>
-);
+  }
+};
 
 export default EssayItem;
