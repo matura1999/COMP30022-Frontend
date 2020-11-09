@@ -1,57 +1,66 @@
 import React from "react";
-import FileItem from "./fileItem";
-import MyPortfolioFileItem from "./myPortfolioFileItem";
-import "./searchAndSortBar.scss";
+import PortfolioEssayItem from "./portfolioEssayItem";
+import "../../components/filterableItemList/searchAndSortBar.scss";
 
-class FileList extends React.Component {
+class PortfolioEssayList extends React.Component {
   render() {
     const filterText = this.props.filterText;
     const sortMethod = this.props.sortMethod;
-    const useFor = this.props.useFor;
+    const username = this.props.username;
     const rows = [];
 
-    const listAfterSearch = this.props.files.filter(({ name }) =>
+    const listAfterSearch = this.props.essays.filter(({ name }) =>
       name.toLowerCase().includes(filterText.toLowerCase())
     );
 
     if (sortMethod === "byName") {
       listAfterSearch.sort((a, b) => a.name.localeCompare(b.name));
-    }
-    if (sortMethod === "byDate") {
+    } else if (sortMethod === "byDate") {
       listAfterSearch.sort((a, b) => b.date.localeCompare(a.date));
     }
-
-    if (useFor === "manage") {
-      listAfterSearch.forEach(({ name, type, date, size, fileUrl }) => {
+    console.log(listAfterSearch);
+    listAfterSearch.forEach(({ id, name, thumbnail, content, date }) => {
+      if (thumbnail) {
         rows.push(
-          <FileItem
+          <PortfolioEssayItem
+            id={id}
             name={name}
-            type={type}
+            thumbnail={
+              <img
+                // width="150px"
+                // height="100px"
+                src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${thumbnail}`}
+                alt="THUMBNAIL"
+              />
+            }
+            content={content}
             date={date}
-            size={size}
-            fileUrl={fileUrl}
+            username={username}
           />
         );
-      });
-    } else {
-      listAfterSearch.forEach(({ name, type, date, size, fileUrl }) => {
+      } else {
         rows.push(
-          <MyPortfolioFileItem
+          <PortfolioEssayItem
+            id={id}
             name={name}
-            type={type}
+            thumbnail={"No Thumbnail"}
+            content={content}
             date={date}
-            size={size}
-            fileUrl={fileUrl}
+            username={username}
           />
         );
-      });
-    }
+      }
+    });
 
-    return <div className="fileList">{rows}</div>;
+    return <div className="myPortfolioEssayList">{rows}</div>;
   }
 }
 
 class SearchBar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   handleFilterTextChange = (e) => {
     this.props.onFilterTextChange(e.target.value);
   };
@@ -66,7 +75,7 @@ class SearchBar extends React.Component {
         <input
           className="searchBar"
           type="text"
-          placeholder="Search File"
+          placeholder="Search Essay"
           value={this.props.filterText}
           onChange={this.handleFilterTextChange}
         />
@@ -81,7 +90,7 @@ class SearchBar extends React.Component {
   }
 }
 
-class FilterableItemList extends React.Component {
+class PortfolioFilterableEssayList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -110,15 +119,15 @@ class FilterableItemList extends React.Component {
           onFilterTextChange={this.handleFilterTextChange}
           onSortChange={this.handleSortChange}
         />
-        <FileList
-          files={this.props.files}
+        <PortfolioEssayList
+          essays={this.props.essays}
+          username={this.props.username}
           filterText={this.state.filterText}
           sortMethod={this.state.sortMethod}
-          useFor={this.props.useFor}
         />
       </div>
     );
   }
 }
 
-export default FilterableItemList;
+export default PortfolioFilterableEssayList;

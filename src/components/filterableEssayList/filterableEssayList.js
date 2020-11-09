@@ -1,6 +1,6 @@
 import React from "react";
 import EssayItem from "./essayItem";
-import "../filterableItemList/FilterableItemList.css";
+import "../filterableItemList/searchAndSortBar.scss";
 
 class EssayList extends React.Component {
   render() {
@@ -41,9 +41,7 @@ class EssayList extends React.Component {
           <EssayItem
             id={id}
             name={name}
-            thumbnail={
-              "No Thumbnail"
-            }
+            thumbnail={"No Thumbnail"}
             content={content}
             date={date}
           />

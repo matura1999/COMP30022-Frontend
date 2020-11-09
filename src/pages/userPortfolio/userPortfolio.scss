@@ -1,9 +1,9 @@
-.userPortfolio{
-    &__body{
+.userPortfolio {
+    &__body {
         margin: 0% 12.5% 0% 12.5%;
     }
 
-    &__nameCardAndMenu{
+    &__nameCardAndMenu {
         display: flex;
         flex-direction: column;
         background-size: contain;
@@ -11,6 +11,7 @@
         background-position: top;
         background-color: #ffffff;
         background-image: url("../../assets/UserPortfolioNameCardDecoration.png");
+        background-size: contain;
         border-left: #e1e1e1 1px groove;
         border-right: #e1e1e1 1px groove;
         border-bottom: #e1e1e1 1px groove;
@@ -20,7 +21,7 @@
         padding: 20px;
     }
 
-    &__avatar{
+    &__avatar {
         width: 80px;
         margin: 0 auto;
     }
