@@ -19,7 +19,7 @@ class EssayItem extends React.Component{
       body: JSON.stringify({ id:id, username: sessionStorage.getItem('username')}),
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/essay",
+      "https://mojito-portfolio-backend.herokuapp.com/files/essay",
       requestOptions
     );
     window.location.reload(false);
