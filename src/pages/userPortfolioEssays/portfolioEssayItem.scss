@@ -39,6 +39,9 @@
         font-size: 30px;
         font-weight: 900;
         color: black;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__content {
