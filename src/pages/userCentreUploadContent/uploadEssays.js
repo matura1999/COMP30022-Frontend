@@ -40,7 +40,11 @@ export default class UploadEssays extends Component {
         
         formData.append('username', sessionStorage.getItem('username'))
         formData.append('title', values.title)
-        formData.append('content', values.body)
+        if(values.body){
+            formData.append('content', values.body)
+        } else {
+            formData.append('content', '')
+        }
         formData.append('date', new Date())
         formData.append('updateImage', true)
         await reqwest({
