@@ -83,40 +83,6 @@ class portfolioEssays extends Component {
         />
       );
     }
-    // const rows = [];
-    // essayItemList.forEach(({ id, name, thumbnail, content, date }) => {
-    //   var Thumbnail = null;
-    //   if(thumbnail){
-    //     Thumbnail = (
-    //         <img width="150px" height="100px" src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${thumbnail}`} alt="THUMBNAIL" />
-    //     );
-    //   } else {
-    //     Thumbnail = "No Thumbnail"
-    //   }
-
-    //   rows.push(
-    //       <div className="essays__item">
-    //         <div className="essays__thumbnail">{Thumbnail}</div>
-
-    //         <div className="essays__info">
-    //           <Link
-    //               exact
-    //               to={
-    //                 "/userPortfolio/" +
-    //                 username +
-    //                 "/essays#" +
-    //                 id
-    //               }
-    //           >
-    //             <div className="essays__title">{name}</div>
-    //             <div className="essays__content">{content}</div>
-    //             <div className="essays__date">{date}</div>
-    //           </Link>
-    //         </div>
-    //       </div>
-    //   );
-    // });
-    // return rows;
   }
 }
 

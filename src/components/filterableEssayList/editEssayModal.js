@@ -19,6 +19,17 @@ export default class EditEssayModal extends React.Component {
     };
   }
   
+  componentDidUpdate(prevProps){
+    if(prevProps.id !== this.props.id){
+      this.setState({
+        currentEssayId: this.props.id,
+        currentTitle: this.props.title,
+        currentContent: this.props.content,
+        savedTitle: this.props.title,
+        savedContent: this.props.content,
+      })
+    }
+  }
   showModal = () => {
     this.setState({
       visible: true,
