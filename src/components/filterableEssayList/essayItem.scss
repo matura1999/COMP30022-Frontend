@@ -36,13 +36,17 @@
   &__title {
     font-size: 30px;
     font-weight: 900;
+    max-width: 28vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   
   
   &__content {
     font-size: 15px;
     font-weight: 500;
-    max-width: 25vw;
+    max-width: 27vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -84,6 +88,10 @@
 
   &__editContent{
     height: 40vh;
+    margin: 10px;
+  }
+
+  &__replaceThumbnailTitle{
     margin: 10px;
   }
 

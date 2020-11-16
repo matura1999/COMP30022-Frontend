@@ -137,7 +137,7 @@ export default class EditEssayModal extends React.Component {
         <Modal
           width={800}
           visible={visible}
-          title="Edit essay"
+          title="Edit Essay"
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
@@ -170,8 +170,15 @@ export default class EditEssayModal extends React.Component {
             rows={4}
             allowClear
           />
-          <span>Update Image?</span>
-          <Switch defaultChecked={false} onChange={this.onChange} checkedChildren="Yes" unCheckedChildren="No"></Switch><br />
+          <div className="essayItem__replaceThumbnailTitle">
+            Replace the old thumbnail? &nbsp;&nbsp;
+            <Switch
+                defaultChecked={false}
+                onChange={this.onChange}
+                checkedChildren="Yes"
+                unCheckedChildren="No">
+            </Switch>
+          </div>
           <Upload {...props}>
             <Button
               uploading={this.state.uploading}
@@ -179,7 +186,7 @@ export default class EditEssayModal extends React.Component {
               className="essayItem__uploadThumbnail"
               icon={<UploadOutlined />}
             >
-              Update Thumbnail
+              Upload Thumbnail
             </Button>
           </Upload>
         </Modal>

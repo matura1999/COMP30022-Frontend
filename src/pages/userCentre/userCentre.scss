@@ -1,8 +1,10 @@
 .userCentre {
     &__banner {
-        background-image: url("../../assets/Banner 1920x90.png");
+        display: flex;
+        flex-direction: column;
         background-repeat: no-repeat;
-        background-size: 100vw;
+        background-position: top;
+        background-image: url("../../assets/Banner 1920x90.png");
     }
 
     &__menuAndContent {
@@ -25,7 +27,7 @@
         font-weight: 900;
         color: white;
         position: relative;
-        text-indent: 240px;
+        text-indent: 17vw;
         height: 90px;
         display: flex;
         align-items: center;
