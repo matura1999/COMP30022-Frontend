@@ -3,6 +3,7 @@ import "./essayDetailed.scss";
 import { Link } from "react-router-dom";
 import { Image, Button, Spin } from "antd";
 import { LeftOutlined } from "@ant-design/icons";
+import url from '../../assets/constant/constant'
 
 export default class EssayDetailed extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ export default class EssayDetailed extends Component {
       }),
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/files/essay",
+      url.backendUrl + "/files/essay",
       requestOptions
     )
       .then((res) => res.json())
@@ -74,7 +75,7 @@ export default class EssayDetailed extends Component {
       Thumbnail = (
         <Image
           className="essayDetailed__picture"
-          src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${thumbnail}`}
+          src={`${url.awsUrl}/${thumbnail}`}
           alt="THUMBNAIL"
         />
       );

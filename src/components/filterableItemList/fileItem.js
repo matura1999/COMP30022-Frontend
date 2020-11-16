@@ -1,6 +1,7 @@
 // this is the file item component for the file management page
 import React from "react";
 import "./fileItem.scss";
+import url from '../../assets/constant/constant'
 
 const deleteElement = async (fileUrl) => {
   const requestOptions = {
@@ -12,7 +13,7 @@ const deleteElement = async (fileUrl) => {
     body: JSON.stringify({ key: fileUrl }),
   };
   await fetch(
-    "https://mojito-portfolio-backend.herokuapp.com/files",
+    url.backendUrl + "/files",
     requestOptions
   )
     .then((res) => res.json())
@@ -60,7 +61,7 @@ const FileItem = ({ name, type, size, date, fileUrl }) => (
       <div className="fileItem__options">
         <a
           data-testid="fileItem-url"
-          href={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${fileUrl}`}
+          href={`${url.awsUrl}/${fileUrl}`}
           download
         >
           <button className="fileItem__download">Download</button>

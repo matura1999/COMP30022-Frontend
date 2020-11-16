@@ -1,6 +1,7 @@
 import React from "react";
 import EssayItem from "./essayItem";
 import "../filterableItemList/searchAndSortBar.scss";
+import url from '../../assets/constant/constant'
 
 class EssayList extends React.Component {
   render() {
@@ -17,7 +18,6 @@ class EssayList extends React.Component {
     } else if (sortMethod === "byDate") {
       listAfterSearch.sort((a, b) => b.date.localeCompare(a.date));
     }
-    console.log(listAfterSearch);
     listAfterSearch.forEach(({ id, name, thumbnail, content, date }) => {
       if (thumbnail) {
         rows.push(
@@ -28,7 +28,7 @@ class EssayList extends React.Component {
               <img
                 width="150px"
                 height="100px"
-                src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${thumbnail}`}
+                src={`${url.awsUrl}/${thumbnail}`}
                 alt="THUMBNAIL"
               />
             }

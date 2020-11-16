@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Avatar,} from "antd";
 import { UserOutlined } from "@ant-design/icons";
+import url from '../../assets/constant/constant'
 
 export default class UserAvatar extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ export default class UserAvatar extends Component {
         },
       };
       await fetch(
-        "https://mojito-portfolio-backend.herokuapp.com/files/avatar/" + username,
+        url.backendUrl + "/files/avatar/" + username,
         requestOptions
       )
         .then((res) => res.json())
@@ -45,7 +46,7 @@ export default class UserAvatar extends Component {
       return (
         <Avatar
           size={size}
-          src={'https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/' + src}
+          src={url.awsUrl + '/' + src}
         />
       )
     } else {

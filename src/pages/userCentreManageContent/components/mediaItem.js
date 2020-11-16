@@ -3,6 +3,7 @@ import { Popconfirm, Card, Image } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import EditDescriptionModal from "./editDescriptionModal";
 import "../manageMedias.scss";
+import url from '../../../assets/constant/constant'
 
 const { Meta } = Card;
 
@@ -16,13 +17,13 @@ const deleteElement = async (source, descriptionUrl) => {
     body: JSON.stringify({ key: source }),
   };
   await fetch(
-    "https://mojito-portfolio-backend.herokuapp.com/files",
+    url.backendUrl + "/files",
     requestOptions
   );
 
   requestOptions.body = JSON.stringify({ key: descriptionUrl });
   await fetch(
-    "https://mojito-portfolio-backend.herokuapp.com/files",
+    url.backendUrl + "/files",
     requestOptions
   );
 
@@ -36,7 +37,7 @@ const MediaItem = ({ source, time, description, descriptionUrl }) => (
     cover={
       <Image
         className="manageMedia__image"
-        src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${source}`}
+        src={`${url.awsUrl}/${source}`}
       />
     }
     actions={[

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Empty, Spin } from 'antd';
 import FilterableMediaList from "../userCentreManageContent/components/filterableMediaList";
+import url from '../../assets/constant/constant'
 
 export default class portfolioMedias extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class portfolioMedias extends Component {
       }),
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/files/media",
+      url.backendUrl + "/files/media",
       requestOptions
     )
       .then((res) => res.json())
@@ -40,7 +41,6 @@ export default class portfolioMedias extends Component {
             notice: res.message,
             loading: false,
           });
-          console.log(res.data);
           const temMediaList = [];
           res.data.map(
             ({
@@ -61,7 +61,6 @@ export default class portfolioMedias extends Component {
               temMediaList.push(mediaObject);
             }
           );
-          console.log(temMediaList);
           this.setState({
             mediaItemList: temMediaList,
           });

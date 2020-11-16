@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import { Upload, message } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
+import url from '../../assets/constant/constant'
 
 const { Dragger } = Upload;
 const sendingData = {user: sessionStorage.getItem('username'), path: 'files'};
 const props = {
   name: "file",
   multiple: true,
-  action: "https://mojito-portfolio-backend.herokuapp.com/files",
+  action: url.backendUrl + "/files",
   method: 'PUT',
   data: sendingData,
   onChange(info) {
     const { status } = info.file;
     if (status !== "uploading") {
-      console.log(info.file, info.fileList);
     }
     if (status === "done") {
       message.success(`${info.file.name} uploaded successfully.`);
@@ -26,7 +26,7 @@ const props = {
 export default class UploadFiles extends Component {
   render() {
     return (
-      <Dragger {...props}>
+      <Dragger {...props} showUploadList={false}>
         <p className="ant-upload-drag-icon">
           <InboxOutlined />
         </p>

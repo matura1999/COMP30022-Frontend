@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Upload, Button, Form, Input, Divider, Space, message } from "antd";
 import "./uploadEssays.css";
 import reqwest from 'reqwest';
-
+import url from '../../assets/constant/constant'
 
 export default class UploadEssays extends Component {
     constructor(props) {
@@ -48,7 +48,7 @@ export default class UploadEssays extends Component {
         formData.append('date', new Date())
         formData.append('updateImage', true)
         await reqwest({
-            url: 'https://mojito-portfolio-backend.herokuapp.com/files/essay',
+            url: url.backendUrl + '/files/essay',
             method: 'PUT',
             processData: false,
             data: formData,

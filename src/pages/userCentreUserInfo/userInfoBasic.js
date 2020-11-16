@@ -5,6 +5,7 @@ import UserAvatar from "../../components/userAvatar/userAvatar";
 import BasicInfoForm from "./components/basicInfoForm";
 import "./userInfo.scss";
 import "../userCentre/userCentre.scss";
+import url from '../../assets/constant/constant'
 
 export default class UserInfoBasic extends Component {
   constructor(props) {
@@ -54,7 +55,7 @@ export default class UserInfoBasic extends Component {
       }),
     };
     fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/user/info/basic",
+      url.backendUrl + "/user/info/basic",
       requestOptions
     )
       .then((res) => res.json())
@@ -78,7 +79,7 @@ export default class UserInfoBasic extends Component {
       },
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/user/info/basic/" +
+      url.backendUrl + "/user/info/basic/" +
         sessionStorage.getItem("username"),
       requestOptions
     )
@@ -109,7 +110,7 @@ export default class UserInfoBasic extends Component {
     const props = {
       name: "file",
       multiple: false,
-      action: "https://mojito-portfolio-backend.herokuapp.com/files/avatar",
+      action: url.backendUrl + "/files/avatar",
       method: "PUT",
       data: sendingData,
       onChange(info) {

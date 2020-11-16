@@ -2,6 +2,7 @@ import { Input, Modal, message } from "antd";
 import { EditOutlined } from "@ant-design/icons";
 import React, { Component } from "react";
 import reqwest from 'reqwest';
+import url from '../../../assets/constant/constant'
 
 export default class EditDescriptionModal extends Component {
   constructor(props) {
@@ -24,17 +25,15 @@ export default class EditDescriptionModal extends Component {
     var data = new Blob([this.state.currentDescription], { type: 'text/plain' });
 
     const file = new File([data], name + ".txt");
-    console.log(file);
     return file;
   }
 
   handleOk = async (e) => {
-    console.log(this.state.currentDescription);
     const formData = new FormData();
     formData.append('file', this.StaticDataToFile(this.state.source.split('/').pop()));
     formData.append('user', sessionStorage.getItem('username'))
     await reqwest({
-      url: 'https://mojito-portfolio-backend.herokuapp.com/files/media',
+      url: url.backendUrl + '/files/media',
       method: 'PUT',
       processData: false,
       data: formData,

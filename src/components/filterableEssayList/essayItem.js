@@ -2,6 +2,8 @@
 import React from "react";
 import "./essayItem.scss";
 import EditEssayModal from "./editEssayModal";
+import url from '../../assets/constant/constant'
+
 class EssayItem extends React.Component{
   constructor(props){
     super(props);
@@ -9,7 +11,6 @@ class EssayItem extends React.Component{
   }
 
   deleteEssay = async (id) => {
-    console.log(id)
     const requestOptions = {
       method: "DELETE",
       headers: {
@@ -19,7 +20,7 @@ class EssayItem extends React.Component{
       body: JSON.stringify({ id:id, username: sessionStorage.getItem('username')}),
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/files/essay",
+      url.backendUrl + "/files/essay",
       requestOptions
     );
     window.location.reload(false);
@@ -27,7 +28,6 @@ class EssayItem extends React.Component{
 
   render(){
     const {name, content, id, thumbnail, date} = this.props
-    console.log(id)
     return (
       <div className="essayItem__container">
         <div className="essayItem__item">

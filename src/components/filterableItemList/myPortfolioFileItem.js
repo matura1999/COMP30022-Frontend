@@ -1,5 +1,6 @@
 import React from "react";
 import "./myPortfolioFileItem.scss";
+import url from '../../assets/constant/constant'
 
 const MyPortfolioFileItem = ({ name, type, size, date, fileUrl }) => (
   <div className="portfolioFile__item">
@@ -18,7 +19,7 @@ const MyPortfolioFileItem = ({ name, type, size, date, fileUrl }) => (
       <div className="portfolioFile__dateDownloadContainer">
         <div className="portfolioFile__date">{date}</div>
         <a
-          href={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${fileUrl}`}
+          href={`${url.awsUrl}/${fileUrl}`}
           download
         >
           <button className="portfolioFile__download">

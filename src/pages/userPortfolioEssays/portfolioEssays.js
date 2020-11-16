@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, withRouter, Link } from "react-router-dom";
+import { withRouter} from "react-router-dom";
 import { Empty, Spin } from "antd";
 import PortfolioFilterableEssayList from "./portfolioFilterableEssayList";
+import url from '../../assets/constant/constant'
 class portfolioEssays extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +22,7 @@ class portfolioEssays extends Component {
       },
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/files/essay/" +
+      url.backendUrl + "/files/essay/" +
         this.state.username,
       requestOptions
     )
@@ -62,7 +63,6 @@ class portfolioEssays extends Component {
 
   render() {
     const { essayItemList, loading, username } = this.state;
-    console.log(essayItemList);
     if (loading) {
       return (
         <div className="loadingOrEmptyContainer">

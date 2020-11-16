@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Upload, Button, message, Modal, Input } from 'antd';
 import { PlusOutlined, UploadOutlined } from '@ant-design/icons';
 import reqwest from 'reqwest';
 import { Row, Col } from 'antd';
+import url from '../../assets/constant/constant'
 import "./uploadMedia.css";
 
 function getBase64(file) {
@@ -73,7 +73,7 @@ export default class UploadMedias extends Component {
         });
         formData.append('user', sessionStorage.getItem('username'))
         reqwest({
-            url: 'https://mojito-portfolio-backend.herokuapp.com/files/media',
+            url: url.backendUrl + '/files/media',
             method: 'PUT',
             processData: false,
             data: formData,

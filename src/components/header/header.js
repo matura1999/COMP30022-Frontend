@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link} from "react-router-dom";
 import { Col, Row, Input } from "antd";
 import HeaderRight from "./headerRight";
 import "./header.scss";

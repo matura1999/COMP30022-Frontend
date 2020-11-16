@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Empty, Spin } from 'antd';
 import FilterableItemList from "../../components/filterableItemList/filterableItemList";
+import url from '../../assets/constant/constant'
 
 export default class ManageFiles extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class ManageFiles extends Component {
       }),
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/files",
+      url.backendUrl + "/files",
       requestOptions
     )
       .then((res) => res.json())

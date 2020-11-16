@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import SearchResultNameCard from "./searchResultNameCard"
 import { Empty, Spin } from 'antd';
 import "./searchResult.scss";
+import url from '../../assets/constant/constant'
+
 const queryString = require('query-string');
 
 export default class SearchResult extends Component {
@@ -25,10 +27,9 @@ export default class SearchResult extends Component {
             },
             body: JSON.stringify(this.state.query)
         };
-        fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/search', requestOptions)
+        fetch(url.backendUrl + '/user/info/search', requestOptions)
             .then(res => res.json())
             .then(res => {
-                console.log(res)
                 if (res.success === false) {
                     setTimeout(() => {
                         this.setState({
@@ -48,7 +49,6 @@ export default class SearchResult extends Component {
     render() {
         const {result} = this.state;
         const {loading} = this.state;
-        console.log(result);
 
         if (loading) {
             return (

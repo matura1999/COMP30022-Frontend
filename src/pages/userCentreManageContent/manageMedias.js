@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Empty, Spin } from 'antd';
 import FilterableMediaList from "./components/filterableMediaList";
+import url from '../../assets/constant/constant'
 
 export default class manageMedias extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ export default class manageMedias extends Component {
       }),
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/files/media",
+      url.backendUrl + "/files/media",
       requestOptions
     )
       .then((res) => res.json())
@@ -60,7 +61,6 @@ export default class manageMedias extends Component {
               temMediaList.push(mediaObject);
             }
           );
-          console.log(temMediaList);
           this.setState({
             mediaItemList: temMediaList,
           });

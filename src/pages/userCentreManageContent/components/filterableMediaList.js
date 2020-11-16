@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "../manageMedias.scss";
 import MediaItem from "./mediaItem";
 import MyPortfolioMediaItem from "./myPortfoiloMediaItem";

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./userPortfolio.scss";
 import UserAvatar from "../../components/userAvatar/userAvatar";
+import url from '../../assets/constant/constant'
 
 export default class UserPortfolioNameCard extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class UserPortfolioNameCard extends Component {
       },
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/user/info/basic/" + this.state.user,
+      url.backendUrl + "/user/info/basic/" + this.state.user,
       requestOptions
     )
       .then((res) => res.json())
@@ -47,7 +48,7 @@ export default class UserPortfolioNameCard extends Component {
       },
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/files/avatar/" + username,
+      url.backendUrl + "/files/avatar/" + username,
       requestOptions
     )
       .then((res) => res.json())

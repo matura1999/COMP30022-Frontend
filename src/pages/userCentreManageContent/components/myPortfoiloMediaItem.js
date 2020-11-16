@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Image } from "antd";
-
+import url from '../../../assets/constant/constant'
 import "../manageMedias.scss";
 
 const MyPortfolioMediaItem = ({ source, time, description }) => (
@@ -10,7 +10,7 @@ const MyPortfolioMediaItem = ({ source, time, description }) => (
     cover={
       <Image
         className="myPortfolioMedia__image"
-        src={`https://mojito-eportfolio.s3-ap-southeast-2.amazonaws.com/${source}`}
+        src={`${url.awsUrl}/${source}`}
       />
     }
   >

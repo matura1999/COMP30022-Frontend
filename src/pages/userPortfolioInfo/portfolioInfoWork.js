@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Empty, Spin } from 'antd';
 import "./portfolioInfo.scss";
+import url from '../../assets/constant/constant'
 
 export default class PortfolioInfoWork extends Component {
     constructor(props){
@@ -20,7 +21,7 @@ export default class PortfolioInfoWork extends Component {
                 'Accept': 'application/json',
             },
         };
-        await fetch('https://mojito-portfolio-backend.herokuapp.com/user/info/work/' + this.state.user, requestOptions)
+        await fetch(url.backendUrl + '/user/info/work/' + this.state.user, requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {

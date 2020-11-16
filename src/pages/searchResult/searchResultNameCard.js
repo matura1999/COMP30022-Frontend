@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import UserAvatar from "../../components/userAvatar/userAvatar";
 import "./searchResult.scss";
 

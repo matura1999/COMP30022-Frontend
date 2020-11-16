@@ -11,6 +11,7 @@ import {
 } from "antd";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import moment from "moment";
+import url from '../../assets/constant/constant'
 const { RangePicker } = DatePicker;
 
 export default class UserInfoWork extends Component {
@@ -36,7 +37,7 @@ export default class UserInfoWork extends Component {
       }),
     };
     fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/user/info/work",
+      url.backendUrl + "/user/info/work",
       requestOptions
     )
       .then((res) => res.json())
@@ -59,7 +60,7 @@ export default class UserInfoWork extends Component {
       },
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/user/info/work/" +
+      url.backendUrl + "/user/info/work/" +
         sessionStorage.getItem("username"),
       requestOptions
     )

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Empty, Spin } from 'antd';
 import FilterableEssayList from "../../components/filterableEssayList/filterableEssayList";
+import url from '../../assets/constant/constant'
 
 export default class ManageEssays extends Component {
   constructor(props) {
@@ -21,8 +22,9 @@ export default class ManageEssays extends Component {
       },
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/files/essay/" +
-        sessionStorage.getItem("username"),
+      url.backendUrl + 
+      "/files/essay/" +
+      sessionStorage.getItem("username"),
       requestOptions
     )
       .then((res) => res.json())

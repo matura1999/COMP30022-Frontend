@@ -19,7 +19,6 @@ import "./userPortfolio.scss";
 export default class UserPortfolio extends Component {
   constructor(props) {
     super(props);
-    console.log(props.match)
     this.state = {
       collapsed: false,
       current: props.match.params.path,
@@ -28,7 +27,6 @@ export default class UserPortfolio extends Component {
   }
   
   handleClick = (e) => {
-    console.log("click ", e.key);
     this.setState({ current: e.key });
   };
 
@@ -42,12 +40,14 @@ export default class UserPortfolio extends Component {
       case "medias":
         return <PortfolioMedias user={user}/>;
       case "essays":
-        if(window.location.href.split('/').pop() =="essays"){
+        if(window.location.href.split('/').pop() === "essays"){
           return <PortfolioEssays user={user}/>;
         } else {
           const essayID = window.location.href.split('/').pop().slice(7,)
           return <EssayDetailed id={essayID} username={user}/>
         }
+      default:
+        return <h1>Page Not Found</h1>
     }
   };
 

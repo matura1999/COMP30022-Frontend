@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Alert, Form, Input, Button } from "antd";
 import { Link } from "react-router-dom";
+import url from '../../assets/constant/constant'
 import "./signIn.scss";
 const layout = {
   labelCol: { offset: 2, span: 20 },
@@ -43,7 +44,7 @@ export default class SignIn extends Component {
       }),
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/user/find",
+      url.backendUrl + "/user/find",
       requestOptions
     )
       .then((res) => res.json())
@@ -76,7 +77,7 @@ export default class SignIn extends Component {
       },
     };
     await fetch(
-      "https://mojito-portfolio-backend.herokuapp.com/files/avatar/" + username,
+      url.backendUrl + "/files/avatar/" + username,
       requestOptions
     )
       .then((res) => res.json())

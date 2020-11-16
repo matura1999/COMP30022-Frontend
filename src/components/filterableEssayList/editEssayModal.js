@@ -2,6 +2,7 @@ import { Button, Modal, Input, Upload, message, Switch } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import React, { Component } from "react";
 import reqwest from 'reqwest'
+import url from '../../assets/constant/constant'
 
 export default class EditEssayModal extends React.Component {
   constructor(props){
@@ -57,7 +58,7 @@ export default class EditEssayModal extends React.Component {
     formData.append('id', currentEssayId)
     
     await reqwest({
-      url: 'https://mojito-portfolio-backend.herokuapp.com/files/essay',
+      url: url.backendUrl + '/files/essay',
       method: 'PUT',
       processData: false,
       data: formData,

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Alert, Form, Input, Button } from 'antd'
 import { Link } from "react-router-dom";
+import url from '../../assets/constant/constant'
 import "./signUp.scss"
 const layout = {
     labelCol: { offset: 8, span: 8 },
@@ -32,7 +33,7 @@ export default class SignUp extends Component {
             },
             body: JSON.stringify({ username: values.username, email: values.email, password: values.password })
         };
-        fetch('https://mojito-portfolio-backend.herokuapp.com/user/add', requestOptions)
+        fetch(url.backendUrl + '/user/add', requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success === false) {

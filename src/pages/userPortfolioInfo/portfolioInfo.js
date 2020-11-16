@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {Row, Col,} from "antd";
 import PortfolioInfoBasic from "./portfolioInfoBasic";
 import PortfolioInfoEdu from "./portfolioInfoEdu";
 import PortfolioInfoWork from "./portfolioInfoWork";
