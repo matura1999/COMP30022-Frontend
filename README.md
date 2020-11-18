@@ -1,6 +1,7 @@
 # Mojito E-Portfolio Frontend
 
-Mojito E-Portfolio is an online portfolio app, this is the front end client of the app
+Mojito E-Portfolio is an online portfolio app, this is the front end client of the app  
+For backend of this app, please view [https://github.com/xiaohanl4/COMP30022-Frontend](https://github.com/xiaohanl4/COMP30022-Frontend)
 
 ## Deployment
 Deployment has already been set up on a Heroku server. This app is running on:
