@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Upload, message } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
-import url from '../../assets/constant/constant'
+import url from "../../assets/constant/constant";
 
 const { Dragger } = Upload;
-const sendingData = {user: sessionStorage.getItem('username'), path: 'files'};
+const sendingData = { user: sessionStorage.getItem("username"), path: "files" };
 const props = {
   name: "file",
   multiple: true,
   action: url.backendUrl + "/files",
-  method: 'PUT',
+  method: "PUT",
   data: sendingData,
   onChange(info) {
     const { status } = info.file;
@@ -33,10 +33,7 @@ export default class UploadFiles extends Component {
         <p className="ant-upload-text">
           Click or drag file to this area to upload
         </p>
-        <p className="ant-upload-hint">
-          Support for a single or bulk upload. Strictly prohibit from uploading
-          company data or other band files
-        </p>
+        <p className="ant-upload-hint">Support for a single or bulk upload.</p>
       </Dragger>
     );
   }
