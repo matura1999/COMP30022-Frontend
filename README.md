@@ -30,6 +30,11 @@ First start by installing the dependencies in the root directory
 npm install
 ```
 
+### Backend setup
+
+The backend of this app is deployed on Heroku, which has link [https://mojito-portfolio-backend.herokuapp.com](https://mojito-portfolio-backend.herokuapp.com)
+The app is interacting with its backend deployed on Heroku by default, if you want to deploy the backend locally, view [https://github.com/xiaohanl4/COMP30022-Backend](https://github.com/xiaohanl4/COMP30022-Backend) for the set up, go to the constant.js file in src/assets/contant folder, change the backend URL to the link to the locally deployed backend.
+
 #### Development mode
 
 To run the app in the in development mode, use
@@ -57,3 +62,5 @@ Unit Testing on some of the components are ready, use
 npm test
 ```
 to run the tests
+
+
