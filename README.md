@@ -30,15 +30,17 @@ First start by installing the dependencies in the root directory
 npm install
 ```
 
-To start the server, there is two way to choose from  
+#### Development mode
 
-1.Runs the app in the development mode by:
+To run the app in the in development mode, use
 ```
 npm run-script dev
 ```
 Then open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-2. Produces a static React build by running:
+#### Run the client 
+
+Produces a static React build by running:
 ```
 npm run-script build
 ```
